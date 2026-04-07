@@ -1,0 +1,24 @@
+# Editor and OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Local runtime logs
+*.log
+*.err.log
+
+# Visual audit artifacts
+_shots/
+_render_audit/
+_events_audit/
+_current_*.png
+_mobile_header_*.png
+_render_check*.png
+
+# Temporary files
+tmp/
+temp/
+.cache/
+
