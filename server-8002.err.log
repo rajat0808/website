@@ -1,783 +1,483 @@
-::ffff:127.0.0.1 - - [24/Mar/2026 10:54:31] "GET /index.html HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:00:10] "GET / HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:00:10] "GET /assets/fontawesome/css/all.min.css HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:00:10] "GET /style.css?v=20260323-5 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:00:11] "GET /assets/8831849-uhd_3840_2160_30fps.mp4 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:00:11] "GET /assets/hero-home-opt.webp HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:00:11] "GET /assets/fontawesome/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:00:11] "GET /assets/logo-sindh-emporio.png?v=20260323-3 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:00:11] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:00:12] "GET /assets/brand-slide-01-opt.webp HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:00:12] "GET /assets/brand-slide-03-opt.webp HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:00:12] "GET /assets/brand-slide-02-opt.webp HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:00:12] "GET /assets/brand-slide-04-opt.webp HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:00:17] "GET /assets/charles-tyrwhitt-03.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:00:17] "GET /assets/armani-exchange-02.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:00:17] "GET /assets/la-martina-02.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:00:17] "GET /assets/superdry-01.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:00:17] "GET /assets/lacoste-runway-campaign.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:00:19] "GET /assets/levis-03.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:00:19] "GET /assets/logo-charles-tyrwhitt.svg HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:00:23] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:00:23] "GET /assets/logo-basanti.png HTTP/1.1" 200 -
-----------------------------------------
-Exception occurred during processing of request from ('::1', 63742, 0, 0)
-----------------------------------------
-Exception occurred during processing of request from ('::1', 63722, 0, 0)
-Traceback (most recent call last):
-Traceback (most recent call last):
-  File "C:\Program Files\Python313\Lib\socketserver.py", line 697, in process_request_thread
-    self.finish_request(request, client_address)
-    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 1320, in finish_request
-    self.RequestHandlerClass(request, client_address, self,
-    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-                             directory=args.directory)
-                             ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\socketserver.py", line 697, in process_request_thread
-    self.finish_request(request, client_address)
-    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 672, in __init__
-    super().__init__(*args, **kwargs)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 1320, in finish_request
-    self.RequestHandlerClass(request, client_address, self,
-    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-                             directory=args.directory)
-                             ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\socketserver.py", line 766, in __init__
-    self.handle()
-    ~~~~~~~~~~~^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 672, in __init__
-    super().__init__(*args, **kwargs)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 436, in handle
-    self.handle_one_request()
-    ~~~~~~~~~~~~~~~~~~~~~~~^^
-  File "C:\Program Files\Python313\Lib\socketserver.py", line 766, in __init__
-    self.handle()
-    ~~~~~~~~~~~^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 424, in handle_one_request
-    method()
-    ~~~~~~^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 436, in handle
-    self.handle_one_request()
-    ~~~~~~~~~~~~~~~~~~~~~~~^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 679, in do_GET
-    self.copyfile(f, self.wfile)
-    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 424, in handle_one_request
-    method()
-    ~~~~~~^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 881, in copyfile
-    shutil.copyfileobj(source, outputfile)
-    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 679, in do_GET
-    self.copyfile(f, self.wfile)
-    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\shutil.py", line 204, in copyfileobj
-    fdst_write(buf)
-    ~~~~~~~~~~^^^^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 881, in copyfile
-    shutil.copyfileobj(source, outputfile)
-    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\socketserver.py", line 845, in write
-    self._sock.sendall(b)
-    ~~~~~~~~~~~~~~~~~~^^^
-  File "C:\Program Files\Python313\Lib\shutil.py", line 204, in copyfileobj
-    fdst_write(buf)
-    ~~~~~~~~~~^^^^^
-ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
-  File "C:\Program Files\Python313\Lib\socketserver.py", line 845, in write
-    self._sock.sendall(b)
-    ~~~~~~~~~~~~~~~~~~^^^
-----------------------------------------
-ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
-----------------------------------------
-::ffff:127.0.0.1 - - [24/Mar/2026 11:13:49] "GET /gas.html HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:14:27] "GET / HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:14:27] "GET /style.css?v=20260323-5 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:14:27] "GET /assets/hero-home-opt.webp HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:14:27] "GET /assets/8831849-uhd_3840_2160_30fps.mp4 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:14:27] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:14:27] "GET /assets/brand-slide-01-opt.webp HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:14:27] "GET /assets/brand-slide-03-opt.webp HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:14:27] "GET /assets/brand-slide-02-opt.webp HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:14:27] "GET /assets/brand-slide-04-opt.webp HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:14:27] "GET /assets/logo-sindh-emporio.png?v=20260323-3 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:14:27] "GET /assets/la-martina-02.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:14:27] "GET /assets/charles-tyrwhitt-03.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:14:27] "GET /assets/levis-03.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:14:27] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:14:30] "GET /brand.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:14:30] "GET /assets/brand-slide-01.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:14:30] "GET /assets/brand-slide-02.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:14:30] "GET /assets/brand-slide-03.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:14:30] "GET /assets/brand-slide-04.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:14:30] "GET /assets/logo-charles-tyrwhitt.svg HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:14:30] "GET /assets/logo-la-martina.svg HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:14:30] "GET /assets/logo-levis.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:14:30] "GET /assets/logo-superdry.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:14:30] "GET /assets/logo-gas.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:14:30] "GET /assets/logo-kora-gold.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:14:36] "GET /gas.html HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:14:36] "GET /style.css?v=20260324-1 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:14:36] "GET /assets/gas-campaign-couple.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:14:36] "GET /assets/gas-hoodie-look.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:14:36] "GET /assets/gas-tee-denim-look.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:14:47] "GET /gas.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:14:47] "GET /style.css?v=20260324-1 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:14:52] "GET /index.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:14:52] "GET /style.css?v=20260323-5 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:14:55] "GET /assets/logo-kora.png HTTP/1.1" 304 -
-::ffff:127.0.0.1 - - [24/Mar/2026 11:17:02] "GET /index.html HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:18:15] "GET /index.html HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:18:15] "GET /style.css?v=20260324-2 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:18:15] "GET /assets/gas-campaign-couple.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:18:15] "GET /assets/favicon-se.png?v=20260323-1 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:23:13] "GET /style.css?v=20260323-5 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:23:13] "GET /assets/brand-slide-01.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:23:13] "GET /assets/brand-slide-02.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:23:13] "GET /assets/brand-slide-03.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:23:13] "GET /assets/brand-slide-04.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:23:31] "GET /gas.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:23:31] "GET /style.css?v=20260324-1 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:23:31] "GET /assets/gas-campaign-couple.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:23:31] "GET /assets/gas-hoodie-look.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:23:31] "GET /assets/gas-tee-denim-look.png HTTP/1.1" 304 -
-::ffff:127.0.0.1 - - [24/Mar/2026 11:25:24] "GET /index.html HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:26:18] "GET /gas.html HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:26:18] "GET /style.css?v=20260324-1 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:26:18] "GET /assets/fontawesome/css/all.min.css HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:26:18] "GET /assets/gas-campaign-couple.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:26:18] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:26:18] "GET /assets/gas-hoodie-look.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:26:18] "GET /assets/gas-tee-denim-look.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:26:18] "GET /assets/logo-gas.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:26:18] "GET /assets/fontawesome/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:26:18] "GET /assets/favicon-se.png?v=20260323-1 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:26:21] "GET /gas.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:26:22] "GET /gas.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:26:23] "GET /gas.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:26:25] "GET /style.css?v=20260323-5 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:26:28] "GET /style.css?v=20260324-1 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:26:32] "GET /kora.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:26:55] "GET /superdry.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:26:55] "GET /style.css?v=20260323-5 HTTP/1.1" 304 -
-::ffff:127.0.0.1 - - [24/Mar/2026 11:28:57] "GET /superdry.html HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:30:32] "GET /superdry.html HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:30:32] "GET /style.css?v=20260324-4 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:30:32] "GET /assets/fontawesome/css/all.min.css HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:30:32] "GET /assets/superdry-01.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:30:32] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:30:32] "GET /assets/fontawesome/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:30:32] "GET /assets/superdry-02.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:30:32] "GET /assets/logo-superdry.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:30:32] "GET /assets/superdry-03.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:30:33] "GET /assets/favicon-se.png?v=20260323-1 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:30:36] "GET /style.css?v=20260323-5 HTTP/1.1" 200 -
-::ffff:127.0.0.1 - - [24/Mar/2026 11:32:37] "GET /kora.html HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:33:24] "GET /kora.html HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:33:24] "GET /style.css?v=20260324-5 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:33:24] "GET /assets/fontawesome/css/all.min.css HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:33:24] "GET /assets/kora-01.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:33:24] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:33:24] "GET /assets/fontawesome/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:33:24] "GET /assets/kora-03.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:33:24] "GET /assets/logo-kora-gold.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:33:24] "GET /assets/kora-02.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:33:24] "GET /assets/favicon-se.png?v=20260323-1 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:33:28] "GET /gas.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:33:28] "GET /style.css?v=20260324-1 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:33:28] "GET /assets/gas-campaign-couple.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:33:28] "GET /assets/gas-hoodie-look.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:33:28] "GET /assets/gas-tee-denim-look.png HTTP/1.1" 304 -
-::ffff:127.0.0.1 - - [24/Mar/2026 11:35:07] "GET /gas.html HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:35:48] "GET /gas.html HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:35:48] "GET /style.css?v=20260324-6 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:35:48] "GET /assets/fontawesome/css/all.min.css HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:35:48] "GET /assets/gas-campaign-couple.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:35:48] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:35:48] "GET /assets/fontawesome/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:35:48] "GET /assets/gas-hoodie-look.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:35:48] "GET /assets/gas-tee-denim-look.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:35:48] "GET /assets/logo-gas.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:35:48] "GET /assets/favicon-se.png?v=20260323-1 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:35:52] "GET /index.html HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:35:52] "GET /style.css?v=20260324-3 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:35:55] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:35:56] "GET /style.css?v=20260323-5 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:35:59] "GET /kora.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:35:59] "GET /style.css?v=20260324-5 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:47:24] "GET /style.css?v=20260323-5 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:47:24] "GET /assets/brand-slide-01.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:47:24] "GET /assets/brand-slide-02.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:47:24] "GET /assets/brand-slide-03.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:47:24] "GET /assets/brand-slide-04.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:47:31] "GET /index.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:47:31] "GET /style.css?v=20260324-3 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:47:34] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
-::ffff:127.0.0.1 - - [24/Mar/2026 11:50:00] "GET /index.html HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:22] "GET /index.html HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:22] "GET /style.css?v=20260324-7 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:22] "GET /assets/fontawesome/css/all.min.css HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:22] "GET /assets/hero-home-opt.webp HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:22] "GET /assets/8831849-uhd_3840_2160_30fps.mp4 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:22] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:22] "GET /assets/fontawesome/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:22] "GET /assets/brand-slide-01-opt.webp HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:22] "GET /assets/logo-sindh-emporio.png?v=20260323-3 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:22] "GET /assets/brand-slide-02-opt.webp HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:22] "GET /assets/brand-slide-03-opt.webp HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:22] "GET /assets/brand-slide-04-opt.webp HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:22] "GET /assets/la-martina-02.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:22] "GET /assets/lacoste-runway-campaign.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:22] "GET /assets/superdry-01.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:22] "GET /assets/armani-exchange-02.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:22] "GET /assets/charles-tyrwhitt-03.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:22] "GET /assets/levis-03.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:22] "GET /assets/gas-campaign-couple.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:22] "GET /assets/logo-charles-tyrwhitt.svg HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:22] "GET /assets/favicon-se.png?v=20260323-1 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:24] "GET /assets/logo-basanti.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:25] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:28] "GET /assets/logo-kora.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:28] "GET /assets/kora-02.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:32] "GET /assets/brand-slide-01.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:32] "GET /style.css?v=20260323-5 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:32] "GET /assets/brand-slide-02.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:32] "GET /assets/brand-slide-03.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:32] "GET /assets/brand-slide-04.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:37] "GET /gas.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:50:37] "GET /style.css?v=20260324-6 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:37] "GET /assets/gas-hoodie-look.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:50:37] "GET /assets/gas-tee-denim-look.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:50:41] "GET /kora.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:50:41] "GET /style.css?v=20260324-5 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:44] "GET /superdry.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:50:44] "GET /style.css?v=20260324-4 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 11:50:51] "GET /index.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:50:51] "GET /style.css?v=20260324-7 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:53:11] "GET /style.css?v=20260323-5 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:53:14] "GET /levis.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:53:14] "GET /assets/levis-01.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 11:53:14] "GET /assets/levis-02.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:03:14] "GET /style.css?v=20260323-5 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:03:20] "GET /index.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:03:20] "GET /style.css?v=20260324-7 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:03:20] "GET /assets/gas-campaign-couple.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:04:29] "GET /index.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:04:39] "GET /style.css?v=20260323-5 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:04:54] "GET /style.css?v=20260324-7 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:32:27] "GET /brand.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:32:27] "GET /style.css?v=20260323-5 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:32:27] "GET /assets/brand-slide-01.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:32:27] "GET /assets/brand-slide-02.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:32:27] "GET /assets/brand-slide-03.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:32:27] "GET /assets/brand-slide-04.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:32:32] "GET /superdry.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:32:32] "GET /style.css?v=20260324-4 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:32:35] "GET /la-martina.html HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:32:35] "GET /assets/la-martina-01.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:32:35] "GET /assets/la-martina-03.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:32:38] "GET /kora.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:32:38] "GET /style.css?v=20260324-5 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:32:40] "GET /gas.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:32:40] "GET /style.css?v=20260324-6 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:32:40] "GET /assets/gas-campaign-couple.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:32:40] "GET /assets/gas-hoodie-look.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:32:40] "GET /assets/gas-tee-denim-look.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:32:45] "GET /charles-tyrwhitt.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:32:45] "GET /assets/charles-tyrwhitt-02.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:32:45] "GET /assets/charles-tyrwhitt-01.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:32:48] "GET /basanti.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:32:50] "GET /armani-exchange.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:32:50] "GET /assets/armani-exchange-04.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:34:29] "GET /lacoste.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:35:08] "GET /index.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:35:08] "GET /style.css?v=20260324-7 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:35:11] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:36:16] "GET /index.html HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:36:16] "GET /style.css?v=20260324-7 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:36:16] "GET /assets/fontawesome/css/all.min.css HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:36:16] "GET /assets/hero-home-opt.webp HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:36:16] "GET /assets/8831849-uhd_3840_2160_30fps.mp4 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:36:16] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:36:16] "GET /assets/fontawesome/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:36:16] "GET /assets/brand-slide-01-opt.webp HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:36:16] "GET /assets/logo-sindh-emporio.png?v=20260323-3 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:36:16] "GET /assets/brand-slide-02-opt.webp HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:36:16] "GET /assets/brand-slide-03-opt.webp HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:36:17] "GET /assets/brand-slide-04-opt.webp HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:36:17] "GET /assets/lacoste-runway-campaign.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:36:17] "GET /assets/superdry-01.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:36:17] "GET /assets/la-martina-02.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:36:17] "GET /assets/gas-campaign-couple.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:36:17] "GET /assets/armani-exchange-02.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:36:17] "GET /assets/charles-tyrwhitt-03.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:36:17] "GET /assets/levis-03.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:36:17] "GET /assets/favicon-se.png?v=20260323-1 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:36:19] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:36:47] "GET /style.css?v=20260323-5 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:36:57] "GET /style.css?v=20260324-5 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:37:48] "GET /style.css?v=20260324-4 HTTP/1.1" 304 -
-::ffff:127.0.0.1 - - [24/Mar/2026 12:40:24] "GET /armani-exchange.html HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:41:02] "GET /armani-exchange.html HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:41:02] "GET /style.css?v=20260324-8 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:41:02] "GET /assets/fontawesome/css/all.min.css HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:41:02] "GET /assets/armani-exchange-01.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:41:02] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:41:02] "GET /assets/fontawesome/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:41:02] "GET /assets/armani-exchange-02.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:41:02] "GET /assets/armani-exchange-04.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:41:02] "GET /assets/logo-armani-exchange.svg HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:41:02] "GET /assets/favicon-se.png?v=20260323-1 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:41:12] "GET /index.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:41:12] "GET /style.css?v=20260324-7 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:41:14] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:43:07] "GET /style.css?v=20260324-7 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:44:00] "GET /style.css?v=20260323-5 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:44:08] "GET /armani-exchange.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:44:08] "GET /style.css?v=20260324-8 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:44:11] "GET /gas.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:44:11] "GET /style.css?v=20260324-6 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:44:11] "GET /assets/gas-hoodie-look.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:44:11] "GET /assets/gas-tee-denim-look.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:44:14] "GET /kora.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:44:14] "GET /style.css?v=20260324-5 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:44:23] "GET /style.css?v=20260323-5 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:44:37] "GET /superdry.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:44:37] "GET /style.css?v=20260324-4 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:46:11] "GET /armani-exchange.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:46:11] "GET /style.css?v=20260324-8 HTTP/1.1" 304 -
-::ffff:127.0.0.1 - - [24/Mar/2026 12:47:45] "GET /armani-exchange.html HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:47:58] "GET /armani-exchange.html HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:47:58] "GET /style.css?v=20260324-9 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:47:58] "GET /assets/fontawesome/css/all.min.css HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:47:58] "GET /assets/armani-exchange-01.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:47:58] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:47:58] "GET /assets/fontawesome/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:47:58] "GET /assets/armani-exchange-02.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:47:58] "GET /assets/armani-exchange-04.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:47:58] "GET /assets/logo-armani-exchange.svg HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:47:58] "GET /assets/favicon-se.png?v=20260323-1 HTTP/1.1" 200 -
-::ffff:127.0.0.1 - - [24/Mar/2026 12:48:58] "GET /armani-exchange.html HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:50:51] "GET /armani-exchange.html HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:50:51] "GET /style.css?v=20260324-8 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:50:51] "GET /assets/fontawesome/css/all.min.css HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:50:51] "GET /assets/armani-exchange-01.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:50:51] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:50:51] "GET /assets/fontawesome/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:50:51] "GET /assets/armani-exchange-04.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:50:51] "GET /assets/armani-exchange-02.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:50:51] "GET /assets/logo-armani-exchange.svg HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:50:51] "GET /assets/favicon-se.png?v=20260323-1 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:51:45] "GET /style.css?v=20260323-5 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:52:03] "GET /index.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:52:03] "GET /style.css?v=20260324-7 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:52:03] "GET /assets/gas-campaign-couple.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:52:05] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:54:28] "GET /assets/brand-slide-01.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:54:28] "GET /style.css?v=20260323-5 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:54:28] "GET /assets/brand-slide-02.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:54:28] "GET /assets/brand-slide-04.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:54:28] "GET /assets/brand-slide-03.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:54:37] "GET /style.css?v=20260324-7 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:54:55] "GET /armani-exchange.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:54:55] "GET /style.css?v=20260324-8 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:55:00] "GET /gas.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:55:00] "GET /style.css?v=20260324-6 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:55:00] "GET /assets/gas-hoodie-look.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:55:00] "GET /assets/gas-tee-denim-look.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:55:06] "GET /kora.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:55:06] "GET /style.css?v=20260324-5 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:55:09] "GET /style.css?v=20260323-5 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:55:12] "GET /superdry.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:55:12] "GET /style.css?v=20260324-4 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 12:55:48] "GET /style.css?v=20260324-7 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 12:55:51] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 13:14:41] "GET /style.css?v=20260323-5 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 13:22:02] "GET / HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 13:22:02] "GET /assets/favicon-se.png?v=20260323-1 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 13:22:03] "GET /style.css?v=20260324-7 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 13:22:03] "GET /assets/8831849-uhd_3840_2160_30fps.mp4 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 13:22:04] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 13:22:04] "GET /assets/logo-sindh-emporio.png?v=20260323-3 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 13:22:05] "GET /assets/gas-campaign-couple.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 13:22:11] "GET /assets/charles-tyrwhitt-03.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 13:22:11] "GET /assets/logo-charles-tyrwhitt.svg HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 13:22:14] "GET /assets/levis-03.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 13:22:18] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 13:22:22] "GET /assets/kora-02.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 13:22:22] "GET /assets/logo-kora.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 13:33:17] "GET /assets/8831849-uhd_3840_2160_30fps.mp4 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:28:32] "GET /brand.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 14:28:32] "GET /assets/brand-slide-01.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:28:32] "GET /style.css?v=20260323-5 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 14:28:32] "GET /assets/brand-slide-03.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:28:32] "GET /assets/brand-slide-02.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:28:32] "GET /assets/brand-slide-04.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:28:32] "GET /assets/logo-levis.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 14:28:32] "GET /assets/logo-charles-tyrwhitt.svg HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 14:28:32] "GET /assets/logo-superdry.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 14:28:32] "GET /assets/logo-gas.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 14:28:32] "GET /assets/logo-kora-gold.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 14:39:20] "GET / HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:20] "GET /assets/hero-home-opt.webp HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:20] "GET /style.css?v=20260324-7 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:20] "GET /assets/fontawesome/css/all.min.css HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:20] "GET /assets/8831849-uhd_3840_2160_30fps.mp4 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:21] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:21] "GET /assets/brand-slide-01-opt.webp HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:21] "GET /assets/armani-exchange-02.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:21] "GET /assets/brand-slide-02-opt.webp HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:21] "GET /assets/logo-sindh-emporio.png?v=20260323-3 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:21] "GET /assets/superdry-01.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:21] "GET /assets/brand-slide-04-opt.webp HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:21] "GET /assets/levis-03.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:21] "GET /assets/lacoste-runway-campaign.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:21] "GET /assets/brand-slide-03-opt.webp HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:21] "GET /assets/charles-tyrwhitt-03.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:21] "GET /assets/gas-campaign-couple.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:21] "GET /assets/fontawesome/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:24] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:27] "GET /assets/kora-02.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:29] "GET /brand.html HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:30] "GET /assets/brand-slide-01.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:30] "GET /style.css?v=20260323-5 HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:30] "GET /assets/brand-slide-04.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:30] "GET /assets/brand-slide-03.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:30] "GET /assets/brand-slide-02.png HTTP/1.1" 200 -
-----------------------------------------
-Exception occurred during processing of request from ('::1', 61044, 0, 0)
-----------------------------------------
-Exception occurred during processing of request from ('::1', 61052, 0, 0)
-----------------------------------------
-Exception occurred during processing of request from ('::1', 61051, 0, 0)
-Traceback (most recent call last):
-Traceback (most recent call last):
-  File "C:\Program Files\Python313\Lib\socketserver.py", line 697, in process_request_thread
-    self.finish_request(request, client_address)
-    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 1320, in finish_request
-    self.RequestHandlerClass(request, client_address, self,
-    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-                             directory=args.directory)
-                             ^^^^^^^^^^^^^^^^^^^^^^^^^
-Traceback (most recent call last):
-  File "C:\Program Files\Python313\Lib\http\server.py", line 672, in __init__
-    super().__init__(*args, **kwargs)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\socketserver.py", line 697, in process_request_thread
-    self.finish_request(request, client_address)
-    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\socketserver.py", line 766, in __init__
-    self.handle()
-    ~~~~~~~~~~~^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 1320, in finish_request
-    self.RequestHandlerClass(request, client_address, self,
-    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-                             directory=args.directory)
-                             ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 436, in handle
-    self.handle_one_request()
-    ~~~~~~~~~~~~~~~~~~~~~~~^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 672, in __init__
-    super().__init__(*args, **kwargs)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 424, in handle_one_request
-    method()
-    ~~~~~~^^
-  File "C:\Program Files\Python313\Lib\socketserver.py", line 766, in __init__
-    self.handle()
-    ~~~~~~~~~~~^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 679, in do_GET
-    self.copyfile(f, self.wfile)
-    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 436, in handle
-    self.handle_one_request()
-    ~~~~~~~~~~~~~~~~~~~~~~~^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 881, in copyfile
-    shutil.copyfileobj(source, outputfile)
-    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 424, in handle_one_request
-    method()
-    ~~~~~~^^
-  File "C:\Program Files\Python313\Lib\shutil.py", line 204, in copyfileobj
-    fdst_write(buf)
-    ~~~~~~~~~~^^^^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 679, in do_GET
-    self.copyfile(f, self.wfile)
-    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\socketserver.py", line 845, in write
-    self._sock.sendall(b)
-    ~~~~~~~~~~~~~~~~~~^^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 881, in copyfile
-    shutil.copyfileobj(source, outputfile)
-    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
-  File "C:\Program Files\Python313\Lib\shutil.py", line 204, in copyfileobj
-    fdst_write(buf)
-    ~~~~~~~~~~^^^^^
-----------------------------------------
-  File "C:\Program Files\Python313\Lib\socketserver.py", line 845, in write
-    self._sock.sendall(b)
-    ~~~~~~~~~~~~~~~~~~^^^
-  File "C:\Program Files\Python313\Lib\socketserver.py", line 697, in process_request_thread
-    self.finish_request(request, client_address)
-    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
-  File "C:\Program Files\Python313\Lib\http\server.py", line 1320, in finish_request
-    self.RequestHandlerClass(request, client_address, self,
-    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-                             directory=args.directory)
-                             ^^^^^^^^^^^^^^^^^^^^^^^^^
-----------------------------------------
-  File "C:\Program Files\Python313\Lib\http\server.py", line 672, in __init__
-    super().__init__(*args, **kwargs)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\socketserver.py", line 766, in __init__
-    self.handle()
-    ~~~~~~~~~~~^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 436, in handle
-    self.handle_one_request()
-    ~~~~~~~~~~~~~~~~~~~~~~~^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 424, in handle_one_request
-    method()
-    ~~~~~~^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 679, in do_GET
-    self.copyfile(f, self.wfile)
-    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 881, in copyfile
-    shutil.copyfileobj(source, outputfile)
-    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\shutil.py", line 204, in copyfileobj
-    fdst_write(buf)
-    ~~~~~~~~~~^^^^^
-  File "C:\Program Files\Python313\Lib\socketserver.py", line 845, in write
-    self._sock.sendall(b)
-    ~~~~~~~~~~~~~~~~~~^^^
-ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
-----------------------------------------
-----------------------------------------
-Exception occurred during processing of request from ('::1', 61034, 0, 0)
-Traceback (most recent call last):
-::1 - - [24/Mar/2026 14:39:31] "GET /assets/logo-armani-exchange.svg HTTP/1.1" 200 -
-  File "C:\Program Files\Python313\Lib\socketserver.py", line 697, in process_request_thread
-    self.finish_request(request, client_address)
-    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-::1 - - [24/Mar/2026 14:39:31] "GET /assets/logo-la-martina.svg HTTP/1.1" 200 -
-  File "C:\Program Files\Python313\Lib\http\server.py", line 1320, in finish_request
-    self.RequestHandlerClass(request, client_address, self,
-    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-                             directory=args.directory)
-                             ^^^^^^^^^^^^^^^^^^^^^^^^^
-::1 - - [24/Mar/2026 14:39:31] "GET /assets/logo-levis.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:31] "GET /assets/logo-charles-tyrwhitt.svg HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:31] "GET /assets/logo-gas.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:31] "GET /assets/logo-kora-gold.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:39:31] "GET /assets/logo-lacoste.png HTTP/1.1" 200 -
-::ffff:127.0.0.1 - - [24/Mar/2026 14:39:31] "GET /assets/logo-basanti.png HTTP/1.1" 200 -
-  File "C:\Program Files\Python313\Lib\http\server.py", line 672, in __init__
-    super().__init__(*args, **kwargs)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\socketserver.py", line 766, in __init__
-    self.handle()
-    ~~~~~~~~~~~^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 436, in handle
-    self.handle_one_request()
-    ~~~~~~~~~~~~~~~~~~~~~~~^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 424, in handle_one_request
-    method()
-    ~~~~~~^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 679, in do_GET
-    self.copyfile(f, self.wfile)
-    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 881, in copyfile
-    shutil.copyfileobj(source, outputfile)
-    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\shutil.py", line 204, in copyfileobj
-    fdst_write(buf)
-    ~~~~~~~~~~^^^^^
-  File "C:\Program Files\Python313\Lib\socketserver.py", line 845, in write
-    self._sock.sendall(b)
-    ~~~~~~~~~~~~~~~~~~^^^
-ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
-----------------------------------------
-----------------------------------------
-----------------------------------------
-Exception occurred during processing of request from ('::1', 61058, 0, 0)
-Exception occurred during processing of request from ('::1', 61056, 0, 0)
-----------------------------------------
-Traceback (most recent call last):
-Exception occurred during processing of request from ('::1', 61054, 0, 0)
-  File "C:\Program Files\Python313\Lib\socketserver.py", line 697, in process_request_thread
-    self.finish_request(request, client_address)
-    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 1320, in finish_request
-    self.RequestHandlerClass(request, client_address, self,
-    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-                             directory=args.directory)
-                             ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 672, in __init__
-    super().__init__(*args, **kwargs)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\socketserver.py", line 766, in __init__
-    self.handle()
-    ~~~~~~~~~~~^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 436, in handle
-    self.handle_one_request()
-    ~~~~~~~~~~~~~~~~~~~~~~~^^
-Traceback (most recent call last):
-  File "C:\Program Files\Python313\Lib\http\server.py", line 424, in handle_one_request
-    method()
-    ~~~~~~^^
-  File "C:\Program Files\Python313\Lib\socketserver.py", line 697, in process_request_thread
-    self.finish_request(request, client_address)
-    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 679, in do_GET
-    self.copyfile(f, self.wfile)
-    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 1320, in finish_request
-    self.RequestHandlerClass(request, client_address, self,
-    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-                             directory=args.directory)
-                             ^^^^^^^^^^^^^^^^^^^^^^^^^
-Traceback (most recent call last):
-  File "C:\Program Files\Python313\Lib\http\server.py", line 881, in copyfile
-    shutil.copyfileobj(source, outputfile)
-    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 672, in __init__
-    super().__init__(*args, **kwargs)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\shutil.py", line 204, in copyfileobj
-    fdst_write(buf)
-    ~~~~~~~~~~^^^^^
-  File "C:\Program Files\Python313\Lib\socketserver.py", line 766, in __init__
-    self.handle()
-    ~~~~~~~~~~~^^
-  File "C:\Program Files\Python313\Lib\socketserver.py", line 845, in write
-    self._sock.sendall(b)
-    ~~~~~~~~~~~~~~~~~~^^^
-ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
-  File "C:\Program Files\Python313\Lib\socketserver.py", line 697, in process_request_thread
-    self.finish_request(request, client_address)
-    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-----------------------------------------
-  File "C:\Program Files\Python313\Lib\http\server.py", line 1320, in finish_request
-    self.RequestHandlerClass(request, client_address, self,
-    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-                             directory=args.directory)
-                             ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 436, in handle
-    self.handle_one_request()
-    ~~~~~~~~~~~~~~~~~~~~~~~^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 672, in __init__
-    super().__init__(*args, **kwargs)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 424, in handle_one_request
-    method()
-    ~~~~~~^^
-  File "C:\Program Files\Python313\Lib\socketserver.py", line 766, in __init__
-    self.handle()
-    ~~~~~~~~~~~^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 436, in handle
-    self.handle_one_request()
-    ~~~~~~~~~~~~~~~~~~~~~~~^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 424, in handle_one_request
-    method()
-    ~~~~~~^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 679, in do_GET
-    self.copyfile(f, self.wfile)
-    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 679, in do_GET
-    self.copyfile(f, self.wfile)
-    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\http\server.py", line 881, in copyfile
-    shutil.copyfileobj(source, outputfile)
-    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\shutil.py", line 204, in copyfileobj
-    fdst_write(buf)
-    ~~~~~~~~~~^^^^^
-  File "C:\Program Files\Python313\Lib\socketserver.py", line 845, in write
-    self._sock.sendall(b)
-    ~~~~~~~~~~~~~~~~~~^^^
-ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
-----------------------------------------
-  File "C:\Program Files\Python313\Lib\http\server.py", line 881, in copyfile
-    shutil.copyfileobj(source, outputfile)
-    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\Python313\Lib\shutil.py", line 204, in copyfileobj
-    fdst_write(buf)
-    ~~~~~~~~~~^^^^^
-  File "C:\Program Files\Python313\Lib\socketserver.py", line 845, in write
-    self._sock.sendall(b)
-    ~~~~~~~~~~~~~~~~~~^^^
-ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
-----------------------------------------
-::1 - - [24/Mar/2026 14:47:57] "GET /assets/brand-slide-01.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:47:57] "GET /assets/brand-slide-02.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:47:57] "GET /assets/brand-slide-03.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:47:57] "GET /assets/brand-slide-04.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:48:05] "GET /levis.html HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 14:48:05] "GET /style.css?v=20260323-5 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 14:48:05] "GET /assets/levis-01.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 14:48:05] "GET /assets/levis-02.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 14:48:07] "GET /kora.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 14:48:07] "GET /style.css?v=20260324-5 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 14:48:07] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 14:48:11] "GET /charles-tyrwhitt.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 14:48:30] "GET /index.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 14:48:30] "GET /style.css?v=20260324-7 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 14:48:30] "GET /assets/logo-sindh-emporio.png?v=20260323-3 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 14:48:30] "GET /assets/gas-campaign-couple.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 14:48:32] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 16:51:26] "GET /assets/logo-kora.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 16:51:35] "GET /brand.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 16:51:35] "GET /style.css?v=20260323-5 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 16:51:35] "GET /assets/brand-slide-01.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 16:51:35] "GET /assets/brand-slide-03.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 16:51:35] "GET /assets/brand-slide-02.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 16:51:35] "GET /assets/brand-slide-04.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 16:51:35] "GET /assets/logo-superdry.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 16:51:35] "GET /assets/logo-kora-gold.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 16:51:47] "GET /levis.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 16:51:47] "GET /assets/levis-03.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 16:51:50] "GET /superdry.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 16:51:50] "GET /style.css?v=20260324-4 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 16:51:52] "GET /la-martina.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 16:51:55] "GET /gas.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 16:51:55] "GET /style.css?v=20260324-6 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 16:51:55] "GET /assets/gas-campaign-couple.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 16:51:55] "GET /assets/gas-hoodie-look.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 16:51:55] "GET /assets/gas-tee-denim-look.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 16:51:57] "GET /kora.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 16:51:57] "GET /style.css?v=20260324-5 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 16:52:01] "GET /basanti.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 16:52:06] "GET /armani-exchange.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 16:52:06] "GET /style.css?v=20260324-8 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 16:52:08] "GET /index.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 16:52:08] "GET /style.css?v=20260324-7 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 16:52:09] "GET /assets/charles-tyrwhitt-03.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 16:52:17] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 16:52:30] "GET /events.html HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 16:52:43] "GET /charles-tyrwhitt.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 16:52:43] "GET /assets/charles-tyrwhitt-02.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 16:52:43] "GET /assets/charles-tyrwhitt-01.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 16:53:10] "GET /assets/logo-levis.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 16:53:13] "GET /lacoste.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 18:38:41] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 18:38:47] "GET /brand.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 18:38:47] "GET /assets/brand-slide-01.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 18:38:47] "GET /style.css?v=20260323-5 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 18:38:47] "GET /assets/brand-slide-02.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 18:38:47] "GET /assets/brand-slide-03.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 18:38:47] "GET /assets/brand-slide-04.png HTTP/1.1" 200 -
-::1 - - [24/Mar/2026 18:38:47] "GET /assets/logo-charles-tyrwhitt.svg HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 18:38:47] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 18:38:47] "GET /assets/logo-gas.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 18:39:13] "GET /index.html HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 18:39:14] "GET /style.css?v=20260324-7 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 18:39:14] "GET /assets/logo-sindh-emporio.png?v=20260323-3 HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 18:39:14] "GET /assets/gas-campaign-couple.png HTTP/1.1" 304 -
-::1 - - [24/Mar/2026 18:39:16] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:18:47] "GET /index.html HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:22:26] "GET / HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:22:26] "GET /style.css?v=20260330-5 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:22:26] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:27] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:27] "GET /style.css?v=20260330-5 HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:27] "GET /assets/fontawesome/css/all.min.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:27] "GET /assets/logo-sindh-emporio.png?v=20260323-3 HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:27] "GET /assets/logo-lacoste-light.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:27] "GET /assets/lacoste-runway-campaign.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:27] "GET /assets/la-martina-02.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:27] "GET /assets/logo-la-martina.svg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:27] "GET /assets/superdry-01.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:27] "GET /assets/logo-superdry.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:27] "GET /assets/gas-campaign-couple.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:27] "GET /assets/armani-exchange-02.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:27] "GET /assets/logo-gas.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:27] "GET /assets/logo-armani-exchange.svg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:27] "GET /assets/charles-tyrwhitt-03.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:27] "GET /assets/levis-03.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:27] "GET /assets/logo-charles-tyrwhitt.svg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:27] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:27] "GET /assets/logo-levis.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:27] "GET /assets/logo-basanti.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:27] "GET /assets/kora-02.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:27] "GET /assets/brand-slide-01-opt.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:27] "GET /assets/logo-kora.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:27] "GET /assets/brand-slide-02-opt.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:27] "GET /assets/brand-slide-03-opt.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:27] "GET /assets/brand-slide-04-opt.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:27] "GET /assets/hero-home-opt.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:29] "GET /assets/8831849-uhd_3840_2160_30fps.mp4 HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:29] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:27:29] "GET /assets/fontawesome/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:55] "GET /index.html?ts=20260407-1125 HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:55] "GET /style.css?v=20260330-5 HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:55] "GET /assets/fontawesome/css/all.min.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:55] "GET /assets/logo-sindh-emporio.png?v=20260323-3 HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:55] "GET /assets/lacoste-runway-campaign.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:55] "GET /assets/logo-lacoste-light.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:55] "GET /assets/la-martina-02.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:55] "GET /assets/logo-la-martina.svg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:55] "GET /assets/superdry-01.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:55] "GET /assets/logo-superdry.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:55] "GET /assets/gas-campaign-couple.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:55] "GET /assets/logo-gas.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:55] "GET /assets/armani-exchange-02.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:55] "GET /assets/logo-armani-exchange.svg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:55] "GET /assets/charles-tyrwhitt-03.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:55] "GET /assets/logo-charles-tyrwhitt.svg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:55] "GET /assets/levis-03.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:55] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:55] "GET /assets/logo-levis.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:55] "GET /assets/logo-basanti.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:55] "GET /assets/kora-02.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:55] "GET /assets/brand-slide-01-opt.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:55] "GET /assets/brand-slide-02-opt.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:55] "GET /assets/logo-kora.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:55] "GET /assets/brand-slide-03-opt.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:55] "GET /assets/brand-slide-04-opt.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:55] "GET /assets/hero-home-opt.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:56] "GET /assets/8831849-uhd_3840_2160_30fps.mp4 HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:56] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:28:56] "GET /assets/fontawesome/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET / HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /style.css?v=20260330-5 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/fontawesome/css/all.min.css HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/hero-home-opt.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/logo-sindh-emporio.png?v=20260323-3 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/logo-lacoste-light.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/lacoste-runway-campaign.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/la-martina-02.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/logo-la-martina.svg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/superdry-01.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/logo-superdry.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/gas-campaign-couple.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/logo-gas.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/armani-exchange-02.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/logo-armani-exchange.svg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/charles-tyrwhitt-03.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/logo-charles-tyrwhitt.svg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/levis-03.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/logo-levis.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/logo-basanti.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/logo-kora.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/kora-02.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/brand-slide-01-opt.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/brand-slide-02-opt.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/brand-slide-03-opt.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/brand-slide-04-opt.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/8831849-uhd_3840_2160_30fps.mp4 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/fontawesome/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:31:40] "GET /assets/favicon-se.png?v=20260323-1 HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:36] "GET /index.html?ts=20260407-1133 HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:36] "GET /style.css?v=20260330-5 HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:36] "GET /assets/fontawesome/css/all.min.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:36] "GET /assets/logo-sindh-emporio.png?v=20260323-3 HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:36] "GET /assets/lacoste-runway-campaign.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:36] "GET /assets/logo-lacoste-light.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:36] "GET /assets/la-martina-02.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:36] "GET /assets/logo-la-martina.svg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:36] "GET /assets/superdry-01.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:36] "GET /assets/logo-superdry.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:36] "GET /assets/gas-campaign-couple.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:36] "GET /assets/logo-gas.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:36] "GET /assets/armani-exchange-02.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:36] "GET /assets/logo-armani-exchange.svg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:36] "GET /assets/charles-tyrwhitt-03.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:36] "GET /assets/logo-charles-tyrwhitt.svg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:36] "GET /assets/levis-03.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:36] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:36] "GET /assets/logo-levis.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:36] "GET /assets/logo-basanti.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:36] "GET /assets/kora-02.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:36] "GET /assets/logo-kora.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:36] "GET /assets/brand-slide-01-opt.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:36] "GET /assets/brand-slide-02-opt.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:36] "GET /assets/brand-slide-03-opt.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:36] "GET /assets/hero-home-opt.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:36] "GET /assets/brand-slide-04-opt.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:37] "GET /assets/8831849-uhd_3840_2160_30fps.mp4 HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:37] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:32:37] "GET /assets/fontawesome/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET / HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /style.css?v=20260330-5 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/fontawesome/css/all.min.css HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/logo-lacoste-light.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/logo-sindh-emporio.png?v=20260323-3 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/la-martina-02.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/lacoste-runway-campaign.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/superdry-01.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/logo-la-martina.svg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/logo-superdry.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/gas-campaign-couple.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/logo-gas.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/armani-exchange-02.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/logo-armani-exchange.svg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/charles-tyrwhitt-03.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/logo-charles-tyrwhitt.svg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/levis-03.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/logo-levis.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/logo-basanti.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/kora-02.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/logo-kora.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/brand-slide-01-opt.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/brand-slide-02-opt.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/fontawesome/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/brand-slide-03-opt.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/brand-slide-04-opt.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/hero-home-opt.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/8831849-uhd_3840_2160_30fps.mp4 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:33:12] "GET /assets/favicon-se.png?v=20260323-1 HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:05] "GET /index.html?ts=20260407-1142 HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:05] "GET /style.css?v=20260330-5 HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:05] "GET /assets/fontawesome/css/all.min.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:05] "GET /assets/logo-sindh-emporio.png?v=20260323-3 HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:05] "GET /assets/lacoste-runway-campaign.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:05] "GET /assets/logo-lacoste-light.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:05] "GET /assets/la-martina-02.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:05] "GET /assets/logo-la-martina.svg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:05] "GET /assets/superdry-01.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:05] "GET /assets/logo-superdry.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:05] "GET /assets/logo-gas.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:05] "GET /assets/gas-campaign-couple.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:05] "GET /assets/logo-armani-exchange.svg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:05] "GET /assets/armani-exchange-02.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:05] "GET /assets/charles-tyrwhitt-03.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:05] "GET /assets/logo-charles-tyrwhitt.svg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:05] "GET /assets/levis-03.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:05] "GET /assets/logo-levis.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:05] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:05] "GET /assets/logo-basanti.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:05] "GET /assets/kora-02.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:05] "GET /assets/logo-kora.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:05] "GET /assets/brand-slide-01-opt.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:05] "GET /assets/brand-slide-02-opt.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:05] "GET /assets/brand-slide-03-opt.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:05] "GET /assets/brand-slide-04-opt.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:05] "GET /assets/hero-home-opt.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:06] "GET /assets/8831849-uhd_3840_2160_30fps.mp4 HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:06] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [07/Apr/2026 11:34:06] "GET /assets/fontawesome/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET / HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /style.css?v=20260330-5 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/fontawesome/css/all.min.css HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/hero-home-opt.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/logo-sindh-emporio.png?v=20260323-3 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/lacoste-runway-campaign.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/logo-lacoste-light.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/la-martina-02.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/superdry-01.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/logo-la-martina.svg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/logo-superdry.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/gas-campaign-couple.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/logo-gas.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/armani-exchange-02.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/logo-armani-exchange.svg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/charles-tyrwhitt-03.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/fontawesome/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/levis-03.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/logo-charles-tyrwhitt.svg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/logo-levis.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/logo-basanti.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/kora-02.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/logo-kora.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/brand-slide-02-opt.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/brand-slide-01-opt.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/brand-slide-04-opt.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/brand-slide-03-opt.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:18] "GET /assets/8831849-uhd_3840_2160_30fps.mp4 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:19] "GET /assets/favicon-se.png?v=20260323-1 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:45] "GET /brand.html HTTP/1.1" 304 -
+::1 - - [07/Apr/2026 11:35:45] "GET /style.css?v=20260331-6 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:45] "GET /assets/brands-hero-shopping-bags.png?v=20260406-1 HTTP/1.1" 304 -
+::1 - - [07/Apr/2026 11:35:48] "GET /events.html HTTP/1.1" 304 -
+::1 - - [07/Apr/2026 11:35:48] "GET /assets/events-basement-launch-11.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:48] "GET /assets/events-grand-launch-01.jpg HTTP/1.1" 304 -
+::1 - - [07/Apr/2026 11:35:48] "GET /assets/events-brands-hero-backdrop-h.png?v=20260331-4 HTTP/1.1" 304 -
+::1 - - [07/Apr/2026 11:35:48] "GET /assets/events-basement-launch-14.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:48] "GET /assets/events-basement-launch-08.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:48] "GET /assets/events-basement-launch-12.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:35:50] "GET /assets/events-grand-launch-02.jpg HTTP/1.1" 304 -
+::1 - - [07/Apr/2026 11:35:50] "GET /assets/events-grand-launch-03.jpg HTTP/1.1" 304 -
+::1 - - [07/Apr/2026 11:35:50] "GET /assets/events-grand-launch-04.jpg HTTP/1.1" 304 -
+::1 - - [07/Apr/2026 11:35:50] "GET /assets/events-grand-launch-06.jpg HTTP/1.1" 304 -
+::1 - - [07/Apr/2026 11:35:50] "GET /assets/events-grand-launch-05.jpg HTTP/1.1" 304 -
+::1 - - [07/Apr/2026 11:37:57] "GET / HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:41:12] "GET /brand.html HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:41:12] "GET /style.css?v=20260331-6 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:41:12] "GET /assets/fontawesome/css/all.min.css HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:41:12] "GET /assets/brands-hero-shopping-bags.png?v=20260406-1 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:41:12] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:41:12] "GET /assets/events-brands-hero-backdrop-h.png?v=20260331-4 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:41:12] "GET /assets/logo-armani-exchange.svg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:41:12] "GET /assets/logo-charles-tyrwhitt.svg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:41:12] "GET /assets/logo-gas.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:41:12] "GET /assets/logo-basanti.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:41:12] "GET /assets/logo-kora-gold.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:41:12] "GET /assets/logo-la-martina.svg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:41:12] "GET /assets/logo-lacoste-from-jpg.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:41:12] "GET /assets/logo-levis.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:41:12] "GET /assets/fontawesome/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:41:12] "GET /assets/logo-superdry.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:41:13] "GET /assets/favicon-se.png?v=20260323-1 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:43:05] "GET /brand.html HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:43:05] "GET /style.css?v=20260331-6 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:43:05] "GET /assets/fontawesome/css/all.min.css HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:43:05] "GET /assets/brands-hero-shopping-bags.png?v=20260406-1 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:43:05] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:43:05] "GET /assets/fontawesome/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:43:05] "GET /assets/logo-armani-exchange.svg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:43:05] "GET /assets/logo-basanti.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:43:05] "GET /assets/logo-gas.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:43:05] "GET /assets/logo-charles-tyrwhitt.svg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:43:05] "GET /assets/logo-kora-gold.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:43:05] "GET /assets/logo-la-martina.svg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:43:05] "GET /assets/logo-lacoste-from-jpg.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:43:05] "GET /assets/logo-levis.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:43:05] "GET /assets/logo-superdry.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:43:05] "GET /assets/favicon-se.png?v=20260323-1 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:44:34] "GET /brand.html HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:44:34] "GET /style.css?v=20260331-6 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:44:34] "GET /assets/fontawesome/css/all.min.css HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:44:34] "GET /assets/brands-hero-shopping-bags.png?v=20260406-1 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:44:34] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:44:34] "GET /assets/events-brands-hero-backdrop-h.png?v=20260331-4 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:44:34] "GET /assets/fontawesome/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:44:34] "GET /assets/logo-armani-exchange.svg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:44:34] "GET /assets/logo-basanti.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:44:34] "GET /assets/logo-charles-tyrwhitt.svg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:44:34] "GET /assets/logo-gas.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:44:34] "GET /assets/logo-kora-gold.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:44:34] "GET /assets/logo-lacoste-from-jpg.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:44:34] "GET /assets/logo-la-martina.svg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:44:34] "GET /assets/logo-levis.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:44:34] "GET /assets/logo-superdry.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:44:34] "GET /assets/favicon-se.png?v=20260323-1 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:44:42] "GET /index.html HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:44:42] "GET /style.css?v=20260330-5 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:44:43] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /index.html HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /style.css?v=20260330-5 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/fontawesome/css/all.min.css HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/hero-home-opt.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/logo-sindh-emporio.png?v=20260323-3 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/logo-lacoste-light.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/lacoste-runway-campaign.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/superdry-01.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/la-martina-02.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/logo-la-martina.svg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/logo-superdry.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/gas-campaign-couple.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/logo-gas.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/armani-exchange-02.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/logo-armani-exchange.svg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/charles-tyrwhitt-03.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/logo-charles-tyrwhitt.svg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/levis-03.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/logo-levis.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/fontawesome/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/logo-basanti.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/kora-02.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/brand-slide-01-opt.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/logo-kora.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/brand-slide-02-opt.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/brand-slide-03-opt.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/brand-slide-04-opt.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:08] "GET /assets/8831849-uhd_3840_2160_30fps.mp4 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:09] "GET /assets/favicon-se.png?v=20260323-1 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:20] "GET /style.css?v=20260331-6 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:27] "GET /assets/events-basement-launch-11.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:27] "GET /assets/events-basement-launch-14.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:27] "GET /assets/events-basement-launch-08.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:49:27] "GET /assets/events-basement-launch-12.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:50:16] "GET /events.html HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:50:16] "GET /style.css?v=20260331-6 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:50:16] "GET /assets/fontawesome/css/all.min.css HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:50:16] "GET /assets/events-basement-launch-11.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:50:16] "GET /assets/events-basanti-summer-01.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:50:16] "GET /assets/events-grand-launch-01.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:50:16] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:50:16] "GET /assets/events-brands-hero-backdrop-h.png?v=20260331-4 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:50:17] "GET /assets/fontawesome/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:50:17] "GET /assets/events-basanti-summer-03.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:50:17] "GET /assets/events-basanti-summer-02.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:50:17] "GET /assets/events-basanti-summer-05.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:50:17] "GET /assets/events-basanti-summer-06.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:50:17] "GET /assets/events-basanti-summer-04.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:50:17] "GET /assets/events-basement-launch-14.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:50:17] "GET /assets/events-basement-launch-03.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:50:17] "GET /assets/events-basement-launch-01.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:50:17] "GET /assets/events-basement-launch-08.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:50:17] "GET /assets/events-basement-launch-12.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:50:17] "GET /assets/events-grand-launch-02.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:50:17] "GET /assets/events-grand-launch-03.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:50:17] "GET /assets/events-grand-launch-04.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:50:17] "GET /assets/events-grand-launch-05.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:50:17] "GET /assets/events-grand-launch-06.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:50:17] "GET /assets/favicon-se.png?v=20260323-1 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:53:53] "GET /events.html HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:53:53] "GET /style.css?v=20260331-6 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:53:53] "GET /assets/fontawesome/css/all.min.css HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:53:53] "GET /assets/events-basanti-summer-01.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:53:53] "GET /assets/events-basement-launch-11.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:53:53] "GET /assets/events-grand-launch-01.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:53:53] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:53:53] "GET /assets/events-brands-hero-backdrop-h.png?v=20260331-4 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:53:53] "GET /assets/fontawesome/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:53:53] "GET /assets/events-basanti-summer-02.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:53:53] "GET /assets/events-basanti-summer-05.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:53:53] "GET /assets/events-basanti-summer-03.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:53:53] "GET /assets/events-basanti-summer-04.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:53:53] "GET /assets/events-basanti-summer-06.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:53:53] "GET /assets/events-basement-launch-03.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:53:53] "GET /assets/events-basement-launch-14.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:53:53] "GET /assets/events-basement-launch-01.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:53:53] "GET /assets/events-basement-launch-08.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:53:53] "GET /assets/events-basement-launch-12.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:53:53] "GET /assets/events-grand-launch-02.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:53:53] "GET /assets/events-grand-launch-03.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:53:53] "GET /assets/events-grand-launch-04.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:53:53] "GET /assets/events-grand-launch-05.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:53:54] "GET /assets/events-grand-launch-06.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:53:54] "GET /assets/favicon-se.png?v=20260323-1 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:54:44] "GET /events.html HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:54:44] "GET /style.css?v=20260331-6 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:54:44] "GET /assets/fontawesome/css/all.min.css HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:54:44] "GET /assets/events-basanti-summer-01.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:54:44] "GET /assets/events-grand-launch-01.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:54:44] "GET /assets/events-basement-launch-11.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:54:44] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:54:44] "GET /assets/events-brands-hero-backdrop-h.png?v=20260331-4 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:54:44] "GET /assets/fontawesome/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:54:44] "GET /assets/events-basanti-summer-03.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:54:44] "GET /assets/events-basanti-summer-02.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:54:44] "GET /assets/events-basanti-summer-04.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:54:44] "GET /assets/events-basanti-summer-05.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:54:44] "GET /assets/events-basanti-summer-06.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:54:44] "GET /assets/events-basement-launch-03.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:54:44] "GET /assets/events-basement-launch-14.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:54:44] "GET /assets/events-basement-launch-01.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:54:44] "GET /assets/events-basement-launch-08.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:54:44] "GET /assets/events-basement-launch-12.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:54:44] "GET /assets/events-grand-launch-02.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:54:44] "GET /assets/events-grand-launch-03.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:54:44] "GET /assets/events-grand-launch-04.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:54:44] "GET /assets/events-grand-launch-05.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:54:44] "GET /assets/events-grand-launch-06.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:54:46] "GET /assets/favicon-se.png?v=20260323-1 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:16] "GET /events.html HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:16] "GET /style.css?v=20260331-6 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:16] "GET /assets/fontawesome/css/all.min.css HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:16] "GET /assets/events-grand-launch-01.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:16] "GET /assets/events-basanti-summer-01.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:16] "GET /assets/events-basement-launch-11.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:16] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:16] "GET /assets/events-brands-hero-backdrop-h.png?v=20260331-4 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:16] "GET /assets/fontawesome/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:16] "GET /assets/favicon-se.png?v=20260323-1 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:16] "GET /assets/events-basanti-summer-05.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:16] "GET /assets/events-basanti-summer-03.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:16] "GET /assets/events-basanti-summer-06.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:16] "GET /assets/events-basanti-summer-04.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:16] "GET /assets/events-basement-launch-03.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:16] "GET /assets/events-basanti-summer-02.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:16] "GET /assets/events-basement-launch-14.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:16] "GET /assets/events-basement-launch-01.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:16] "GET /assets/events-basement-launch-08.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:16] "GET /assets/events-basement-launch-12.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:16] "GET /assets/events-grand-launch-02.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:16] "GET /assets/events-grand-launch-03.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:16] "GET /assets/events-grand-launch-04.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:16] "GET /assets/events-grand-launch-05.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:16] "GET /assets/events-grand-launch-06.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:35] "GET /events.html HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:35] "GET /style.css?v=20260331-6 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:35] "GET /assets/fontawesome/css/all.min.css HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:35] "GET /assets/events-basanti-summer-01.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:35] "GET /assets/events-basement-launch-11.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:35] "GET /assets/events-grand-launch-01.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:35] "GET /assets/logo-nav-sindh-emporio-white.png?v=20260323-1 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:35] "GET /assets/events-brands-hero-backdrop-h.png?v=20260331-4 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:35] "GET /assets/events-basanti-summer-11.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:35] "GET /assets/events-basanti-summer-07.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:35] "GET /assets/events-basanti-summer-09.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:35] "GET /assets/events-basanti-summer-08.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:35] "GET /assets/events-basanti-summer-10.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:35] "GET /assets/events-basanti-summer-12.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:35] "GET /assets/fontawesome/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:35] "GET /assets/events-basanti-summer-13.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:36] "GET /assets/events-basement-launch-03.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:36] "GET /assets/events-basement-launch-14.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:36] "GET /assets/events-basement-launch-01.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:36] "GET /assets/events-basement-launch-08.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:36] "GET /assets/events-basement-launch-12.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:36] "GET /assets/events-basement-launch-05.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:36] "GET /assets/events-basement-launch-15.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:36] "GET /assets/events-basement-launch-02.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:36] "GET /assets/events-basement-launch-10.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:36] "GET /assets/events-basement-launch-06.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:36] "GET /assets/events-basement-launch-13.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:37] "GET /assets/events-basement-launch-04.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:37] "GET /assets/events-basement-launch-07.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:37] "GET /assets/events-basement-launch-09.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:37] "GET /assets/events-grand-launch-02.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:37] "GET /assets/events-grand-launch-03.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:37] "GET /assets/events-grand-launch-04.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:37] "GET /assets/events-grand-launch-05.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:37] "GET /assets/events-grand-launch-06.jpg HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:37] "GET /assets/events-basanti-summer-02.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:37] "GET /assets/events-basanti-summer-03.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:37] "GET /assets/events-basanti-summer-04.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:37] "GET /assets/events-basanti-summer-05.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:37] "GET /assets/events-basanti-summer-06.webp HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:55:38] "GET /assets/favicon-se.png?v=20260323-1 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:56:07] "GET /index.html HTTP/1.1" 304 -
+::1 - - [07/Apr/2026 11:56:07] "GET /style.css?v=20260330-5 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:56:07] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 11:57:17] "GET /style.css?v=20260331-6 HTTP/1.1" 304 -
+::1 - - [07/Apr/2026 11:57:25] "GET /events.html HTTP/1.1" 304 -
+::1 - - [07/Apr/2026 11:57:32] "GET /style.css?v=20260330-5 HTTP/1.1" 304 -
+::1 - - [07/Apr/2026 12:00:07] "GET /events.html HTTP/1.1" 304 -
+::1 - - [07/Apr/2026 12:00:07] "GET /style.css?v=20260331-6 HTTP/1.1" 304 -
+::1 - - [07/Apr/2026 12:00:28] "GET /basanti.html HTTP/1.1" 304 -
+::1 - - [07/Apr/2026 12:00:28] "GET /style.css?v=20260327-1 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 12:00:33] "GET /armani-exchange.html HTTP/1.1" 304 -
+::1 - - [07/Apr/2026 12:20:12] "GET /index.html HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 12:20:12] "GET /style.css?v=20260330-5 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 12:20:12] "GET /assets/basanti-01-upright.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 12:20:20] "GET /events.html HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 12:20:20] "GET /assets/events-basement-launch-11.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 12:20:20] "GET /style.css?v=20260331-6 HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 12:20:20] "GET /assets/events-basement-launch-14.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 12:20:20] "GET /assets/events-basement-launch-08.png HTTP/1.1" 200 -
+::1 - - [07/Apr/2026 12:20:20] "GET /assets/events-basement-launch-12.png HTTP/1.1" 200 -
