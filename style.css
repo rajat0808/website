@@ -2061,6 +2061,13 @@ body.menu-open .menu-lines span:last-child {
   transform-origin: center;
 }
 
+.brands-logo-item--sindh-emporio .brands-featured-logo {
+  transform: translate(-50%, -50%) scale(1.16);
+  transform-origin: center;
+  filter: none;
+  mix-blend-mode: multiply;
+}
+
 .brands-logo-item--lacoste {
   --logo-scale: 0.95;
 }
@@ -2091,6 +2098,10 @@ body.menu-open .menu-lines span:last-child {
 
 .brands-logo-item--kora {
   --logo-scale: 1;
+}
+
+.brands-logo-item--sindh-emporio {
+  --logo-scale: 1.9;
 }
 
 @keyframes brandsLogoMarquee {
@@ -4668,8 +4679,8 @@ body.event-gallery-open {
   color: var(--brand-ink);
   background: transparent;
   text-align: center;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+  width: 100%;
+  margin-left: 0;
 }
 
 .brand-page .brand-hero-text {
@@ -6018,6 +6029,15 @@ body.event-gallery-open {
   --luxury-card-bg: #1e3a8a;
 }
 
+.brand-page .luxury-card--sindh-emporio {
+  --brand-logo-scale: 0.98;
+  --luxury-card-bg: #ffffff;
+}
+
+.brand-page .luxury-card--sindh-emporio .luxury-card__logo img {
+  mix-blend-mode: multiply;
+}
+
 .brand-page .luxury-card--armani .luxury-card__logo img,
 .brand-page .luxury-card--la-martina .luxury-card__logo img {
   filter: brightness(0) invert(1);
@@ -6213,6 +6233,10 @@ body.event-gallery-open {
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--charles-tyrwhitt {
   --brand-logo-scale: 1.1;
+}
+
+.brand-page:not([class*="brand-page--"]) .luxury-card--sindh-emporio {
+  --brand-logo-scale: 0.9;
 }
 
 .brand-page:not([class*="brand-page--"])
