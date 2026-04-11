@@ -421,7 +421,7 @@ body.menu-open .menu-lines span:last-child {
   display: block;
   text-align: center;
   font-family: var(--font-serif);
-  font-size: clamp(0.77rem, 1vw, 1.1rem);
+  font-size: clamp(0.85rem, 1vw, 1rem);
   letter-spacing: 0.2em;
   color: #122847;
   text-transform: uppercase;
@@ -769,9 +769,9 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .about-feature--home .about-read-more {
-  font-size: 0.9rem;
-  min-height: 2.75rem;
-  min-width: 10rem;
+  font-size: 0.78rem; /* Decreased from 0.9rem */
+  min-height: 2.25rem; /* Decreased from 2.75rem */
+  min-width: 8rem; /* Decreased from 10rem */
   letter-spacing: 0.12em;
 }
 
@@ -841,6 +841,7 @@ body.menu-open .menu-lines span:last-child {
   .header-container .logo {
     width: 8.4rem;
     height: 2.05rem;
+    margin-top: -10px;
   }
 
   .menu-layout {
@@ -868,6 +869,7 @@ body.menu-open .menu-lines span:last-child {
   .about-grid {
     grid-template-columns: 1fr;
     gap: 1.8rem;
+    margin-top: 1.2rem;
   }
 
   .about-display {
@@ -928,7 +930,11 @@ body.menu-open .menu-lines span:last-child {
   }
 
   .hero {
-    height: 65vh;
+    height: 48vh;
+  }
+
+  .about-feature {
+    padding-top: 1.5rem;
   }
 
   .hero--classic {
@@ -955,11 +961,12 @@ body.menu-open .menu-lines span:last-child {
   }
 
   .gallery-heading {
-    padding-bottom: 0.6rem;
+    padding-top: 2rem;
+    padding-bottom: 0.8rem;
   }
 
   .gallery-heading+.hero {
-    margin-top: 4px;
+    margin-top: 0.6rem;
   }
 
   .hero-side-tag {
@@ -1013,6 +1020,8 @@ body.menu-open .menu-lines span:last-child {
   .about-kicker {
     text-align: left;
     letter-spacing: 0.15em;
+    font-size: 1.25rem; /* Increased from 0.95rem */
+    font-weight: 700;
   }
 
   .about-copy p {
@@ -1024,7 +1033,7 @@ body.menu-open .menu-lines span:last-child {
   }
 
   .hero {
-    height: 60vh;
+    height: 42vh;
   }
 
   .hero--classic {
@@ -1076,6 +1085,7 @@ body.menu-open .menu-lines span:last-child {
   .header-container .logo {
     width: 7.2rem;
     height: 1.8rem;
+    margin-top: -12px;
   }
 
   .hero-title {
@@ -1611,7 +1621,7 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .gallery-heading {
-  padding: clamp(2.2rem, 5vw, 3.4rem) 5% clamp(1.2rem, 2.8vw, 2rem);
+  padding: clamp(3rem, 5.5vw, 6rem) 5% clamp(1rem, 2.2vw, 1.8rem);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1619,7 +1629,7 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .gallery-heading+.hero {
-  margin-top: 0;
+  margin-top: 0.8rem;
 }
 
 .gallery-heading+.hero.hero--classic {
@@ -1805,6 +1815,7 @@ body.menu-open .menu-lines span:last-child {
 /* Brand Spotlight */
 .brand-spotlight {
   background: #ffffff;
+  padding-bottom: clamp(1.2rem, 3.2vw, 2.4rem);
 }
 
 .brand-intro {
@@ -2190,7 +2201,7 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .brands-logo-item--hugo {
-  --logo-scale: 1.1;
+  --logo-scale: 0.85;
 }
 
 .brands-logo-item--hugo.brands-logo-item--featured {
@@ -2198,7 +2209,7 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .brands-logo-item--hugo .brands-featured-logo {
-  transform: translate(-50%, -50%) scale(1.35);
+  transform: translate(-50%, -50%) scale(0.9);
   transform-origin: center;
   filter: brightness(0) saturate(100%);
   mix-blend-mode: multiply;
@@ -3082,8 +3093,9 @@ body.event-gallery-open {
 
 .index-page .event-card--home p {
   margin: 0;
-  font-size: clamp(1.12rem, 2.1vw, 1.26rem);
-  line-height: 1.4;
+  font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+  line-height: 1.5;
+  color: #000000;
 }
 
 .index-page .event-card--home .events-cta {
@@ -3119,8 +3131,8 @@ body.event-gallery-open {
   margin-left: auto;
   margin-right: auto;
   color: #000000;
-  font-size: 1.03rem;
-  line-height: 1.45;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .event-card--home .event-pills {
@@ -3256,42 +3268,37 @@ body.event-gallery-open {
 
   .index-page .contact-title {
     white-space: normal;
-    line-height: 1.1;
-    font-size: clamp(1.6rem, 7.2vw, 2.45rem);
-    letter-spacing: 0.04em;
+    line-height: 1.15;
+    font-size: clamp(1.4rem, 6.5vw, 2.1rem);
+    letter-spacing: 0.05em;
+    margin-bottom: 1.6rem;
   }
 
   .index-page .event-card--home .events-cta {
     width: auto;
     min-width: 0;
     min-height: 0;
-    padding: 0.7rem 2.2rem;
-    font-size: 0.72rem;
+    padding: 0.85rem 2.4rem;
+    font-size: 0.75rem;
     letter-spacing: 0.18em;
     border-radius: 2px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   }
 
   .index-page .event-card--home p {
-    font-size: clamp(0.88rem, 3.8vw, 1.05rem);
-    line-height: 1.5;
-    color: #555;
+    font-size: clamp(0.75rem, 3.2vw, 0.85rem);
+    line-height: 1.6;
+    color: #000000;
   }
 
   .index-page .event-card--home {
-    gap: 0.8rem;
-    padding-bottom: 0.5rem;
-  }
-
-  .index-page .contact-title {
-    font-size: clamp(1.3rem, 6vw, 1.9rem);
-    letter-spacing: 0.05em;
-    margin-bottom: 0.6rem;
+    gap: 1.4rem;
+    padding-bottom: 0.8rem;
   }
 
   .index-page .contact.section-padding {
-    padding-top: 1rem;
-    padding-bottom: 1.2rem;
+    padding-top: 2.8rem;
+    padding-bottom: 2.4rem;
   }
 }
 
@@ -4672,11 +4679,20 @@ body.event-gallery-open {
   justify-self: flex-start;
 }
 
+.brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup {
+  margin-top: clamp(0.7rem, 1.6vw, 1rem);
+}
+
 .brand-page .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
   width: auto;
   height: clamp(110px, 12vw, 150px);
   max-width: 320px;
   max-height: none;
+}
+
+.brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
+  height: clamp(160px, 16vw, 232px);
+  max-width: min(100%, 450px);
 }
 
 .brand-page .brand-profile--logo-only .brand-profile-grid .brand-hero-meta {
@@ -4967,6 +4983,34 @@ body.event-gallery-open {
   .brand-page .brand-profile-grid .brand-hero-panel {
     border-bottom: 1px solid #9b7b55;
     padding-bottom: 1.4rem;
+    text-align: center;
+  }
+
+  .brand-page .brand-profile-grid .brand-hero-logo-lockup {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto 1.2rem;
+  }
+
+  .brand-page .brand-profile-grid .brand-hero-logo-lockup img {
+    max-height: clamp(112px, 13vw, 184px);
+    margin: 0 auto;
+  }
+
+  .brand-page .brand-hero-meta {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .brand-page--armani .brand-profile-grid .brand-hero-logo-lockup img {
+    max-height: clamp(260px, 32vw, 320px);
+  }
+
+  .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
+    height: clamp(156px, 35vw, 250px);
+    max-width: min(100%, 460px);
+    max-height: none;
   }
 
   .brand-page .brand-profile--logo-only .brand-profile-grid .brand-hero-panel {
@@ -5670,7 +5714,7 @@ body.event-gallery-open {
   }
 
   .brand-page .brand-profile-actions {
-    justify-content: center;
+    justify-content: flex-end;
   }
 }
 
@@ -5867,7 +5911,7 @@ body.event-gallery-open {
 .brand-page .brand-layout {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(0.5rem, 1.1vw, 1.1rem);
+  gap: clamp(1.2rem, 2.8vw, 2.8rem);
   align-items: stretch;
 }
 
@@ -5924,7 +5968,7 @@ body.event-gallery-open {
 .brand-page .brand-feature-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(1.5rem, 3vw, 2.6rem);
+  gap: clamp(2rem, 4vw, 3.5rem);
   width: min(72rem, 100%);
   align-items: stretch;
 }
@@ -6119,7 +6163,7 @@ body.event-gallery-open {
 .brand-page .luxury-showcase {
   position: relative;
   --brand-logo-height: clamp(64px, 9vw, 110px);
-  padding: clamp(3rem, 6vw, 6rem) 4%;
+  padding: clamp(4.5rem, 9vw, 9rem) 4%;
   color: var(--brand-ink);
   background: #ffffff;
   overflow: hidden;
@@ -6161,7 +6205,7 @@ body.event-gallery-open {
 
 .brand-page .luxury-showcase__header {
   max-width: 680px;
-  margin-bottom: clamp(2rem, 4vw, 3rem);
+  margin-bottom: clamp(2.8rem, 5.5vw, 4.5rem);
 }
 
 .brand-page .luxury-showcase__kicker {
@@ -6190,7 +6234,7 @@ body.event-gallery-open {
 
 .brand-page .luxury-grid {
   display: grid;
-  gap: 0.35rem;
+  gap: 1.25rem;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
@@ -6264,16 +6308,16 @@ body.event-gallery-open {
 }
 
 .brand-page .luxury-card--armani {
-  --brand-logo-scale: 1.32;
+  --brand-logo-scale: 1.05;
   --luxury-card-bg: #000000;
 }
 
 .brand-page .luxury-card--basanti {
-  --brand-logo-scale: 3.5;
+  --brand-logo-scale: 0.85;
 }
 
 .brand-page .luxury-card--kora {
-  --brand-logo-scale: 1.3;
+  --brand-logo-scale: 1.15;
   --luxury-card-bg: #0b1f4b;
 }
 
@@ -6298,7 +6342,7 @@ body.event-gallery-open {
 }
 
 .brand-page .luxury-card--levis {
-  --brand-logo-scale: 1.07;
+  --brand-logo-scale: 0.85;
   --luxury-card-bg: #c1121f;
 }
 
@@ -6314,9 +6358,7 @@ body.event-gallery-open {
 
 .brand-page .luxury-card--hugo .luxury-card__logo img {
   filter: brightness(0);
-  width: min(80%, 280px);
-  height: auto;
-  max-height: 60%;
+  max-width: 48%;
 }
 
 .brand-page .luxury-card--charles-tyrwhitt {
@@ -6325,7 +6367,7 @@ body.event-gallery-open {
 }
 
 .brand-page .luxury-card--sindh-emporio {
-  --brand-logo-scale: 0.4;
+  --brand-logo-scale: 0.35;
   --luxury-card-bg: #000000;
 }
 
@@ -6510,7 +6552,7 @@ body.event-gallery-open {
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--basanti {
-  --brand-logo-scale: 1.4;
+  --brand-logo-scale: 1.22;
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--kora {
@@ -6526,7 +6568,7 @@ body.event-gallery-open {
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--superdry {
-  --brand-logo-scale: 0.86;
+  --brand-logo-scale: 1.06;
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--saresa {
@@ -6546,7 +6588,7 @@ body.event-gallery-open {
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--sindh-emporio {
-  --brand-logo-scale: 0.82;
+  --brand-logo-scale: 0.62;
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--superdry .luxury-card__logo img {
@@ -6588,11 +6630,25 @@ body.event-gallery-open {
 @media (max-width: 640px) {
   .brand-page .luxury-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.8rem;
   }
 
   .brand-page .luxury-card {
     max-width: 100%;
     justify-self: center;
+    padding: 0.5rem;
+  }
+
+  .brand-page:not([class*="brand-page--"]) .luxury-card__logo img {
+    height: clamp(80px, 24vw, 120px);
+  }
+
+  .brand-page:not([class*="brand-page--"]) .luxury-card--basanti {
+    --brand-logo-scale: 1.62;
+  }
+
+  .brand-page:not([class*="brand-page--"]) .luxury-card--superdry .luxury-card__logo img {
+    height: clamp(80px, 24vw, 120px);
   }
 }
 
