@@ -5200,27 +5200,17 @@ body.event-gallery-open {
 /* Brand catalog hero (brand.html) */
 .brand-page:not([class*="brand-page--"]) .brand-hero {
   padding: 0;
-  background: #000000;
+  background: #f7f2e8;
 }
 
 .brand-page:not([class*="brand-page--"]) .brand-hero-media {
   height: clamp(16rem, 42vw, 24rem);
-  background:
-    linear-gradient(180deg, #fbf8f2 0%, #f3eee5 100%);
+  background: #f7f2e8;
   overflow: hidden;
 }
 
 .brand-page:not([class*="brand-page--"]) .brand-hero-media::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(
-    90deg,
-    rgba(251, 248, 242, 0.16) 0%,
-    rgba(251, 248, 242, 0.06) 40%,
-    rgba(251, 248, 242, 0) 100%
-  );
+  content: none;
 }
 
 .brand-page:not([class*="brand-page--"]) .brand-hero-media::after {
@@ -5233,12 +5223,12 @@ body.event-gallery-open {
   width: 100%;
   height: 100%;
   max-height: none;
-  object-fit: cover !important;
+  object-fit: contain !important;
   object-position: center center;
   filter: none;
   opacity: 1 !important;
   z-index: 0;
-  transform: scale(1.08);
+  transform: scale(1);
   transform-origin: center center;
 }
 
@@ -6373,12 +6363,12 @@ body.event-gallery-open {
 }
 
 .brand-page .luxury-card--armani {
-  --brand-logo-scale: 1.05;
+  --brand-logo-scale: 0.98;
   --luxury-card-bg: #000000;
 }
 
 .brand-page .luxury-card--basanti {
-  --brand-logo-scale: 0.85;
+  --brand-logo-scale: 2.10;
 }
 
 .brand-page .luxury-card--kora {
@@ -6606,7 +6596,7 @@ body.event-gallery-open {
 
 .brand-page:not([class*="brand-page--"]) .luxury-card__logo img {
   width: auto;
-  height: clamp(179px, calc(18vw - 1px), 239px);
+  height: clamp(160px, calc(16vw - 1px), 210px);
   max-width: 96%;
   max-height: none;
   transform: translate(-50%, -50%) scale(var(--brand-logo-scale));
@@ -6617,11 +6607,11 @@ body.event-gallery-open {
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--basanti {
-  --brand-logo-scale: 1.34;
+  --brand-logo-scale: 2.10;
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--kora {
-  --brand-logo-scale: 1.08;
+  --brand-logo-scale: 1.15;
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--lacoste {
@@ -6661,27 +6651,31 @@ body.event-gallery-open {
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--sindh-emporio {
-  --brand-logo-scale: 0.62;
+  --brand-logo-scale: 0.85;
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--superdry .luxury-card__logo img {
-  height: clamp(179px, calc(18vw - 1px), 239px);
+  height: clamp(160px, calc(16vw - 1px), 210px);
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--lacoste .luxury-card__logo img {
-  width: 92%;
-  height: auto;
-  max-width: 92%;
-  max-height: 62%;
-  transform: translate(-50%, -50%);
+  width: auto;
+  height: clamp(160px, calc(16vw - 1px), 210px);
+  max-width: 96%;
+  max-height: none;
+  transform: translate(-50%, -50%) scale(var(--brand-logo-scale));
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--saresa .luxury-card__logo img {
-  width: 76%;
-  height: auto;
-  max-width: 76%;
-  max-height: 72%;
-  transform: translate(-50%, -50%);
+  width: auto;
+  height: clamp(160px, calc(16vw - 1px), 210px);
+  max-width: 96%;
+  max-height: none;
+  transform: translate(-50%, -50%) scale(var(--brand-logo-scale));
+}
+
+.brand-page:not([class*="brand-page--"]) .luxury-card--boss .luxury-card__logo img {
+  max-width: 96%;
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card__meta {
@@ -6713,7 +6707,7 @@ body.event-gallery-open {
   }
 
   .brand-page:not([class*="brand-page--"]) .luxury-card__logo img {
-    height: clamp(80px, 24vw, 120px);
+    height: clamp(72px, 21vw, 108px);
   }
 
   .brand-page:not([class*="brand-page--"]) .luxury-card--basanti {
@@ -6721,7 +6715,7 @@ body.event-gallery-open {
   }
 
   .brand-page:not([class*="brand-page--"]) .luxury-card--superdry .luxury-card__logo img {
-    height: clamp(80px, 24vw, 120px);
+    height: clamp(72px, 21vw, 108px);
   }
 
   .brand-page:not([class*="brand-page--"]) .luxury-card--la-martina {
