@@ -2211,7 +2211,7 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .brands-logo-item--basanti .brands-featured-logo {
-  transform: translate(-50%, -50%) scale(2.8);
+  transform: translate(-50%, -50%) scale(2.6);
 
   transform-origin: center;
 }
@@ -2277,7 +2277,7 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .brands-logo-item--basanti {
-    --logo-scale: 1.1;
+    --logo-scale: 0.9;
 
 }
 
@@ -6368,7 +6368,7 @@ body.event-gallery-open {
 }
 
 .brand-page .luxury-card--basanti {
-  --brand-logo-scale: 1.75;
+  --brand-logo-scale: 1.55;
 }
 
 .brand-page .luxury-card--kora {
@@ -6607,7 +6607,7 @@ body.event-gallery-open {
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--basanti {
-  --brand-logo-scale: 1.75;
+  --brand-logo-scale: 1.55;
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--kora {
