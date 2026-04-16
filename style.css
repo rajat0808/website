@@ -1673,7 +1673,7 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .index-page .gallery-heading + .hero {
-  margin-top: 0;
+  margin-top: clamp(0.8rem, 1.8vw, 1.4rem);
 }
 
 .index-page .hero--classic {
@@ -2222,7 +2222,7 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .brands-logo-item--saresa .brands-featured-logo {
-  transform: translate(-50%, -50%) scale(2.05);
+  transform: translate(-50%, -50%) scale(1.9);
   transform-origin: center;
   filter: none;
 }
@@ -3385,9 +3385,17 @@ body.event-gallery-open {
     padding-top: calc(var(--index-event-gap) + 2rem);
     padding-bottom: 2.4rem;
   }
+
+  .index-page .footer {
+    margin-top: 2.2rem;
+  }
 }
 
 /* Footer */
+.index-page .footer {
+  margin-top: clamp(2.2rem, 4.5vw, 3.8rem);
+}
+
 .footer {
   background: #0b0b0b;
   color: #f5f5f5;
@@ -4760,13 +4768,17 @@ body.event-gallery-open {
   text-align: left;
 }
 
+.brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-panel {
+  margin-top: clamp(-3.1rem, -4.2vw, -1.9rem);
+}
+
 .brand-page .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup {
   justify-self: flex-start;
 }
 
 .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup {
-  margin-top: clamp(-0.7rem, -1vw, -0.3rem);
-  margin-bottom: clamp(0.3rem, 0.9vw, 0.55rem);
+  margin-top: clamp(-1.2rem, -1.8vw, -0.7rem);
+  margin-bottom: clamp(-1.1rem, -1.8vw, -0.5rem);
 }
 
 .brand-page .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
@@ -4779,6 +4791,7 @@ body.event-gallery-open {
 .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
   height: clamp(188px, 18vw, 270px);
   max-width: min(100%, 500px);
+  transform: translateY(-14%);
 }
 
 .brand-page .brand-profile--logo-only .brand-profile-grid .brand-hero-meta {
@@ -4786,7 +4799,7 @@ body.event-gallery-open {
 }
 
 .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-meta {
-  margin-top: 0;
+  margin-top: clamp(-2.4rem, -3.2vw, -1.3rem);
 }
 
 .brand-page .brand-profile--logo-only .brand-profile-grid .brand-hero-meta div {
@@ -5076,6 +5089,10 @@ body.event-gallery-open {
     text-align: center;
   }
 
+  .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-panel {
+    margin-top: clamp(-2rem, -5vw, -0.8rem);
+  }
+
   .brand-page .brand-profile-grid .brand-hero-logo-lockup {
     display: flex;
     justify-content: center;
@@ -5084,7 +5101,7 @@ body.event-gallery-open {
   }
 
   .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup {
-    margin: -0.35rem auto 0.55rem;
+    margin: -0.9rem auto -0.7rem;
   }
 
   .brand-page .brand-profile-grid .brand-hero-logo-lockup img {
@@ -5105,6 +5122,11 @@ body.event-gallery-open {
     height: clamp(184px, 38vw, 290px);
     max-width: min(100%, 520px);
     max-height: none;
+    transform: translateY(-10%);
+  }
+
+  .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-meta {
+    margin-top: clamp(-1.4rem, -3.6vw, -0.7rem);
   }
 
   .brand-page .brand-profile--logo-only .brand-profile-grid .brand-hero-panel {
