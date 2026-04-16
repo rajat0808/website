@@ -2211,7 +2211,7 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .brands-logo-item--basanti .brands-featured-logo {
-  transform: translate(-50%, -50%) scale(3.15);
+  transform: translate(-50%, -50%) scale(2.8);
 
   transform-origin: center;
 }
@@ -2277,7 +2277,7 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .brands-logo-item--basanti {
-    --logo-scale: 1.2;
+    --logo-scale: 1.1;
 
 }
 
@@ -6368,7 +6368,7 @@ body.event-gallery-open {
 }
 
 .brand-page .luxury-card--basanti {
-  --brand-logo-scale: 2.10;
+  --brand-logo-scale: 1.75;
 }
 
 .brand-page .luxury-card--kora {
