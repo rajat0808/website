@@ -21,4 +21,5 @@ _render_check*.png
 tmp/
 temp/
 .cache/
+assets/_tmp-*
 

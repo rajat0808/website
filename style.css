@@ -51,9 +51,17 @@ h6 {
   font-family: "Times New Roman", Times, serif !important;
 }
 
-/* Center headings in index sections, excluding About and the first hero section. */
-.index-page section:not(.about-section):not(.hero--video) :is(h1, h2, h3, h4, h5, h6) {
+/* Center all headings inside homepage sections. */
+.index-page section :is(h1, h2, h3, h4, h5, h6) {
   text-align: center;
+}
+
+.index-page {
+  --index-section-gap: clamp(2.75rem, 5vw, 4rem);
+  --index-section-gap-tight: clamp(1rem, 2vw, 1.5rem);
+  --index-heading-gap: clamp(4rem, 7vw, 6rem);
+  --index-event-gap: clamp(4.5rem, 7.5vw, 6.5rem);
+  --index-event-heading-width: min(100%, 980px);
 }
 
 @media (max-width: 900px) {
@@ -965,6 +973,11 @@ body.menu-open .menu-lines span:last-child {
     padding-bottom: 0.8rem;
   }
 
+  .index-page .gallery-heading {
+    padding-top: var(--index-heading-gap);
+    padding-bottom: var(--index-section-gap-tight);
+  }
+
   .gallery-heading+.hero {
     margin-top: 0.6rem;
   }
@@ -1134,6 +1147,11 @@ body.menu-open .menu-lines span:last-child {
 .hero--video {
   background-image: url("assets/hero-home-opt.webp");
   margin-top: -20px;
+}
+
+/* Homepage: rely on body/header offset only and avoid extra section gaps. */
+.index-page .hero--video {
+  margin-top: 0;
 }
 
 .hero--video::before {
@@ -1628,8 +1646,21 @@ body.menu-open .menu-lines span:last-child {
   text-align: center;
 }
 
+.index-page .gallery-heading {
+  padding-top: var(--index-heading-gap);
+  padding-bottom: var(--index-section-gap-tight);
+}
+
 .gallery-heading+.hero {
   margin-top: 0.8rem;
+}
+
+.index-page .gallery-heading + .hero {
+  margin-top: 0;
+}
+
+.index-page .hero--classic {
+  margin-top: 0;
 }
 
 .gallery-heading+.hero.hero--classic {
@@ -1988,6 +2019,11 @@ body.menu-open .menu-lines span:last-child {
   padding: clamp(2.2rem, 4.5vw, 4rem) 5%;
 }
 
+.index-page .brands-premium {
+  padding-top: var(--index-heading-gap);
+  padding-bottom: var(--index-section-gap);
+}
+
 .brands-premium::before,
 .brands-premium::after {
   content: none;
@@ -2144,6 +2180,7 @@ body.menu-open .menu-lines span:last-child {
 .brands-logo-item--superdry .brands-featured-logo {
   transform: translate(-50%, -50%) scale(1.2);
   transform-origin: center;
+  filter: brightness(0) saturate(100%);
 }
 
 .brands-logo-item--la-martina .brands-featured-logo {
@@ -2171,6 +2208,8 @@ body.menu-open .menu-lines span:last-child {
   transform-origin: center;
   filter: none;
 }
+
+
 
 .brands-logo-item--charles-tyrwhitt .brands-featured-logo {
   transform: translate(-50%, -50%) scale(1.22);
@@ -2200,19 +2239,15 @@ body.menu-open .menu-lines span:last-child {
   --logo-scale: 1.01;
 }
 
-.brands-logo-item--hugo {
-  --logo-scale: 0.85;
-}
-
-.brands-logo-item--hugo.brands-logo-item--featured {
-  background: #ffffff;
-}
-
-.brands-logo-item--hugo .brands-featured-logo {
-  transform: translate(-50%, -50%) scale(0.9);
+.brands-logo-item--boss .brands-featured-logo {
+  width: clamp(156px, 76%, 236px);
+  height: clamp(54px, 30%, 86px);
+  object-fit: contain;
+  object-position: center;
+  transform: translate(-50%, -50%) scale(1.75);
   transform-origin: center;
-  filter: brightness(0) saturate(100%);
-  mix-blend-mode: multiply;
+  filter: none;
+  mix-blend-mode: normal;
 }
 
 .brands-logo-item--armani {
@@ -3047,14 +3082,21 @@ body.event-gallery-open {
 }
 
 .index-page .contact.section-padding {
-  padding-top: clamp(1.2rem, 2.8vw, 2rem);
-  padding-bottom: clamp(1.8rem, 3.8vw, 2.8rem);
+  padding-top: calc(var(--index-event-gap) + 3rem);
+  padding-bottom: clamp(2rem, 4vw, 3rem);
 }
 
 /* Index contact spotlight overrides. */
+.index-page .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 16px;
+  text-align: center;
+}
+
 .index-page .contact-shell {
   width: 100%;
-  max-width: 42rem;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -3062,7 +3104,7 @@ body.event-gallery-open {
 .index-page .contact-title {
   width: 100%;
   max-width: none;
-  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  margin-bottom: var(--index-section-gap-tight);
   margin-left: 0;
   margin-right: 0;
   padding-inline: 0;
@@ -3074,6 +3116,15 @@ body.event-gallery-open {
   line-height: 1.1;
 }
 
+.index-page .contact-title,
+.index-page .event-card--home {
+  text-align: center;
+}
+
+.index-page .contact-title {
+  display: inline-block;
+}
+
 .index-page .events-spotlight {
   width: 100%;
   max-width: none;
@@ -3082,6 +3133,10 @@ body.event-gallery-open {
 }
 
 .index-page .event-card--home {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   padding-inline: 0;
   padding-top: 0;
   padding-bottom: clamp(0.9rem, 1.8vw, 1.4rem);
@@ -3099,12 +3154,19 @@ body.event-gallery-open {
 }
 
 .index-page .event-card--home .events-cta {
-  margin-top: 0;
-  width: auto;
-  min-width: 14rem;
-  min-height: 3.3rem;
-  padding-inline: 2rem;
-  font-size: 0.95rem;
+  display: block;
+  margin: 20px auto 0;
+  width: 100%;
+  max-width: 100%;
+  min-height: 0;
+  padding: 14px 40px;
+  background: #111111;
+  color: #ffffff;
+  border: none;
+  letter-spacing: 2px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: none;
 }
 
 .events-spotlight {
@@ -3275,14 +3337,10 @@ body.event-gallery-open {
   }
 
   .index-page .event-card--home .events-cta {
-    width: auto;
-    min-width: 0;
-    min-height: 0;
-    padding: 0.85rem 2.4rem;
-    font-size: 0.75rem;
-    letter-spacing: 0.18em;
-    border-radius: 2px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 13px;
+    letter-spacing: 2px;
   }
 
   .index-page .event-card--home p {
@@ -3291,13 +3349,17 @@ body.event-gallery-open {
     color: #000000;
   }
 
+  .index-page .container {
+    max-width: 100%;
+  }
+
   .index-page .event-card--home {
     gap: 1.4rem;
     padding-bottom: 0.8rem;
   }
 
   .index-page .contact.section-padding {
-    padding-top: 2.8rem;
+    padding-top: calc(var(--index-event-gap) + 3rem);
     padding-bottom: 2.4rem;
   }
 }
@@ -5088,16 +5150,23 @@ body.event-gallery-open {
 }
 
 .brand-page:not([class*="brand-page--"]) .brand-hero-media {
-  height: clamp(15rem, 44vh, 25rem);
-  background-color: #000000;
-  background-image: url("assets/brand-events-hero-lights-v4.png?v=20260408-1");
-  background-size: cover;
-  background-position: center 60%;
-  background-repeat: no-repeat;
+  height: clamp(16rem, 42vw, 24rem);
+  background:
+    linear-gradient(180deg, #fbf8f2 0%, #f3eee5 100%);
+  overflow: hidden;
 }
 
 .brand-page:not([class*="brand-page--"]) .brand-hero-media::before {
-  content: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    rgba(251, 248, 242, 0.16) 0%,
+    rgba(251, 248, 242, 0.06) 40%,
+    rgba(251, 248, 242, 0) 100%
+  );
 }
 
 .brand-page:not([class*="brand-page--"]) .brand-hero-media::after {
@@ -5109,10 +5178,14 @@ body.event-gallery-open {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  max-height: none;
+  object-fit: cover !important;
+  object-position: center center;
   filter: none;
-  opacity: 0;
+  opacity: 1 !important;
+  z-index: 0;
+  transform: scale(1.08);
+  transform-origin: center center;
 }
 
 .brand-page:not([class*="brand-page--"]) .brand-hero-headline {
@@ -5133,9 +5206,9 @@ body.event-gallery-open {
   letter-spacing: 0.24em;
   text-transform: uppercase;
   background: none;
-  color: #cda35a;
-  -webkit-text-fill-color: #cda35a;
-  text-shadow: 0 3px 12px rgba(60, 31, 10, 0.2);
+  color: #9d7435;
+  -webkit-text-fill-color: #9d7435;
+  text-shadow: 0 10px 28px rgba(126, 92, 35, 0.18);
 }
 
 .brand-page .brand-hero-media .slider {
@@ -5279,7 +5352,7 @@ body.event-gallery-open {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-rows: repeat(8, minmax(0, 1fr));
   width: min(100%, 64rem);
-  aspect-ratio: 1.6 / 1;
+  aspect-ratio: 1.55 / 1;
   margin: 0 auto;
   padding: clamp(0.3rem, 0.8vw, 0.55rem);
 }
@@ -5295,20 +5368,20 @@ body.event-gallery-open {
 }
 
 .brand-page .brand-hero--collage .brand-hero-card--tall {
-  grid-column: 1 / span 5;
+  grid-column: 1 / span 4;
   grid-row: 1 / span 8;
   z-index: 1;
 }
 
 .brand-page .brand-hero--collage .brand-hero-card--mid {
   grid-column: 5 / span 4;
-  grid-row: 1 / span 6;
+  grid-row: 1 / span 8;
   z-index: 2;
 }
 
 .brand-page .brand-hero--collage .brand-hero-card--wide {
-  grid-column: 8 / span 5;
-  grid-row: 2 / span 7;
+  grid-column: 9 / span 4;
+  grid-row: 1 / span 8;
   z-index: 3;
 }
 
@@ -5317,7 +5390,7 @@ body.event-gallery-open {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  object-position: center;
+  object-position: center 20%;
   border: 0;
   border-radius: 0;
   background: transparent;
@@ -5405,49 +5478,6 @@ body.event-gallery-open {
   object-position: center 26%;
 }
 
-.brand-page.brand-page--armani .brand-hero--collage .brand-hero-collage {
-  aspect-ratio: 1.55 / 1;
-}
-
-.brand-page.brand-page--armani .brand-hero--collage .brand-hero-card--tall {
-  grid-column: 1 / span 4;
-  grid-row: 1 / span 8;
-}
-
-.brand-page.brand-page--armani .brand-hero--collage .brand-hero-card--mid {
-  grid-column: 5 / span 4;
-  grid-row: 1 / span 8;
-}
-
-.brand-page.brand-page--armani .brand-hero--collage .brand-hero-card--wide {
-  grid-column: 9 / span 4;
-  grid-row: 1 / span 8;
-}
-
-.brand-page.brand-page--armani .brand-hero--collage .brand-hero-card .brand-hero-image {
-  object-position: center 20%;
-}
-
-.brand-page.brand-page--gas .brand-hero--collage .brand-hero-collage {
-  aspect-ratio: 1.12 / 1;
-}
-
-.brand-page.brand-page--gas .brand-hero--collage .brand-hero-card--tall {
-  grid-column: 1 / span 6;
-  grid-row: 1 / span 8;
-}
-
-.brand-page.brand-page--gas .brand-hero--collage .brand-hero-card--mid {
-  grid-column: 6 / span 4;
-  grid-row: 1 / span 5;
-}
-
-.brand-page.brand-page--gas .brand-hero--collage .brand-hero-card--wide {
-  grid-column: 8 / span 5;
-  grid-row: 2 / span 7;
-  background: #eff2f7;
-}
-
 .brand-page.brand-page--gas .brand-hero--collage .brand-hero-card--tall .brand-hero-image {
   object-position: center 18%;
 }
@@ -5478,10 +5508,6 @@ body.event-gallery-open {
   object-position: center bottom;
 }
 
-.brand-page.brand-page--charles-tyrwhitt .brand-hero--collage .brand-hero-card--wide {
-  background: #e9e2d6;
-}
-
 .brand-page.brand-page--levis .brand-hero--collage .brand-hero-logo-lockup {
   background: #c1121f;
   padding: 0.42rem 0.72rem;
@@ -5506,10 +5532,6 @@ body.event-gallery-open {
   object-position: center bottom;
 }
 
-.brand-page.brand-page--levis .brand-hero--collage .brand-hero-card--wide {
-  background: #e6ebf2;
-}
-
 .brand-page.brand-page--la-martina .brand-hero--collage .brand-hero-card--tall .brand-hero-image {
   object-position: center 20%;
 }
@@ -5522,19 +5544,8 @@ body.event-gallery-open {
   object-position: center 24%;
 }
 
-.brand-page.brand-page--superdry .brand-hero--collage .brand-hero-card--wide,
-.brand-page.brand-page--lacoste .brand-hero--collage .brand-hero-card--wide {
-  grid-column: 8 / span 5;
-  grid-row: 2 / span 7;
-}
-
 .brand-page.brand-page--superdry .brand-hero--collage .brand-hero-card--wide .brand-hero-image {
   object-position: center 20%;
-}
-
-.brand-page.brand-page--superdry .brand-hero--collage .brand-hero-collage,
-.brand-page.brand-page--lacoste .brand-hero--collage .brand-hero-collage {
-  aspect-ratio: 1.08 / 1;
 }
 
 .brand-page .brand-profile-grid--boxed {
@@ -5983,8 +5994,8 @@ body.event-gallery-open {
   border-radius: 26px;
   border: 1px solid var(--brand-line);
   background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
   box-shadow: 0 30px 60px rgba(35, 27, 22, 0.12);
   width: 100%;
   min-height: clamp(14rem, 22vw, 18rem);
@@ -5992,8 +6003,8 @@ body.event-gallery-open {
 
 .brand-page .brand-showcase .brand-frame {
   background: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
 }
 
 .brand-page .brand-frame--feature {
@@ -6333,7 +6344,7 @@ body.event-gallery-open {
 
 .brand-page .luxury-card--superdry {
   --brand-logo-scale: 1.6;
-  --luxury-card-bg: #f97316;
+  --luxury-card-bg: #ffffff;
 }
 
 .brand-page .luxury-card--saresa {
@@ -6351,13 +6362,13 @@ body.event-gallery-open {
   --luxury-card-bg: #1e3a8a;
 }
 
-.brand-page .luxury-card--hugo {
+.brand-page .luxury-card--boss {
   --brand-logo-scale: 1;
-  --luxury-card-bg: #cc0000;
+  --luxury-card-bg: #000000;
 }
 
-.brand-page .luxury-card--hugo .luxury-card__logo img {
-  filter: brightness(0);
+.brand-page .luxury-card--boss .luxury-card__logo img {
+  filter: none;
   max-width: 48%;
 }
 
@@ -6400,7 +6411,7 @@ body.event-gallery-open {
 }
 
 .brand-page .luxury-card--superdry .luxury-card__logo img {
-  filter: brightness(0) invert(1);
+  filter: none;
 }
 
 .brand-page .luxury-card--levis .luxury-card__logo img {
@@ -6548,7 +6559,7 @@ body.event-gallery-open {
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--armani {
-  --brand-logo-scale: 1.1;
+  --brand-logo-scale: 0.76;
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--basanti {
@@ -6564,7 +6575,14 @@ body.event-gallery-open {
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--la-martina {
-  --brand-logo-scale: 1.05;
+  --brand-logo-scale: 1.16;
+  --luxury-card-bg: #000000;
+}
+
+.brand-page:not([class*="brand-page--"]) .luxury-card--la-martina .luxury-card__logo img {
+  max-width: 96%;
+  filter: brightness(0) invert(1);
+  mix-blend-mode: normal;
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--superdry {
@@ -6581,6 +6599,7 @@ body.event-gallery-open {
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--gas {
   --brand-logo-scale: 0.9;
+  --luxury-card-bg: #000000;
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--charles-tyrwhitt {
