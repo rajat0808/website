@@ -64,6 +64,11 @@ h6 {
   --index-event-heading-width: min(100%, 980px);
 }
 
+.index-page .header-container .logo {
+  width: clamp(10rem, 14vw, 13rem);
+  height: clamp(2.5rem, 3.1vw, 3.2rem);
+}
+
 @media (max-width: 900px) {
   html {
     scroll-padding-top: var(--header-height-mobile);
@@ -852,6 +857,12 @@ body.menu-open .menu-lines span:last-child {
     margin-top: -10px;
   }
 
+  .index-page .header-container .logo {
+    width: 9.3rem;
+    height: 2.28rem;
+    margin-top: -10px;
+  }
+
   .menu-layout {
     flex-direction: column;
   }
@@ -1098,6 +1109,12 @@ body.menu-open .menu-lines span:last-child {
   .header-container .logo {
     width: 7.2rem;
     height: 1.8rem;
+    margin-top: -12px;
+  }
+
+  .index-page .header-container .logo {
+    width: 8rem;
+    height: 2rem;
     margin-top: -12px;
   }
 
@@ -2166,8 +2183,8 @@ body.menu-open .menu-lines span:last-child {
   top: 50%;
   left: 50%;
   bottom: auto;
-  width: clamp(124px, 68%, 192px);
-  height: clamp(42px, 24%, 68px);
+  width: clamp(142px, 76%, 228px);
+  height: clamp(50px, 30%, 86px);
   max-width: none;
   max-height: none;
   object-fit: contain;
@@ -2194,7 +2211,8 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .brands-logo-item--basanti .brands-featured-logo {
-  transform: translate(-50%, -50%) scale(2.7);
+    transform: translate(-50%, -50%) scale(2.9);
+
   transform-origin: center;
 }
 
@@ -2255,11 +2273,12 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .brands-logo-item--levis {
-  --logo-scale: 1.08;
+  --logo-scale: 1.11;
 }
 
 .brands-logo-item--basanti {
-  --logo-scale: 1;
+    --logo-scale: 1.2;
+
 }
 
 .brands-logo-item--kora {
@@ -2271,7 +2290,7 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .brands-logo-item--sindh-emporio {
-  --logo-scale: 1.9;
+  --logo-scale: 2.01;
 }
 
 @keyframes brandsLogoMarquee {
@@ -4746,7 +4765,8 @@ body.event-gallery-open {
 }
 
 .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup {
-  margin-top: clamp(0.7rem, 1.6vw, 1rem);
+  margin-top: clamp(-0.7rem, -1vw, -0.3rem);
+  margin-bottom: clamp(0.3rem, 0.9vw, 0.55rem);
 }
 
 .brand-page .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
@@ -4764,6 +4784,10 @@ body.event-gallery-open {
 
 .brand-page .brand-profile--logo-only .brand-profile-grid .brand-hero-meta {
   justify-items: start;
+}
+
+.brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-meta {
+  margin-top: 0;
 }
 
 .brand-page .brand-profile--logo-only .brand-profile-grid .brand-hero-meta div {
@@ -5058,6 +5082,10 @@ body.event-gallery-open {
     justify-content: center;
     width: 100%;
     margin: 0 auto 1.2rem;
+  }
+
+  .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup {
+    margin: -0.35rem auto 0.55rem;
   }
 
   .brand-page .brand-profile-grid .brand-hero-logo-lockup img {
@@ -6569,7 +6597,7 @@ body.event-gallery-open {
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--basanti {
-  --brand-logo-scale: 1.22;
+  --brand-logo-scale: 1.34;
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--kora {
@@ -6669,7 +6697,7 @@ body.event-gallery-open {
   }
 
   .brand-page:not([class*="brand-page--"]) .luxury-card--basanti {
-    --brand-logo-scale: 1.62;
+    --brand-logo-scale: 1.74;
   }
 
   .brand-page:not([class*="brand-page--"]) .luxury-card--superdry .luxury-card__logo img {
