@@ -2303,6 +2303,10 @@ body.menu-open .menu-lines span:last-child {
     --brands-gap: 0.45rem;
   }
 
+  .brands-logo-item--la-martina .brands-featured-logo {
+    transform: translate(-50%, -50%) scale(0.88);
+  }
+
   .brands-title {
     letter-spacing: 0.04em;
     font-size: clamp(1.6rem, 7vw, 2.45rem);
@@ -3082,7 +3086,7 @@ body.event-gallery-open {
 }
 
 .index-page .contact.section-padding {
-  padding-top: calc(var(--index-event-gap) + 3rem);
+  padding-top: calc(var(--index-event-gap) + 2rem);
   padding-bottom: clamp(2rem, 4vw, 3rem);
 }
 
@@ -3359,7 +3363,7 @@ body.event-gallery-open {
   }
 
   .index-page .contact.section-padding {
-    padding-top: calc(var(--index-event-gap) + 3rem);
+    padding-top: calc(var(--index-event-gap) + 2rem);
     padding-bottom: 2.4rem;
   }
 }
@@ -4753,7 +4757,8 @@ body.event-gallery-open {
 }
 
 .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
-  height: clamp(160px, 16vw, 232px);
+    height: clamp(168px, 16vw, 240px);
+
   max-width: min(100%, 450px);
 }
 
@@ -5070,7 +5075,8 @@ body.event-gallery-open {
   }
 
   .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
-    height: clamp(156px, 35vw, 250px);
+        height: clamp(164px, 35vw, 258px);
+
     max-width: min(100%, 460px);
     max-height: none;
   }
@@ -6668,6 +6674,14 @@ body.event-gallery-open {
 
   .brand-page:not([class*="brand-page--"]) .luxury-card--superdry .luxury-card__logo img {
     height: clamp(80px, 24vw, 120px);
+  }
+
+  .brand-page:not([class*="brand-page--"]) .luxury-card--la-martina {
+    --brand-logo-scale: 0.94;
+  }
+
+  .brand-page:not([class*="brand-page--"]) .luxury-card--la-martina .luxury-card__logo img {
+    max-width: 88%;
   }
 }
 
