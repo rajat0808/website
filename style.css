@@ -2211,7 +2211,7 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .brands-logo-item--basanti .brands-featured-logo {
-    transform: translate(-50%, -50%) scale(2.9);
+  transform: translate(-50%, -50%) scale(3.15);
 
   transform-origin: center;
 }
@@ -2222,7 +2222,7 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .brands-logo-item--saresa .brands-featured-logo {
-  transform: translate(-50%, -50%) scale(2.35);
+  transform: translate(-50%, -50%) scale(2.05);
   transform-origin: center;
   filter: none;
 }
@@ -4777,9 +4777,8 @@ body.event-gallery-open {
 }
 
 .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
-    height: clamp(168px, 16vw, 240px);
-
-  max-width: min(100%, 450px);
+  height: clamp(188px, 18vw, 270px);
+  max-width: min(100%, 500px);
 }
 
 .brand-page .brand-profile--logo-only .brand-profile-grid .brand-hero-meta {
@@ -5103,9 +5102,8 @@ body.event-gallery-open {
   }
 
   .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
-        height: clamp(164px, 35vw, 258px);
-
-    max-width: min(100%, 460px);
+    height: clamp(184px, 38vw, 290px);
+    max-width: min(100%, 520px);
     max-height: none;
   }
 
