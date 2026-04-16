@@ -4799,7 +4799,7 @@ body.event-gallery-open {
 }
 
 .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-meta {
-  margin-top: clamp(-2.4rem, -3.2vw, -1.3rem);
+  margin-top: clamp(-3.2rem, -4.4vw, -2rem);
 }
 
 .brand-page .brand-profile--logo-only .brand-profile-grid .brand-hero-meta div {
@@ -5126,7 +5126,7 @@ body.event-gallery-open {
   }
 
   .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-meta {
-    margin-top: clamp(-1.4rem, -3.6vw, -0.7rem);
+    margin-top: clamp(-2.2rem, -5.4vw, -1.2rem);
   }
 
   .brand-page .brand-profile--logo-only .brand-profile-grid .brand-hero-panel {
