@@ -6607,7 +6607,7 @@ body.event-gallery-open {
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--basanti {
-  --brand-logo-scale: 2.10;
+  --brand-logo-scale: 1.75;
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--kora {
