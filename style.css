@@ -4898,7 +4898,7 @@ body.event-gallery-open {
 .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
   height: clamp(188px, 18vw, 270px);
   max-width: min(100%, 500px);
-  transform: translateY(-14%);
+  transform: translateY(-4%);
 }
 
 .brand-page .brand-profile--logo-only .brand-profile-grid .brand-hero-meta {
@@ -4907,6 +4907,18 @@ body.event-gallery-open {
 
 .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-meta {
   margin-top: clamp(-3.2rem, -4.4vw, -2rem);
+}
+
+.brand-page:not(.brand-page--basanti) .brand-profile--logo-only .brand-profile-grid .brand-hero-meta {
+  margin-top: clamp(0.9rem, 1.8vw, 1.4rem);
+}
+
+.brand-page--la-martina .brand-profile--logo-only .brand-profile-grid .brand-hero-meta {
+  margin-top: clamp(-0.45rem, -0.8vw, -0.2rem);
+}
+
+.brand-page--la-martina .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup {
+  margin-bottom: clamp(-0.45rem, -0.8vw, -0.2rem);
 }
 
 .brand-page .brand-profile--logo-only .brand-profile-grid .brand-hero-meta div {
@@ -5174,6 +5186,9 @@ body.event-gallery-open {
 }
 
 .brand-page--lacoste .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
+  width: min(100%, 320px);
+  height: auto;
+  max-height: none;
   transform: scale(0.9);
   transform-origin: center;
 }
@@ -5231,6 +5246,10 @@ body.event-gallery-open {
     margin: -0.9rem auto -0.7rem;
   }
 
+  .brand-page--la-martina .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup {
+    margin: -0.4rem auto -0.2rem;
+  }
+
   .brand-page .brand-profile-grid .brand-hero-logo-lockup img {
     max-height: clamp(112px, 13vw, 184px);
     margin: 0 auto;
@@ -5255,11 +5274,15 @@ body.event-gallery-open {
     height: clamp(184px, 38vw, 290px);
     max-width: min(100%, 520px);
     max-height: none;
-    transform: translateY(-10%);
+    transform: translateY(-3%);
   }
 
   .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-meta {
     margin-top: clamp(-2.2rem, -5.4vw, -1.2rem);
+  }
+
+  .brand-page--la-martina .brand-profile--logo-only .brand-profile-grid .brand-hero-meta {
+    margin-top: clamp(-0.45rem, -1.8vw, -0.2rem);
   }
 
   .brand-page .brand-profile--logo-only .brand-profile-grid .brand-hero-panel {
@@ -5529,7 +5552,7 @@ body.event-gallery-open {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-rows: repeat(8, minmax(0, 1fr));
   width: min(100%, 84rem);
-  aspect-ratio: 27 / 16;
+  aspect-ratio: 27 / 15;
   margin: 0 auto;
   padding: clamp(0.3rem, 0.8vw, 0.55rem);
 }
@@ -5908,7 +5931,7 @@ body.event-gallery-open {
 
 @media (max-width: 560px) {
   .brand-page .brand-hero--collage .brand-hero-collage {
-    aspect-ratio: 1 / 1.08;
+    aspect-ratio: 1 / 0.98;
   }
 
   .brand-page .brand-hero--collage .brand-hero-card--tall {
