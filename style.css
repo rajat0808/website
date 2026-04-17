@@ -976,7 +976,7 @@ body.menu-open .menu-lines span:last-child {
 
   .hero--classic .hero-slider-track img {
     height: auto;
-    aspect-ratio: 9 / 16;
+    aspect-ratio: 1 / 1;
   }
 
   .gallery-heading {
@@ -1231,8 +1231,8 @@ body.menu-open .menu-lines span:last-child {
 
 .hero--classic .hero-slider-track img {
   width: var(--slide-width);
-  height: auto;
-  aspect-ratio: 9 / 16;
+  height: var(--slide-width);
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center;
   flex-shrink: 0;
@@ -5396,8 +5396,8 @@ body.event-gallery-open {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-rows: repeat(8, minmax(0, 1fr));
-  width: min(100%, 64rem);
-  aspect-ratio: 1.55 / 1;
+  width: min(100%, 72rem);
+  aspect-ratio: 27 / 16;
   margin: 0 auto;
   padding: clamp(0.3rem, 0.8vw, 0.55rem);
 }
@@ -5745,7 +5745,7 @@ body.event-gallery-open {
 
   .brand-page .brand-hero--collage .brand-hero-collage {
     width: 100%;
-    aspect-ratio: 1.2 / 1;
+    aspect-ratio: 27 / 16;
   }
 
   .brand-page .brand-hero--collage .brand-hero-card {
