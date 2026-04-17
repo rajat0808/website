@@ -2323,11 +2323,7 @@ body.menu-open .menu-lines span:last-child {
   }
 
   .brands-logo-item--la-martina .brands-featured-logo {
-    transform: translate(-50%, -50%) scale(1.08);
-  }
-
-  .brands-logo-item--lacoste .brands-featured-logo {
-    transform: translate(-50%, -50%) scale(1.2);
+    transform: translate(-50%, -50%) scale(0.88);
   }
 
   .brands-title {
@@ -3409,32 +3405,6 @@ body.event-gallery-open {
   .hero--classic .hero-slider-track {
     --slide-width: clamp(146px, 48vw, 182px);
     --slide-gap: 6px;
-  }
-
-  .index-page .hero--classic {
-    padding-inline: 4%;
-  }
-
-  .index-page .hero--classic .hero-slider-track,
-  .index-page .hero--classic .hero-slider-track.is-ready,
-  .index-page .hero--classic .hero-slider-track.is-paused,
-  .index-page .hero--classic .hero-slider-track.is-offscreen {
-    animation: none !important;
-    transform: none !important;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.5rem;
-    padding: 0;
-  }
-
-  .index-page .hero--classic .hero-slider-track img {
-    width: 100%;
-    height: auto;
-  }
-
-  .index-page .hero--classic .hero-slider-track img:nth-child(n + 5) {
-    display: none;
   }
 
   .index-page .contact-title {
