@@ -5053,6 +5053,10 @@ body.event-gallery-open {
   filter: brightness(0);
 }
 
+.brand-page--kora .brand-profile--logo-only .brand-profile-grid .brand-hero-panel {
+  padding-left: clamp(0.6rem, 1.2vw, 1rem);
+}
+
 .brand-page--la-martina .brand-profile-grid .brand-hero-logo-lockup {
   justify-self: center;
 }
@@ -6635,7 +6639,7 @@ body.event-gallery-open {
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--saresa {
-  --brand-logo-scale: 0.8;
+  --brand-logo-scale: 0.7;
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--levis {
@@ -6652,7 +6656,7 @@ body.event-gallery-open {
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--sindh-emporio {
-  --brand-logo-scale: 0.75;
+  --brand-logo-scale: 0.65;
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--superdry .luxury-card__logo img {
