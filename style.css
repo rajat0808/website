@@ -976,7 +976,7 @@ body.menu-open .menu-lines span:last-child {
 
   .hero--classic .hero-slider-track img {
     height: auto;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 9 / 16;
   }
 
   .gallery-heading {
@@ -1231,8 +1231,8 @@ body.menu-open .menu-lines span:last-child {
 
 .hero--classic .hero-slider-track img {
   width: var(--slide-width);
-  height: var(--slide-width);
-  aspect-ratio: 1 / 1;
+  height: auto;
+  aspect-ratio: 9 / 16;
   object-fit: cover;
   object-position: center;
   flex-shrink: 0;
@@ -2695,7 +2695,7 @@ body.menu-open .menu-lines span:last-child {
   overflow: hidden;
   background: #f6f1e7;
   box-shadow: var(--shadow-soft);
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 9 / 16;
   cursor: pointer;
 }
 
@@ -2856,23 +2856,26 @@ body.event-gallery-open {
 
 .event-gallery-viewer__frame {
   margin: 0;
-  width: 100%;
-  height: 100%;
-  aspect-ratio: auto;
+  width: min(calc(100vw - 6.5rem), calc(92vh * 9 / 16));
+  max-width: 100%;
+  height: auto;
+  max-height: 92vh;
+  aspect-ratio: 9 / 16;
   background: transparent;
   border: 0;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-self: center;
 }
 
 .event-gallery-viewer__image {
   max-width: 100%;
-  max-height: 100vh;
-  width: auto;
-  height: auto;
-  object-fit: contain;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
@@ -2933,7 +2936,7 @@ body.event-gallery-open {
 
 .event-gallery-grid__item {
   margin: 0;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 9 / 16;
   overflow: hidden;
   background: #f6f1e7;
 }
@@ -2952,7 +2955,7 @@ body.event-gallery-open {
   }
 
   .event-collage__item {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 9 / 16;
   }
 
   .events-page .event-item,
@@ -3180,7 +3183,7 @@ body.event-gallery-open {
   width: auto;
   max-width: 100%;
   min-height: 0;
-  padding: 14px 198.92px;
+  padding: 14px 229.75px 14px 234.37px;
   background: #111111;
   color: #ffffff;
   border: none;
@@ -3359,7 +3362,7 @@ body.event-gallery-open {
 
   .index-page .event-card--home .events-cta {
     width: auto;
-    padding: 12px 110.46px;
+    padding: 12px 127.59px 12px 130.16px;
     font-size: 13px;
     letter-spacing: 2px;
   }
