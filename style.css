@@ -3379,7 +3379,7 @@ body.event-gallery-open {
   }
 
   .index-page .event-card--home .events-cta {
-    width: min(100%, 20rem);
+    width: clamp(12rem, 86vw, 20rem);
     padding: 12px 18px;
     font-size: 0.76rem;
     letter-spacing: 0.16em;
@@ -3388,13 +3388,21 @@ body.event-gallery-open {
   }
 
   .index-page .event-card--home p {
-    font-size: clamp(0.86rem, 3.5vw, 0.95rem);
-    line-height: 1.6;
+    max-width: 100%;
+    width: 100%;
+    font-size: clamp(0.72rem, 3.05vw, 0.8rem);
+    line-height: 1.5;
     color: #000000;
+  }
+
+  .index-page .event-card--home p br {
+    display: none;
   }
 
   .index-page .container {
     max-width: 100%;
+    width: 100%;
+    padding-inline: clamp(0.25rem, 2vw, 0.75rem);
   }
 
   .index-page .event-card--home {
@@ -3405,6 +3413,8 @@ body.event-gallery-open {
   .index-page .contact.section-padding {
     padding-top: clamp(1.2rem, 6.5vw, 2.1rem);
     padding-bottom: 2rem;
+    padding-left: clamp(0.75rem, 4vw, 1rem);
+    padding-right: clamp(0.75rem, 4vw, 1rem);
   }
 
   .index-page .footer {
@@ -3429,8 +3439,13 @@ body.event-gallery-open {
   }
 
   .index-page .contact-title {
-    font-size: clamp(1.2rem, 5.8vw, 1.55rem);
-    letter-spacing: 0.03em;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    text-wrap: nowrap;
+    font-size: clamp(1.05rem, 5.1vw, 1.35rem);
+    line-height: 1.08;
+    letter-spacing: 0.02em;
     margin-bottom: 1rem;
   }
 
@@ -3439,7 +3454,8 @@ body.event-gallery-open {
   }
 
   .index-page .event-card--home p {
-    max-width: 33ch;
+    max-width: 100%;
+    text-wrap: balance;
   }
 }
 
