@@ -2206,7 +2206,7 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .brands-logo-item--armani .brands-featured-logo {
-  transform: translate(-50%, -50%) scale(1.8);
+  transform: translate(-50%, -50%) scale(1.6);
   transform-origin: center;
 }
 
@@ -2217,12 +2217,12 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .brands-logo-item--kora .brands-featured-logo {
-  transform: translate(-50%, -50%) scale(1.6);
+  transform: translate(-50%, -50%) scale(1.4);
   transform-origin: center;
 }
 
 .brands-logo-item--saresa .brands-featured-logo {
-  transform: translate(-50%, -50%) scale(1.9);
+  transform: translate(-50%, -50%) scale(1.7);
   transform-origin: center;
   filter: none;
 }
@@ -2235,7 +2235,7 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .brands-logo-item--sindh-emporio .brands-featured-logo {
-  transform: translate(-50%, -50%) scale(1.36);
+  transform: translate(-50%, -50%) scale(1.16);
   transform-origin: center;
   filter: none;
   mix-blend-mode: multiply;
@@ -2254,7 +2254,7 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .brands-logo-item--gas {
-  --logo-scale: 1.01;
+  --logo-scale: 0.81;
 }
 
 .brands-logo-item--boss .brands-featured-logo {
@@ -2269,7 +2269,7 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .brands-logo-item--armani {
-  --logo-scale: 1.12;
+  --logo-scale: 0.89
 }
 
 .brands-logo-item--levis {
@@ -2282,15 +2282,15 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .brands-logo-item--kora {
-  --logo-scale: 1;
+  --logo-scale: 0.8;
 }
 
 .brands-logo-item--saresa {
-  --logo-scale: 1.15;
+  --logo-scale: 0.95;
 }
 
 .brands-logo-item--sindh-emporio {
-  --logo-scale: 2.21;
+  --logo-scale: 2.01;
 }
 
 @keyframes brandsLogoMarquee {
@@ -2346,7 +2346,7 @@ body.menu-open .menu-lines span:last-child {
 
 .events-hero {
   position: relative;
-  min-height: clamp(15rem, 44vh, 25rem);
+  min-height: clamp(16rem, 42vw, 24rem);
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -2357,9 +2357,9 @@ body.menu-open .menu-lines span:last-child {
   position: absolute;
   inset: 0;
   background-color: #000000;
-  background-image: url("assets/brand-events-hero-lights-v4.png?v=20260408-1");
+  background-image: url("assets/brand-hero-gold-floral-exact.jpg?v=20260417-exact");
   background-size: cover;
-  background-position: center 60%;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 
@@ -2382,11 +2382,9 @@ body.menu-open .menu-lines span:last-child {
   text-transform: uppercase;
   line-height: 0.95;
   background: none;
-  color: #cda35a;
-  -webkit-text-fill-color: #cda35a;
-  text-shadow:
-    0 1px 0 rgba(244, 201, 140, 0.1),
-    0 8px 20px rgba(0, 0, 0, 0.42);
+  color: #000000;
+  -webkit-text-fill-color: #000000;
+  text-shadow: none;
 }
 
 .events-page .events.section-padding {
@@ -2399,7 +2397,7 @@ body.menu-open .menu-lines span:last-child {
   }
 
   .events-hero__media {
-    background-position: center 60%;
+    background-position: center center;
   }
 }
 
@@ -3177,12 +3175,12 @@ body.event-gallery-open {
 }
 
 .index-page .event-card--home .events-cta {
-  display: block;
+  display: inline-block;
   margin: 20px auto 0;
-  width: 100%;
+  width: auto;
   max-width: 100%;
   min-height: 0;
-  padding: 14px 40px;
+  padding: 14px 198.92px;
   background: #111111;
   color: #ffffff;
   border: none;
@@ -3360,8 +3358,8 @@ body.event-gallery-open {
   }
 
   .index-page .event-card--home .events-cta {
-    width: 100%;
-    padding: 12px 20px;
+    width: auto;
+    padding: 12px 110.46px;
     font-size: 13px;
     letter-spacing: 2px;
   }
@@ -5223,7 +5221,7 @@ body.event-gallery-open {
   width: 100%;
   height: 100%;
   max-height: none;
-  object-fit: contain !important;
+  object-fit: cover !important;
   object-position: center center;
   filter: none;
   opacity: 1 !important;
@@ -5250,9 +5248,9 @@ body.event-gallery-open {
   letter-spacing: 0.24em;
   text-transform: uppercase;
   background: none;
-  color: #9d7435;
-  -webkit-text-fill-color: #9d7435;
-  text-shadow: 0 10px 28px rgba(126, 92, 35, 0.18);
+  color: #000000;
+  -webkit-text-fill-color: #000000;
+  text-shadow: none;
 }
 
 .brand-page .brand-hero-media .slider {
@@ -6619,7 +6617,7 @@ body.event-gallery-open {
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--la-martina {
-  --brand-logo-scale: 1.16;
+  --brand-logo-scale: 0.96;
   --luxury-card-bg: #000000;
 }
 
@@ -6634,7 +6632,7 @@ body.event-gallery-open {
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--saresa {
-  --brand-logo-scale: 1;
+  --brand-logo-scale: 0.8;
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--levis {
@@ -6647,11 +6645,11 @@ body.event-gallery-open {
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--charles-tyrwhitt {
-  --brand-logo-scale: 1.1;
+  --brand-logo-scale: 1;
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--sindh-emporio {
-  --brand-logo-scale: 1.05;
+  --brand-logo-scale: 0.75;
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--superdry .luxury-card__logo img {
@@ -6719,7 +6717,7 @@ body.event-gallery-open {
   }
 
   .brand-page:not([class*="brand-page--"]) .luxury-card--la-martina {
-    --brand-logo-scale: 0.94;
+    --brand-logo-scale: 0.74;
   }
 
   .brand-page:not([class*="brand-page--"]) .luxury-card--la-martina .luxury-card__logo img {
