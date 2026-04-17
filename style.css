@@ -2695,7 +2695,7 @@ body.menu-open .menu-lines span:last-child {
   overflow: hidden;
   background: #f6f1e7;
   box-shadow: var(--shadow-soft);
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 1 / 1;
   cursor: pointer;
 }
 
@@ -2856,26 +2856,23 @@ body.event-gallery-open {
 
 .event-gallery-viewer__frame {
   margin: 0;
-  width: min(calc(100vw - 6.5rem), calc(92vh * 9 / 16));
-  max-width: 100%;
-  height: auto;
-  max-height: 92vh;
-  aspect-ratio: 9 / 16;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
   background: transparent;
   border: 0;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  justify-self: center;
 }
 
 .event-gallery-viewer__image {
   max-width: 100%;
-  max-height: 100%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-height: 100vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
   display: block;
 }
 
@@ -2936,7 +2933,7 @@ body.event-gallery-open {
 
 .event-gallery-grid__item {
   margin: 0;
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   background: #f6f1e7;
 }
@@ -2955,7 +2952,7 @@ body.event-gallery-open {
   }
 
   .event-collage__item {
-    aspect-ratio: 9 / 16;
+    aspect-ratio: 1 / 1;
   }
 
   .events-page .event-item,
