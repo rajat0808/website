@@ -839,11 +839,6 @@ body.menu-open .menu-lines span:last-child {
     margin-left: auto;
   }
 
-  .index-page .header-container {
-    position: relative;
-    justify-content: center;
-  }
-
   .index-page .menu-trigger {
     margin-left: auto;
     position: relative;
@@ -872,11 +867,10 @@ body.menu-open .menu-lines span:last-child {
     width: 9.3rem;
     height: 2.28rem;
     margin-top: -10px;
-    margin-left: auto;
+    margin-left: 0;
     margin-right: auto;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    position: static;
+    transform: none;
   }
 
   .menu-layout {
