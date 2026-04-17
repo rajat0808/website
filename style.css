@@ -4923,6 +4923,12 @@ body.event-gallery-open {
   text-align: left;
 }
 
+@media (min-width: 769px) {
+  .brand-page--charles-tyrwhitt .brand-profile--logo-only .brand-profile-grid .brand-hero-panel {
+    transform: translateX(clamp(8px, 1vw, 14px));
+  }
+}
+
 .brand-page .brand-profile-grid .brand-hero-title,
 .brand-page .brand-profile-grid .brand-hero-lead {
   display: none;
@@ -5171,6 +5177,16 @@ body.event-gallery-open {
 
 .brand-page--la-martina .brand-profile-grid .brand-hero-logo-lockup {
   justify-self: center;
+}
+
+.brand-page--lacoste .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
+  transform: scale(0.9);
+  transform-origin: center;
+}
+
+.brand-page--gas .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
+  transform: scale(0.9);
+  transform-origin: center;
 }
 
 @media (max-width: 768px) {
@@ -5494,7 +5510,7 @@ body.event-gallery-open {
 }
 
 .brand-page .brand-hero--collage .brand-hero-shell {
-  width: min(1200px, 100%);
+  width: min(1360px, 100%);
   margin: 0 auto;
   display: block;
 }
@@ -5518,7 +5534,7 @@ body.event-gallery-open {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-rows: repeat(8, minmax(0, 1fr));
-  width: min(100%, 72rem);
+  width: min(100%, 84rem);
   aspect-ratio: 27 / 16;
   margin: 0 auto;
   padding: clamp(0.3rem, 0.8vw, 0.55rem);
@@ -6757,7 +6773,7 @@ body.event-gallery-open {
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--saresa {
-  --brand-logo-scale: 0.7;
+  --brand-logo-scale: 0.8;
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--levis {
