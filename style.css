@@ -839,6 +839,17 @@ body.menu-open .menu-lines span:last-child {
     margin-left: auto;
   }
 
+  .index-page .header-container {
+    position: relative;
+    justify-content: center;
+  }
+
+  .index-page .menu-trigger {
+    margin-left: auto;
+    position: relative;
+    z-index: 1;
+  }
+
   #menuPanel {
     display: none;
   }
@@ -861,6 +872,11 @@ body.menu-open .menu-lines span:last-child {
     width: 9.3rem;
     height: 2.28rem;
     margin-top: -10px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .menu-layout {
@@ -2322,6 +2338,24 @@ body.menu-open .menu-lines span:last-child {
     --brands-gap: 0.45rem;
   }
 
+  .index-page .brands-logo-group {
+    align-items: center;
+  }
+
+  .index-page .brands-logo-item,
+  .index-page .brands-logo-item--featured {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .index-page .brands-logo-item--featured .brands-featured-logo {
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    object-position: center center;
+    transform-origin: center center;
+  }
+
   .brands-logo-item--la-martina .brands-featured-logo {
     transform: translate(-50%, -50%) scale(1.08);
   }
@@ -3371,10 +3405,13 @@ body.event-gallery-open {
   }
 
   .index-page .contact-title {
-    white-space: normal;
-    line-height: 1.15;
-    font-size: clamp(1.3rem, 6vw, 1.9rem);
-    letter-spacing: 0.04em;
+    white-space: nowrap;
+    text-wrap: nowrap;
+    line-height: 1.1;
+    font-size: clamp(1.08rem, 4.6vw, 1.45rem);
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: 0.03em;
     margin-bottom: 1.3rem;
   }
 
@@ -3390,19 +3427,23 @@ body.event-gallery-open {
   .index-page .event-card--home p {
     max-width: 100%;
     width: 100%;
-    font-size: clamp(0.72rem, 3.05vw, 0.8rem);
-    line-height: 1.5;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(0.82rem, 2.6vw, 0.95rem);
+    line-height: 1.4;
     color: #000000;
+    text-align: center;
+    white-space: nowrap;
   }
 
   .index-page .event-card--home p br {
-    display: none;
+    display: block;
   }
 
   .index-page .container {
     max-width: 100%;
     width: 100%;
-    padding-inline: clamp(0.25rem, 2vw, 0.75rem);
+    padding-inline: clamp(0rem, 1vw, 0.5rem);
   }
 
   .index-page .event-card--home {
@@ -3413,8 +3454,8 @@ body.event-gallery-open {
   .index-page .contact.section-padding {
     padding-top: clamp(1.2rem, 6.5vw, 2.1rem);
     padding-bottom: 2rem;
-    padding-left: clamp(0.75rem, 4vw, 1rem);
-    padding-right: clamp(0.75rem, 4vw, 1rem);
+    padding-left: clamp(0.35rem, 2.2vw, 0.75rem);
+    padding-right: clamp(0.35rem, 2.2vw, 0.75rem);
   }
 
   .index-page .footer {
@@ -3443,9 +3484,11 @@ body.event-gallery-open {
     max-width: 100%;
     white-space: nowrap;
     text-wrap: nowrap;
-    font-size: clamp(1.05rem, 5.1vw, 1.35rem);
+    font-size: clamp(1.02rem, 4.9vw, 1.28rem);
     line-height: 1.08;
     letter-spacing: 0.02em;
+    font-weight: 700;
+    color: #000000;
     margin-bottom: 1rem;
   }
 
@@ -3455,7 +3498,8 @@ body.event-gallery-open {
 
   .index-page .event-card--home p {
     max-width: 100%;
-    text-wrap: balance;
+    text-wrap: auto;
+    white-space: nowrap;
   }
 }
 
