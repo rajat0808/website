@@ -6931,10 +6931,15 @@ body.event-gallery-open {
 
   /* Specific override for Basanti mobile logo prominence */
   .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
-    width: min(100%, 500px) !important;
+    width: min(100%, 420px) !important;
     height: auto !important;
     max-height: none !important;
     transform: translateY(-2%);
+  }
+
+  /* Increase Basanti marquee logo by 0.2 in mobile */
+  .brands-logo-item--basanti .brands-featured-logo {
+    transform: translate(-50%, -50%) scale(2.8);
   }
 
   .brand-page .brand-hero--collage .brand-hero-collage {
