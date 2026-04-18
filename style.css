@@ -6918,6 +6918,10 @@ body.event-gallery-open {
 }
 
 @media (max-width: 560px) {
+  .brand-page .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
+    width: min(100%, 220px);
+  }
+
   .brand-page .brand-hero--collage .brand-hero-collage {
     aspect-ratio: 27 / 16;
   }
