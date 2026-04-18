@@ -6929,6 +6929,14 @@ body.event-gallery-open {
     width: min(100%, 360px) !important;
   }
 
+  /* Specific override for Basanti mobile logo prominence */
+  .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
+    width: min(100%, 500px) !important;
+    height: auto !important;
+    max-height: none !important;
+    transform: translateY(-2%);
+  }
+
   .brand-page .brand-hero--collage .brand-hero-collage {
     aspect-ratio: 27 / 16;
   }
