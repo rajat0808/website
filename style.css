@@ -6907,12 +6907,12 @@ body.event-gallery-open {
   }
 }
 
-.brand-page .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
+.brand-page--charles-tyrwhitt .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
   width: min(100%, 140px) !important;
 }
 
 @media (min-width: 769px) {
-  .brand-page .brand-profile--logo-only .brand-profile-grid .brand-hero-meta {
+  .brand-page--charles-tyrwhitt .brand-profile--logo-only .brand-profile-grid .brand-hero-meta {
     margin-top: 10.5rem !important;
   }
 }
