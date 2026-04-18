@@ -6908,7 +6908,7 @@ body.event-gallery-open {
 }
 
 .brand-page .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
-  width: min(100%, 140px);
+  width: min(100%, 140px) !important;
 }
 
 @media (min-width: 769px) {
@@ -6919,7 +6919,7 @@ body.event-gallery-open {
 
 @media (max-width: 560px) {
   .brand-page .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
-    width: min(100%, 220px);
+    width: min(100%, 260px) !important;
   }
 
   .brand-page .brand-hero--collage .brand-hero-collage {
