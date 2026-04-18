@@ -6931,7 +6931,7 @@ body.event-gallery-open {
 
   /* Specific override for Basanti mobile logo prominence */
   .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
-    width: min(100%, 420px) !important;
+    width: min(100%, 340px) !important;
     height: auto !important;
     max-height: none !important;
     transform: translateY(-2%);
