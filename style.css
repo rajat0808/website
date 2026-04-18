@@ -6908,12 +6908,16 @@ body.event-gallery-open {
 }
 
 .brand-page--charles-tyrwhitt .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
-  width: min(100%, 140px) !important;
+  width: min(100%, 320px) !important;
+  height: auto;
+  max-height: none;
+  transform: scale(0.9);
+  transform-origin: left center;
 }
 
 @media (min-width: 769px) {
   .brand-page--charles-tyrwhitt .brand-profile--logo-only .brand-profile-grid .brand-hero-meta {
-    margin-top: 0.7rem !important;
+    margin-top: 8.0rem !important;
   }
 }
 
