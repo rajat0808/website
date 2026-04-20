@@ -3589,32 +3589,18 @@ body.event-gallery-open {
 
 .footer-logo {
   font-family: "Times New Roman", Times, serif !important;
-  font-size: clamp(1.6rem, 5vw, 2.2rem);
-  line-height: 0.85;
+  font-size: clamp(1.2rem, 3.5vw, 1.6rem);
+  line-height: 1.2;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   margin: 0 0 1.4rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-logo span {
   display: block;
-}
-
-.footer-logo .logo-sub {
-  font-size: 0.6em;
-  letter-spacing: 0.55em;
-  margin-top: 5px;
-  font-family: var(--font-sans) !important;
-  font-weight: 400;
-  opacity: 0.9;
+  font-weight: normal;
 }
 
 @media (max-width: 640px) {
   .footer-logo {
-    align-items: center;
-    text-align: center;
+    text-align: left;
   }
 }
 
