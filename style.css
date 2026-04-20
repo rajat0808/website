@@ -3589,18 +3589,19 @@ body.event-gallery-open {
 
 .footer-logo {
   font-family: "Times New Roman", Times, serif !important;
-  font-size: clamp(1.2rem, 3.5vw, 1.6rem);
+  font-size: clamp(1rem, 2.5vw, 1.35rem);
   line-height: 1.2;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  margin: 0 0 1.4rem;
+  margin: 0 0 1rem;
   display: block;
   font-weight: normal;
+  text-align: left !important;
 }
 
 @media (max-width: 640px) {
   .footer-logo {
-    text-align: left;
+    text-align: left !important;
   }
 }
 
