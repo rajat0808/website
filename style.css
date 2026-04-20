@@ -3438,7 +3438,7 @@ body.event-gallery-open {
     line-height: 1.4;
     color: #000000;
     text-align: center;
-    white-space: nowrap !important;
+    white-space: normal;
   }
 
   .index-page .event-card--home p br {
@@ -3507,7 +3507,7 @@ body.event-gallery-open {
 
   .index-page .event-card--home p {
     max-width: none;
-    white-space: nowrap !important;
+    white-space: normal;
     font-size: clamp(0.45rem, 2.4vw, 0.85rem);
   }
 }
