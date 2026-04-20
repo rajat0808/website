@@ -5271,8 +5271,8 @@ body.event-gallery-open {
   }
 
   .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
-    height: clamp(140px, 32vw, 220px);
-    max-width: min(100%, 400px);
+    height: clamp(110px, 26vw, 170px);
+    max-width: min(100%, 320px);
     max-height: none;
     transform: translateY(-3%);
   }
@@ -6931,7 +6931,7 @@ body.event-gallery-open {
 
   /* Specific override for Basanti mobile logo prominence */
   .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
-    width: min(100%, 240px) !important;
+    width: min(100%, 180px) !important;
     height: auto !important;
     max-height: none !important;
     transform: translateY(-2%);
