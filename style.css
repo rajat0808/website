@@ -3399,12 +3399,12 @@ body.event-gallery-open {
   }
 
   .index-page .gallery-heading {
-    padding-top: clamp(3.5rem, 9vw, 5.5rem);
-    padding-bottom: 1rem;
+    padding-top: clamp(0.5rem, 3vw, 1rem);
+    padding-bottom: 0.5rem;
   }
 
   .index-page .brands-premium {
-    padding-bottom: clamp(3rem, 8vw, 5rem);
+    padding-bottom: clamp(0.5rem, 2vw, 1rem);
   }
 
   .index-page .contact-title {
@@ -3472,12 +3472,12 @@ body.event-gallery-open {
 
 @media (max-width: 430px) {
   .index-page .gallery-heading {
-    padding-top: clamp(3.2rem, 8.5vw, 5.2rem);
-    padding-bottom: 0.9rem;
+    padding-top: clamp(0.3rem, 2vw, 0.8rem);
+    padding-bottom: 0.4rem;
   }
 
   .index-page .brands-premium {
-    padding-bottom: clamp(2.8rem, 7.5vw, 4.8rem);
+    padding-bottom: clamp(0.4rem, 1.5vw, 0.9rem);
   }
 
   .gallery-heading__title {
