@@ -5346,6 +5346,16 @@ body.event-gallery-open {
   transform-origin: center;
 }
 
+@media (min-width: 769px) {
+  .brand-page--gas
+    .brand-profile--logo-only
+    .brand-profile-grid
+    .brand-hero-logo-lockup
+    img {
+    transform: scale(0.65) translateX(6%);
+  }
+}
+
 @media (max-width: 768px) {
   .brand-page .brand-profile-grid {
     grid-template-columns: 1fr;
