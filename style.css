@@ -173,7 +173,8 @@ ul {
   display: block;
   width: 100%;
   height: 100%;
-  background: url("assets/logo-nav-sindh-emporio-white.png?v=20260323-1") center / contain no-repeat;
+  background: url("assets/logo-nav-sindh-emporio-white.png?v=20260323-1")
+    center / contain no-repeat;
   text-indent: -9999px;
   overflow: hidden;
   white-space: nowrap;
@@ -480,15 +481,15 @@ body.menu-open .menu-lines span:last-child {
   gap: clamp(0.6rem, 1.4vw, 1.2rem);
 }
 
-.about-display>span {
+.about-display > span {
   display: block;
 }
 
-.about-display>span:first-child:not(.about-kicker--logo) {
+.about-display > span:first-child:not(.about-kicker--logo) {
   color: #cda35a;
 }
 
-.about-display>span:last-child em {
+.about-display > span:last-child em {
   color: #cda35a;
   font-style: normal;
 }
@@ -649,7 +650,7 @@ body.menu-open .menu-lines span:last-child {
   margin-right: clamp(-3rem, -1.8vw, -1rem);
 }
 
-.about-side-tag>span {
+.about-side-tag > span {
   display: inline;
   line-height: 1.2;
   white-space: nowrap;
@@ -720,7 +721,7 @@ body.menu-open .menu-lines span:last-child {
   z-index: 1;
 }
 
-.about-feature--home .about-display>span {
+.about-feature--home .about-display > span {
   color: #111111;
   display: block;
   margin-right: 0;
@@ -985,7 +986,7 @@ body.menu-open .menu-lines span:last-child {
   }
 
   .hero--classic .hero-slider-track img {
-    height: auto;
+    height: var(--slide-width);
     aspect-ratio: 1 / 1;
   }
 
@@ -999,7 +1000,7 @@ body.menu-open .menu-lines span:last-child {
     padding-bottom: var(--index-section-gap-tight);
   }
 
-  .gallery-heading+.hero {
+  .gallery-heading + .hero {
     margin-top: 0.6rem;
   }
 
@@ -1087,7 +1088,7 @@ body.menu-open .menu-lines span:last-child {
   }
 
   .hero--classic .hero-slider-track img {
-    height: auto;
+    height: var(--slide-width);
   }
 
   .section-title {
@@ -1461,9 +1462,11 @@ body.menu-open .menu-lines span:last-child {
   top: -6rem;
   width: 18rem;
   height: 18rem;
-  background: radial-gradient(circle,
-      rgba(205, 163, 90, 0.25),
-      transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(205, 163, 90, 0.25),
+    transparent 70%
+  );
   pointer-events: none;
 }
 
@@ -1678,7 +1681,7 @@ body.menu-open .menu-lines span:last-child {
   padding-bottom: var(--index-section-gap-tight);
 }
 
-.gallery-heading+.hero {
+.gallery-heading + .hero {
   margin-top: 0.8rem;
 }
 
@@ -1690,18 +1693,18 @@ body.menu-open .menu-lines span:last-child {
   margin-top: 0;
 }
 
-.gallery-heading+.hero.hero--classic {
+.gallery-heading + .hero.hero--classic {
   height: auto;
   min-height: 0;
   align-items: flex-start;
 }
 
-.gallery-heading+.hero.hero--classic .hero-slider {
+.gallery-heading + .hero.hero--classic .hero-slider {
   position: relative;
   inset: auto;
 }
 
-.gallery-heading+.hero.hero--classic .hero-slider-track {
+.gallery-heading + .hero.hero--classic .hero-slider-track {
   align-items: stretch;
 }
 
@@ -2237,8 +2240,6 @@ body.menu-open .menu-lines span:last-child {
   filter: none;
 }
 
-
-
 .brands-logo-item--charles-tyrwhitt .brands-featured-logo {
   transform: translate(-50%, -50%) scale(1.22);
   transform-origin: center;
@@ -2279,7 +2280,7 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .brands-logo-item--armani {
-  --logo-scale: 0.89
+  --logo-scale: 0.89;
 }
 
 .brands-logo-item--levis {
@@ -2287,8 +2288,7 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .brands-logo-item--basanti {
-    --logo-scale: 0.9;
-
+  --logo-scale: 0.9;
 }
 
 .brands-logo-item--kora {
@@ -3402,10 +3402,10 @@ body.event-gallery-open {
     white-space: nowrap;
     text-wrap: nowrap;
     line-height: 1.06;
-    font-size: clamp(1.18rem, 5.2vw, 1.8rem);
+    font-size: clamp(1.4rem, 6.8vw, 2.1rem);
     font-weight: 700;
     color: #000000;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.06em;
     margin-bottom: 0.95rem;
   }
 
@@ -3423,12 +3423,11 @@ body.event-gallery-open {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    font-size: clamp(0.84rem, 2.8vw, 0.96rem);
+    font-size: clamp(0.8rem, 3.5vw, 0.96rem);
     line-height: 1.45;
     color: #000000;
     text-align: center;
     white-space: normal;
-    text-wrap: balance;
   }
 
   .index-page .event-card--home p br {
@@ -3479,9 +3478,9 @@ body.event-gallery-open {
     max-width: 100%;
     white-space: nowrap;
     text-wrap: nowrap;
-    font-size: clamp(1.12rem, 5.1vw, 1.45rem);
+    font-size: clamp(1.35rem, 6.5vw, 1.75rem);
     line-height: 1.06;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.04em;
     font-weight: 700;
     color: #000000;
     margin-bottom: 0.85rem;
@@ -3493,7 +3492,6 @@ body.event-gallery-open {
 
   .index-page .event-card--home p {
     max-width: min(100%, 46ch);
-    text-wrap: balance;
     white-space: normal;
   }
 }
@@ -3506,7 +3504,8 @@ body.event-gallery-open {
 .footer {
   background: #0b0b0b;
   color: #f5f5f5;
-  padding: clamp(2.6rem, 4vw, 3.6rem) 6% calc(2.2rem + env(safe-area-inset-bottom));
+  padding: clamp(2.6rem, 4vw, 3.6rem) 6%
+    calc(2.2rem + env(safe-area-inset-bottom));
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -3687,7 +3686,7 @@ body.event-gallery-open {
   .footer-timing h3 {
     margin-bottom: 0.25rem !important;
   }
-  
+
   .footer-links li {
     margin-bottom: 0.1rem;
   }
@@ -3856,9 +3855,11 @@ body.event-gallery-open {
 .brands-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(140deg,
-      rgba(11, 10, 13, 0.95),
-      rgba(42, 13, 23, 0.4));
+  background: linear-gradient(
+    140deg,
+    rgba(11, 10, 13, 0.95),
+    rgba(42, 13, 23, 0.4)
+  );
 }
 
 .brands-hero-content {
@@ -3971,9 +3972,11 @@ body.event-gallery-open {
 .featured-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg,
-      rgba(0, 0, 0, 0.1),
-      rgba(11, 10, 13, 0.9));
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.1),
+    rgba(11, 10, 13, 0.9)
+  );
 }
 
 .featured-content {
@@ -4271,9 +4274,11 @@ body.event-gallery-open {
   gap: 2rem;
   padding: clamp(2.4rem, 4vw, 3.4rem);
   border-radius: 1.6rem;
-  background: linear-gradient(135deg,
-      rgba(42, 13, 23, 0.9),
-      rgba(12, 11, 15, 0.95));
+  background: linear-gradient(
+    135deg,
+    rgba(42, 13, 23, 0.9),
+    rgba(12, 11, 15, 0.95)
+  );
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55);
 }
@@ -4340,9 +4345,11 @@ body.event-gallery-open {
 .brand-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(140deg,
-      rgba(11, 10, 13, 0.92),
-      rgba(42, 13, 23, 0.4));
+  background: linear-gradient(
+    140deg,
+    rgba(11, 10, 13, 0.92),
+    rgba(42, 13, 23, 0.4)
+  );
 }
 
 .brand-hero-content {
@@ -4453,9 +4460,11 @@ body.event-gallery-open {
 }
 
 .brand-collections {
-  background: linear-gradient(120deg,
-      rgba(16, 15, 20, 0.95),
-      rgba(42, 13, 23, 0.55));
+  background: linear-gradient(
+    120deg,
+    rgba(16, 15, 20, 0.95),
+    rgba(42, 13, 23, 0.55)
+  );
 }
 
 .brand-collections-header {
@@ -4745,12 +4754,12 @@ body.event-gallery-open {
   display: none;
 }
 
-.brand-page .brand-profile-grid--events>.brand-profile-media {
+.brand-page .brand-profile-grid--events > .brand-profile-media {
   grid-column: 1;
   grid-row: 1;
 }
 
-.brand-page .brand-profile-grid--events>.brand-profile-panel {
+.brand-page .brand-profile-grid--events > .brand-profile-panel {
   grid-column: 2;
   grid-row: 1;
 }
@@ -4794,12 +4803,12 @@ body.event-gallery-open {
   align-self: center;
 }
 
-.brand-page .brand-profile-grid>.brand-hero-panel {
+.brand-page .brand-profile-grid > .brand-hero-panel {
   grid-column: 1;
   grid-row: 1;
 }
 
-.brand-page .brand-profile-grid>.brand-about-box {
+.brand-page .brand-profile-grid > .brand-about-box {
   grid-column: 3;
   grid-row: 1;
 }
@@ -4875,27 +4884,44 @@ body.event-gallery-open {
   text-align: left;
 }
 
-.brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-panel {
+.brand-page--basanti
+  .brand-profile--logo-only
+  .brand-profile-grid
+  .brand-hero-panel {
   margin-top: clamp(-3.1rem, -4.2vw, -1.9rem);
 }
 
-.brand-page .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup {
+.brand-page
+  .brand-profile--logo-only
+  .brand-profile-grid
+  .brand-hero-logo-lockup {
   justify-self: flex-start;
 }
 
-.brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup {
+.brand-page--basanti
+  .brand-profile--logo-only
+  .brand-profile-grid
+  .brand-hero-logo-lockup {
   margin-top: clamp(-1.2rem, -1.8vw, -0.7rem);
   margin-bottom: clamp(-1.1rem, -1.8vw, -0.5rem);
 }
 
-.brand-page .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
+.brand-page
+  .brand-profile--logo-only
+  .brand-profile-grid
+  .brand-hero-logo-lockup
+  img {
   width: auto;
   height: clamp(110px, 12vw, 150px);
   max-width: 320px;
   max-height: none;
 }
 
-.brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
+.brand-page--basanti
+  .brand-profile--logo-only
+  .brand-profile-grid
+  .brand-hero-logo-lockup
+  img {
   height: clamp(188px, 18vw, 270px);
   max-width: min(100%, 500px);
   transform: translateY(-4%);
@@ -4905,19 +4931,31 @@ body.event-gallery-open {
   justify-items: start;
 }
 
-.brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-meta {
+.brand-page--basanti
+  .brand-profile--logo-only
+  .brand-profile-grid
+  .brand-hero-meta {
   margin-top: clamp(-3.2rem, -4.4vw, -2rem);
 }
 
-.brand-page:not(.brand-page--basanti) .brand-profile--logo-only .brand-profile-grid .brand-hero-meta {
+.brand-page:not(.brand-page--basanti)
+  .brand-profile--logo-only
+  .brand-profile-grid
+  .brand-hero-meta {
   margin-top: clamp(0.9rem, 1.8vw, 1.4rem);
 }
 
-.brand-page--la-martina .brand-profile--logo-only .brand-profile-grid .brand-hero-meta {
+.brand-page--la-martina
+  .brand-profile--logo-only
+  .brand-profile-grid
+  .brand-hero-meta {
   margin-top: clamp(-0.45rem, -0.8vw, -0.2rem);
 }
 
-.brand-page--la-martina .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup {
+.brand-page--la-martina
+  .brand-profile--logo-only
+  .brand-profile-grid
+  .brand-hero-logo-lockup {
   margin-bottom: clamp(-0.45rem, -0.8vw, -0.2rem);
 }
 
@@ -4925,12 +4963,19 @@ body.event-gallery-open {
   text-align: left;
 }
 
-.brand-page .brand-profile--logo-only .brand-about-box--simple .brand-about-box__content h2 {
+.brand-page
+  .brand-profile--logo-only
+  .brand-about-box--simple
+  .brand-about-box__content
+  h2 {
   text-align: left;
 }
 
 @media (min-width: 769px) {
-  .brand-page--charles-tyrwhitt .brand-profile--logo-only .brand-profile-grid .brand-hero-panel {
+  .brand-page--charles-tyrwhitt
+    .brand-profile--logo-only
+    .brand-profile-grid
+    .brand-hero-panel {
     transform: translateX(clamp(8px, 1vw, 14px));
   }
 }
@@ -5177,7 +5222,10 @@ body.event-gallery-open {
   filter: brightness(0);
 }
 
-.brand-page--kora .brand-profile--logo-only .brand-profile-grid .brand-hero-panel {
+.brand-page--kora
+  .brand-profile--logo-only
+  .brand-profile-grid
+  .brand-hero-panel {
   padding-left: clamp(0.6rem, 1.2vw, 1rem);
 }
 
@@ -5185,7 +5233,11 @@ body.event-gallery-open {
   justify-self: center;
 }
 
-.brand-page--lacoste .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
+.brand-page--lacoste
+  .brand-profile--logo-only
+  .brand-profile-grid
+  .brand-hero-logo-lockup
+  img {
   width: min(100%, 320px);
   height: auto;
   max-height: none;
@@ -5193,7 +5245,11 @@ body.event-gallery-open {
   transform-origin: center;
 }
 
-.brand-page--gas .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
+.brand-page--gas
+  .brand-profile--logo-only
+  .brand-profile-grid
+  .brand-hero-logo-lockup
+  img {
   transform: scale(0.9);
   transform-origin: center;
 }
@@ -5210,14 +5266,14 @@ body.event-gallery-open {
     display: none;
   }
 
-  .brand-page .brand-profile-grid>.brand-hero-panel,
-  .brand-page .brand-profile-grid>.brand-about-box {
+  .brand-page .brand-profile-grid > .brand-hero-panel,
+  .brand-page .brand-profile-grid > .brand-about-box {
     grid-column: 1;
     grid-row: auto;
   }
 
-  .brand-page .brand-profile-grid--events>.brand-profile-media,
-  .brand-page .brand-profile-grid--events>.brand-profile-panel {
+  .brand-page .brand-profile-grid--events > .brand-profile-media,
+  .brand-page .brand-profile-grid--events > .brand-profile-panel {
     grid-column: 1;
   }
 
@@ -5231,7 +5287,10 @@ body.event-gallery-open {
     text-align: center;
   }
 
-  .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-panel {
+  .brand-page--basanti
+    .brand-profile--logo-only
+    .brand-profile-grid
+    .brand-hero-panel {
     margin-top: clamp(-2rem, -5vw, -0.8rem);
   }
 
@@ -5242,11 +5301,17 @@ body.event-gallery-open {
     margin: 0 auto 1.2rem;
   }
 
-  .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup {
+  .brand-page--basanti
+    .brand-profile--logo-only
+    .brand-profile-grid
+    .brand-hero-logo-lockup {
     margin: -0.9rem auto -0.7rem;
   }
 
-  .brand-page--la-martina .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup {
+  .brand-page--la-martina
+    .brand-profile--logo-only
+    .brand-profile-grid
+    .brand-hero-logo-lockup {
     margin: -0.4rem auto -0.2rem;
   }
 
@@ -5255,7 +5320,11 @@ body.event-gallery-open {
     margin: 0 auto;
   }
 
-  .brand-page--la-martina .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
+  .brand-page--la-martina
+    .brand-profile--logo-only
+    .brand-profile-grid
+    .brand-hero-logo-lockup
+    img {
     height: clamp(130px, 34vw, 190px);
     max-width: min(100%, 360px);
     max-height: none;
@@ -5270,18 +5339,28 @@ body.event-gallery-open {
     max-height: clamp(260px, 32vw, 320px);
   }
 
-  .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
+  .brand-page--basanti
+    .brand-profile--logo-only
+    .brand-profile-grid
+    .brand-hero-logo-lockup
+    img {
     height: clamp(110px, 26vw, 170px);
     max-width: min(100%, 320px);
     max-height: none;
     transform: translateY(-3%);
   }
 
-  .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-meta {
+  .brand-page--basanti
+    .brand-profile--logo-only
+    .brand-profile-grid
+    .brand-hero-meta {
     margin-top: clamp(-2.2rem, -5.4vw, -1.2rem);
   }
 
-  .brand-page--la-martina .brand-profile--logo-only .brand-profile-grid .brand-hero-meta {
+  .brand-page--la-martina
+    .brand-profile--logo-only
+    .brand-profile-grid
+    .brand-hero-meta {
     margin-top: clamp(-0.45rem, -1.8vw, -0.2rem);
   }
 
@@ -5532,7 +5611,7 @@ body.event-gallery-open {
   display: block;
 }
 
-.brand-page .brand-hero--collage .brand-hero-shell>.brand-hero-panel {
+.brand-page .brand-hero--collage .brand-hero-shell > .brand-hero-panel {
   display: none;
 }
 
@@ -5661,49 +5740,82 @@ body.event-gallery-open {
   word-break: break-word;
 }
 
-.brand-page.brand-page--kora .brand-hero--collage .brand-hero-card .brand-hero-image {
+.brand-page.brand-page--kora
+  .brand-hero--collage
+  .brand-hero-card
+  .brand-hero-image {
   object-fit: contain;
   object-position: center;
 }
 
-.brand-page.brand-page--basanti .brand-hero--collage .brand-hero-card .brand-hero-image {
+.brand-page.brand-page--basanti
+  .brand-hero--collage
+  .brand-hero-card
+  .brand-hero-image {
   object-position: center 34%;
 }
 
-.brand-page.brand-page--superdry .brand-hero--collage .brand-hero-card .brand-hero-image {
+.brand-page.brand-page--superdry
+  .brand-hero--collage
+  .brand-hero-card
+  .brand-hero-image {
   object-position: center 24%;
 }
 
-.brand-page.brand-page--lacoste .brand-hero--collage .brand-hero-card .brand-hero-image {
+.brand-page.brand-page--lacoste
+  .brand-hero--collage
+  .brand-hero-card
+  .brand-hero-image {
   object-position: center 26%;
 }
 
-.brand-page.brand-page--gas .brand-hero--collage .brand-hero-card--tall .brand-hero-image {
+.brand-page.brand-page--gas
+  .brand-hero--collage
+  .brand-hero-card--tall
+  .brand-hero-image {
   object-position: center 18%;
 }
 
-.brand-page.brand-page--gas .brand-hero--collage .brand-hero-card--mid .brand-hero-image {
+.brand-page.brand-page--gas
+  .brand-hero--collage
+  .brand-hero-card--mid
+  .brand-hero-image {
   object-position: center 22%;
 }
 
-.brand-page.brand-page--gas .brand-hero--collage .brand-hero-card--wide .brand-hero-image {
+.brand-page.brand-page--gas
+  .brand-hero--collage
+  .brand-hero-card--wide
+  .brand-hero-image {
   object-fit: contain;
   object-position: center 82%;
 }
 
-.brand-page.brand-page--charles-tyrwhitt .brand-hero--collage .brand-hero-logo-lockup img {
+.brand-page.brand-page--charles-tyrwhitt
+  .brand-hero--collage
+  .brand-hero-logo-lockup
+  img {
   width: min(100%, 280px);
 }
 
-.brand-page.brand-page--charles-tyrwhitt .brand-hero--collage .brand-hero-card--tall .brand-hero-image {
+.brand-page.brand-page--charles-tyrwhitt
+  .brand-hero--collage
+  .brand-hero-card--tall
+  .brand-hero-image {
   object-position: center 18%;
 }
 
-.brand-page.brand-page--charles-tyrwhitt .brand-hero--collage .brand-hero-card--mid .brand-hero-image {
+.brand-page.brand-page--charles-tyrwhitt
+  .brand-hero--collage
+  .brand-hero-card--mid
+  .brand-hero-image {
   object-position: center 28%;
 }
 
-.brand-page.brand-page--charles-tyrwhitt .brand-hero--collage .brand-hero-card--wide .brand-hero-image {
+.brand-page.brand-page--charles-tyrwhitt
+  .brand-hero--collage
+  .brand-hero-card--wide
+  .brand-hero-image {
   object-fit: contain;
   object-position: center bottom;
 }
@@ -5719,32 +5831,53 @@ body.event-gallery-open {
   filter: brightness(0) invert(1);
 }
 
-.brand-page.brand-page--levis .brand-hero--collage .brand-hero-card--tall .brand-hero-image {
+.brand-page.brand-page--levis
+  .brand-hero--collage
+  .brand-hero-card--tall
+  .brand-hero-image {
   object-position: center 20%;
 }
 
-.brand-page.brand-page--levis .brand-hero--collage .brand-hero-card--mid .brand-hero-image {
+.brand-page.brand-page--levis
+  .brand-hero--collage
+  .brand-hero-card--mid
+  .brand-hero-image {
   object-position: center 46%;
 }
 
-.brand-page.brand-page--levis .brand-hero--collage .brand-hero-card--wide .brand-hero-image {
+.brand-page.brand-page--levis
+  .brand-hero--collage
+  .brand-hero-card--wide
+  .brand-hero-image {
   object-fit: contain;
   object-position: center bottom;
 }
 
-.brand-page.brand-page--la-martina .brand-hero--collage .brand-hero-card--tall .brand-hero-image {
+.brand-page.brand-page--la-martina
+  .brand-hero--collage
+  .brand-hero-card--tall
+  .brand-hero-image {
   object-position: center 20%;
 }
 
-.brand-page.brand-page--la-martina .brand-hero--collage .brand-hero-card--mid .brand-hero-image {
+.brand-page.brand-page--la-martina
+  .brand-hero--collage
+  .brand-hero-card--mid
+  .brand-hero-image {
   object-position: center 28%;
 }
 
-.brand-page.brand-page--la-martina .brand-hero--collage .brand-hero-card--wide .brand-hero-image {
+.brand-page.brand-page--la-martina
+  .brand-hero--collage
+  .brand-hero-card--wide
+  .brand-hero-image {
   object-position: center 24%;
 }
 
-.brand-page.brand-page--superdry .brand-hero--collage .brand-hero-card--wide .brand-hero-image {
+.brand-page.brand-page--superdry
+  .brand-hero--collage
+  .brand-hero-card--wide
+  .brand-hero-image {
   object-position: center 20%;
 }
 
@@ -5862,7 +5995,10 @@ body.event-gallery-open {
   text-align: left;
 }
 
-.brand-page.brand-page--lacoste .brand-hero--collage .brand-hero-card--wide .brand-hero-image {
+.brand-page.brand-page--lacoste
+  .brand-hero--collage
+  .brand-hero-card--wide
+  .brand-hero-image {
   object-fit: contain;
   object-position: center;
 }
@@ -6066,16 +6202,20 @@ body.event-gallery-open {
 
 .brand-page .brand-motion-window::before {
   left: 0;
-  background: linear-gradient(90deg,
-      var(--brand-bg) 0%,
-      rgba(247, 242, 237, 0) 100%);
+  background: linear-gradient(
+    90deg,
+    var(--brand-bg) 0%,
+    rgba(247, 242, 237, 0) 100%
+  );
 }
 
 .brand-page .brand-motion-window::after {
   right: 0;
-  background: linear-gradient(270deg,
-      var(--brand-bg) 0%,
-      rgba(247, 242, 237, 0) 100%);
+  background: linear-gradient(
+    270deg,
+    var(--brand-bg) 0%,
+    rgba(247, 242, 237, 0) 100%
+  );
 }
 
 .brand-page .brand-motion-track {
@@ -6265,7 +6405,6 @@ body.event-gallery-open {
 }
 
 @keyframes brandTitleFade {
-
   0%,
   100% {
     opacity: 1;
@@ -6337,7 +6476,6 @@ body.event-gallery-open {
 }
 
 @media (max-width: 600px) {
-
   .brand-page .brand-hero,
   .brand-page .brand-marquee,
   .brand-page .brand-showcase,
@@ -6779,7 +6917,10 @@ body.event-gallery-open {
   --luxury-card-bg: #000000;
 }
 
-.brand-page:not([class*="brand-page--"]) .luxury-card--la-martina .luxury-card__logo img {
+.brand-page:not([class*="brand-page--"])
+  .luxury-card--la-martina
+  .luxury-card__logo
+  img {
   max-width: 96%;
   filter: brightness(0) invert(1);
   mix-blend-mode: normal;
@@ -6810,11 +6951,17 @@ body.event-gallery-open {
   --brand-logo-scale: 0.65;
 }
 
-.brand-page:not([class*="brand-page--"]) .luxury-card--superdry .luxury-card__logo img {
+.brand-page:not([class*="brand-page--"])
+  .luxury-card--superdry
+  .luxury-card__logo
+  img {
   height: clamp(160px, calc(16vw - 1px), 210px);
 }
 
-.brand-page:not([class*="brand-page--"]) .luxury-card--lacoste .luxury-card__logo img {
+.brand-page:not([class*="brand-page--"])
+  .luxury-card--lacoste
+  .luxury-card__logo
+  img {
   width: auto;
   height: clamp(160px, calc(16vw - 1px), 210px);
   max-width: 96%;
@@ -6822,7 +6969,10 @@ body.event-gallery-open {
   transform: translate(-50%, -50%) scale(var(--brand-logo-scale));
 }
 
-.brand-page:not([class*="brand-page--"]) .luxury-card--saresa .luxury-card__logo img {
+.brand-page:not([class*="brand-page--"])
+  .luxury-card--saresa
+  .luxury-card__logo
+  img {
   width: auto;
   height: clamp(160px, calc(16vw - 1px), 210px);
   max-width: 96%;
@@ -6830,7 +6980,10 @@ body.event-gallery-open {
   transform: translate(-50%, -50%) scale(var(--brand-logo-scale));
 }
 
-.brand-page:not([class*="brand-page--"]) .luxury-card--boss .luxury-card__logo img {
+.brand-page:not([class*="brand-page--"])
+  .luxury-card--boss
+  .luxury-card__logo
+  img {
   max-width: 96%;
 }
 
@@ -6870,7 +7023,10 @@ body.event-gallery-open {
     --brand-logo-scale: 1.74;
   }
 
-  .brand-page:not([class*="brand-page--"]) .luxury-card--superdry .luxury-card__logo img {
+  .brand-page:not([class*="brand-page--"])
+    .luxury-card--superdry
+    .luxury-card__logo
+    img {
     height: clamp(72px, 21vw, 108px);
   }
 
@@ -6878,7 +7034,10 @@ body.event-gallery-open {
     --brand-logo-scale: 0.92;
   }
 
-  .brand-page:not([class*="brand-page--"]) .luxury-card--la-martina .luxury-card__logo img {
+  .brand-page:not([class*="brand-page--"])
+    .luxury-card--la-martina
+    .luxury-card__logo
+    img {
     max-width: 96%;
   }
 }
@@ -6895,7 +7054,6 @@ body.event-gallery-open {
 }
 
 @media (prefers-reduced-motion: reduce) {
-
   .brand-page .luxury-card,
   .brand-page .luxury-card__cta {
     transition: none;
@@ -6907,7 +7065,11 @@ body.event-gallery-open {
   }
 }
 
-.brand-page--charles-tyrwhitt .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
+.brand-page--charles-tyrwhitt
+  .brand-profile--logo-only
+  .brand-profile-grid
+  .brand-hero-logo-lockup
+  img {
   width: min(100%, 320px) !important;
   height: auto;
   max-height: none;
@@ -6916,21 +7078,35 @@ body.event-gallery-open {
 }
 
 @media (min-width: 769px) {
-  .brand-page--charles-tyrwhitt .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup {
+  .brand-page--charles-tyrwhitt
+    .brand-profile--logo-only
+    .brand-profile-grid
+    .brand-hero-logo-lockup {
     margin-top: 2.9rem !important;
   }
-  .brand-page--charles-tyrwhitt .brand-profile--logo-only .brand-profile-grid .brand-hero-meta {
+  .brand-page--charles-tyrwhitt
+    .brand-profile--logo-only
+    .brand-profile-grid
+    .brand-hero-meta {
     margin-top: 2.5rem !important;
   }
 }
 
 @media (max-width: 560px) {
-  .brand-page .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
+  .brand-page
+    .brand-profile--logo-only
+    .brand-profile-grid
+    .brand-hero-logo-lockup
+    img {
     width: min(100%, 360px) !important;
   }
 
   /* Specific override for Basanti mobile logo prominence */
-  .brand-page--basanti .brand-profile--logo-only .brand-profile-grid .brand-hero-logo-lockup img {
+  .brand-page--basanti
+    .brand-profile--logo-only
+    .brand-profile-grid
+    .brand-hero-logo-lockup
+    img {
     width: min(100%, 180px) !important;
     height: auto !important;
     max-height: none !important;
