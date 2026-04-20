@@ -3490,6 +3490,14 @@ body.event-gallery-open {
     --slide-gap: 6px;
   }
 
+  .index-page .about-tagline {
+    font-size: clamp(0.6rem, 2.8vw, 0.82rem);
+    letter-spacing: 0.14em;
+    white-space: nowrap !important;
+    text-wrap: nowrap !important;
+    margin-top: 1.5rem;
+  }
+
   .index-page .contact-title {
     width: 100%;
     max-width: 100%;
