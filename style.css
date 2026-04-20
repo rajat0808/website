@@ -3398,10 +3398,21 @@ body.event-gallery-open {
     width: 100%;
   }
 
+  .index-page .gallery-heading {
+    padding-top: clamp(0.5rem, 3vw, 0.9rem);
+    padding-bottom: 0.4rem;
+  }
+
+  .index-page .brands-premium {
+    padding-bottom: clamp(0.8rem, 2.5vw, 1.4rem);
+  }
+
   .index-page .contact-title {
-    white-space: nowrap;
-    text-wrap: nowrap;
-    line-height: 1.06;
+    width: 90%;
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.1;
     font-size: clamp(1.4rem, 6.8vw, 2.1rem);
     font-weight: 700;
     color: #000000;
@@ -3446,7 +3457,7 @@ body.event-gallery-open {
   }
 
   .index-page .contact.section-padding {
-    padding-top: clamp(1.2rem, 6.5vw, 2.1rem);
+    padding-top: clamp(3.2rem, 11vw, 5.5rem);
     padding-bottom: 2rem;
     padding-left: clamp(0.7rem, 3vw, 1rem);
     padding-right: clamp(0.7rem, 3vw, 1rem);
@@ -3459,8 +3470,12 @@ body.event-gallery-open {
 
 @media (max-width: 430px) {
   .index-page .gallery-heading {
-    padding-top: clamp(1.1rem, 5vw, 1.6rem);
-    padding-bottom: 0.6rem;
+    padding-top: clamp(0.35rem, 2vw, 0.6rem);
+    padding-bottom: 0.45rem;
+  }
+
+  .index-page .brands-premium {
+    padding-bottom: clamp(0.55rem, 1.8vw, 1rem);
   }
 
   .gallery-heading__title {
@@ -3474,10 +3489,10 @@ body.event-gallery-open {
   }
 
   .index-page .contact-title {
-    width: 100%;
-    max-width: 100%;
-    white-space: nowrap;
-    text-wrap: nowrap;
+    width: 85%;
+    max-width: 24rem;
+    margin-left: auto;
+    margin-right: auto;
     font-size: clamp(1.35rem, 6.5vw, 1.75rem);
     line-height: 1.06;
     letter-spacing: 0.04em;
