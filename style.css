@@ -2212,7 +2212,7 @@ body.menu-open .menu-lines span:last-child {
   max-height: 100%;
   object-fit: contain;
   display: block;
-  transform: scale(var(--logo-scale));
+  transform: scale(calc(var(--logo-scale) - 0.1)) translateX(0.1em);
   transform-origin: center;
 }
 
@@ -4968,6 +4968,8 @@ body.event-gallery-open {
   max-height: clamp(140px, 16vw, 230px);
   object-fit: contain;
   display: block;
+  transform: scale(0.9) translateX(0.1em);
+  transform-origin: left center;
 }
 
 .brand-page .brand-profile--logo-only .brand-profile-grid .brand-hero-panel {
@@ -5342,7 +5344,7 @@ body.event-gallery-open {
   .brand-profile-grid
   .brand-hero-logo-lockup
   img {
-  transform: scale(0.9);
+  transform: scale(1.0);
   transform-origin: center;
 }
 
@@ -5352,7 +5354,7 @@ body.event-gallery-open {
     .brand-profile-grid
     .brand-hero-logo-lockup
     img {
-    transform: scale(0.65) translateX(6%);
+    transform: scale(0.75) translateX(6%);
   }
 }
 
@@ -6752,7 +6754,7 @@ body.event-gallery-open {
   max-width: 100%;
   max-height: none;
   object-fit: contain;
-  transform: translate(-50%, -50%) scale(var(--brand-logo-scale));
+  transform: translate(calc(-50% + 0.1em), -50%) scale(calc(var(--brand-logo-scale) - 0.1));
   transform-origin: center;
   display: block;
 }
@@ -7004,7 +7006,7 @@ body.event-gallery-open {
   height: clamp(160px, calc(16vw - 1px), 210px);
   max-width: 96%;
   max-height: none;
-  transform: translate(-50%, -50%) scale(var(--brand-logo-scale));
+  transform: translate(calc(-50% + 0.1em), -50%) scale(calc(var(--brand-logo-scale) - 0.1));
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--armani {
@@ -7077,7 +7079,7 @@ body.event-gallery-open {
   height: clamp(160px, calc(16vw - 1px), 210px);
   max-width: 96%;
   max-height: none;
-  transform: translate(-50%, -50%) scale(var(--brand-logo-scale));
+  transform: translate(calc(-50% + 0.1em), -50%) scale(calc(var(--brand-logo-scale) - 0.1));
 }
 
 .brand-page:not([class*="brand-page--"])
@@ -7088,7 +7090,7 @@ body.event-gallery-open {
   height: clamp(160px, calc(16vw - 1px), 210px);
   max-width: 96%;
   max-height: none;
-  transform: translate(-50%, -50%) scale(var(--brand-logo-scale));
+  transform: translate(calc(-50% + 0.1em), -50%) scale(calc(var(--brand-logo-scale) - 0.1));
 }
 
 .brand-page:not([class*="brand-page--"])
