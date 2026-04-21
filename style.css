@@ -3257,7 +3257,7 @@ body.event-gallery-open {
   align-items: center;
   justify-content: center;
   margin: 20px auto 0;
-  width: min(100%, 37.4rem);
+  width: min(100%, 48rem);
   max-width: 100%;
   min-height: 3rem;
   padding: 14px 24px;
