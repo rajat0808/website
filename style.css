@@ -6784,12 +6784,12 @@ body.event-gallery-open {
 }
 
 .brand-page .luxury-card--lacoste {
-  --brand-logo-scale: 1.04;
+  --brand-logo-scale: 1.14;
   --luxury-card-bg: #1f5a37;
 }
 
 .brand-page .luxury-card--la-martina {
-  --brand-logo-scale: 2;
+  --brand-logo-scale: 2.1;
   --luxury-card-bg: #5fa85d;
 }
 
@@ -6824,12 +6824,12 @@ body.event-gallery-open {
 }
 
 .brand-page .luxury-card--charles-tyrwhitt {
-  --brand-logo-scale: 1;
+  --brand-logo-scale: 1.1;
   --luxury-card-bg: #1e3a8a;
 }
 
 .brand-page .luxury-card--sindh-emporio {
-  --brand-logo-scale: 0.55;
+  --brand-logo-scale: 0.65;
   --luxury-card-bg: #000000;
 }
 
@@ -7022,11 +7022,11 @@ body.event-gallery-open {
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--lacoste {
-  --brand-logo-scale: 0.9;
+  --brand-logo-scale: 1;
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--la-martina {
-  --brand-logo-scale: 0.96;
+  --brand-logo-scale: 1.06;
   --luxury-card-bg: #000000;
 }
 
@@ -7057,11 +7057,11 @@ body.event-gallery-open {
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--charles-tyrwhitt {
-  --brand-logo-scale: 1;
+  --brand-logo-scale: 1.1;
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--sindh-emporio {
-  --brand-logo-scale: 0.65;
+  --brand-logo-scale: 0.75;
 }
 
 .brand-page:not([class*="brand-page--"])
