@@ -5354,7 +5354,7 @@ body.event-gallery-open {
     .brand-profile-grid
     .brand-hero-logo-lockup
     img {
-    transform: scale(0.75) translateX(6%);
+    transform: scale(0.75) translateX(2%);
   }
 }
 
