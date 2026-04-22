@@ -5996,6 +5996,35 @@ body.event-gallery-open {
   object-position: center 20%;
 }
 
+.brand-page.brand-page--basanti .brand-hero--collage .brand-hero-collage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  aspect-ratio: auto;
+  gap: 0;
+  height: clamp(30rem, 65vh, 45rem);
+}
+
+.brand-page.brand-page--basanti .brand-hero--collage .brand-hero-card {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.brand-page.brand-page--basanti .brand-hero--collage .brand-hero-card--tall {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.brand-page.brand-page--basanti .brand-hero--collage .brand-hero-card--mid {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.brand-page.brand-page--basanti .brand-hero--collage .brand-hero-card--wide {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
 .brand-page .brand-profile-grid--boxed {
   max-width: 1200px;
 }
@@ -7021,7 +7050,7 @@ body.event-gallery-open {
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--armani {
-  --brand-logo-scale: 0.76;
+  --brand-logo-scale: 1.01;
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--basanti {
@@ -7037,7 +7066,7 @@ body.event-gallery-open {
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--la-martina {
-  --brand-logo-scale: 1.06;
+  --brand-logo-scale: 1.31;
   --luxury-card-bg: #000000;
 }
 
