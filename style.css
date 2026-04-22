@@ -5431,8 +5431,8 @@ body.event-gallery-open {
     .brand-profile-grid
     .brand-hero-logo-lockup
     img {
-    height: clamp(130px, 34vw, 190px);
-    max-width: min(100%, 360px);
+    height: clamp(162px, 42vw, 237px);
+    max-width: min(100%, 420px);
     max-height: none;
   }
 
@@ -5442,7 +5442,7 @@ body.event-gallery-open {
   }
 
   .brand-page--armani .brand-profile-grid .brand-hero-logo-lockup img {
-    max-height: clamp(260px, 32vw, 320px);
+    max-height: clamp(325px, 40vw, 400px);
   }
 
   .brand-page--basanti
@@ -6177,11 +6177,11 @@ body.event-gallery-open {
   }
 
   .brand-page .brand-profile {
-    padding-top: 0.6rem;
+    padding-top: 2rem;
   }
 
   .brand-page .brand-profile-grid {
-    padding-top: 1rem;
+    padding-top: 2rem;
     padding-bottom: 1.2rem;
   }
 
@@ -6854,8 +6854,7 @@ body.event-gallery-open {
   filter: none;
 }
 
-.brand-page .luxury-card--saresa .luxury-card__logo img,
-.brand-page .brand-hero-logo-lockup.luxury-card--saresa img {
+.brand-page .luxury-card--saresa .luxury-card__logo img {
   mix-blend-mode: normal;
   filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
   width: min(99%, 520px);
@@ -6863,6 +6862,15 @@ body.event-gallery-open {
   max-width: 99%;
   max-height: 92%;
   transform: translate(-50%, -50%) scale(1.06);
+}
+
+.brand-page .brand-hero-logo-lockup.luxury-card--saresa img {
+  mix-blend-mode: normal;
+  filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+  width: min(100%, 280px);
+  height: auto;
+  max-height: clamp(80px, 14vw, 140px);
+  transform: none;
 }
 
 .brand-page .luxury-card--armani .luxury-card__logo img,
