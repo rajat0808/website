@@ -5459,7 +5459,10 @@ body.event-gallery-open {
     .brand-profile-grid
     .brand-hero-logo-lockup
     img {
-    transform: scale(0.55) translateX(2%);
+    height: clamp(50px, 12vw, 85px);
+    max-width: min(100%, 180px);
+    max-height: none;
+    transform: translateX(4%);
   }
 
   .brand-page--basanti
