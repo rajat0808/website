@@ -2435,10 +2435,12 @@ body.menu-open .menu-lines span:last-child {
   position: absolute;
   inset: 0;
   background-color: #000000;
-  background-image: url("assets/brand-hero-gold-floral-exact.jpg?v=20260422");
+  background-image: url("assets/brand-hero-final.jpg?v=20260422-3");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  filter: contrast(1.1) brightness(1.05) saturate(1.1);
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .events-hero__headline {
@@ -2459,10 +2461,8 @@ body.menu-open .menu-lines span:last-child {
   letter-spacing: 0.26em;
   text-transform: uppercase;
   line-height: 0.95;
-  background: none;
-  color: var(--lux-gold);
-  -webkit-text-fill-color: var(--lux-gold);
-  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  color: #cda35a;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
 }
 
 .events-page .events.section-padding {
@@ -5362,7 +5362,8 @@ body.event-gallery-open {
 @media (max-width: 768px) {
   .brand-page .brand-profile-grid {
     grid-template-columns: 1fr;
-    row-gap: 40px;
+    row-gap: 24px;
+    padding-top: 4rem;
     min-height: auto;
     text-align: left;
   }
@@ -5388,7 +5389,7 @@ body.event-gallery-open {
 
   .brand-page .brand-profile-grid .brand-hero-panel {
     border-bottom: 1px solid #9b7b55;
-    padding-bottom: 1.4rem;
+    padding-bottom: 1rem;
     text-align: center;
   }
 
@@ -5396,14 +5397,14 @@ body.event-gallery-open {
     .brand-profile--logo-only
     .brand-profile-grid
     .brand-hero-panel {
-    margin-top: clamp(-2rem, -5vw, -0.8rem);
+    margin-top: 0;
   }
 
   .brand-page .brand-profile-grid .brand-hero-logo-lockup {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin: 0 auto 1.2rem;
+    margin: 0 auto 0.8rem;
   }
 
   .brand-page--basanti
@@ -5596,10 +5597,8 @@ body.event-gallery-open {
   font-weight: 500;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  background: none;
-  color: var(--lux-gold);
-  -webkit-text-fill-color: var(--lux-gold);
-  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  color: #cda35a;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
 }
 
 .brand-page .brand-hero-media .slider {
@@ -5672,9 +5671,11 @@ body.event-gallery-open {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
-  filter: none;
+  filter: contrast(1.1) brightness(1.05) saturate(1.1);
+  image-rendering: -webkit-optimize-contrast;
+
 }
 
 .brand-page .brand-hero-media .brand-hero-split {
@@ -6815,7 +6816,7 @@ body.event-gallery-open {
 
 .brand-page .luxury-card--saresa {
   --brand-logo-scale: 0.8;
-  --luxury-card-bg: #f3f3f1;
+  --luxury-card-bg: #ffffff;
 }
 
 .brand-page .luxury-card--levis {
@@ -6853,7 +6854,8 @@ body.event-gallery-open {
   filter: none;
 }
 
-.brand-page .luxury-card--saresa .luxury-card__logo img {
+.brand-page .luxury-card--saresa .luxury-card__logo img,
+.brand-page .brand-hero-logo-lockup.luxury-card--saresa img {
   mix-blend-mode: normal;
   filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
   width: min(99%, 520px);
