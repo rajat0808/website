@@ -5867,7 +5867,8 @@ body.event-gallery-open {
   .brand-hero--collage
   .brand-hero-card
   .brand-hero-image {
-  object-position: center 34%;
+  object-fit: contain;
+  object-position: center;
 }
 
 .brand-page.brand-page--superdry
@@ -6008,6 +6009,7 @@ body.event-gallery-open {
 .brand-page.brand-page--basanti .brand-hero--collage .brand-hero-card {
   border-radius: 0;
   box-shadow: none;
+  background-color: #f5f2ed;
 }
 
 .brand-page.brand-page--basanti .brand-hero--collage .brand-hero-card--tall {
