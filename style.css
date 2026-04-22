@@ -5418,7 +5418,7 @@ body.event-gallery-open {
     .brand-profile--logo-only
     .brand-profile-grid
     .brand-hero-logo-lockup {
-    margin: -0.4rem auto -0.2rem;
+    margin: -0.9rem auto -0.7rem;
   }
 
   .brand-page .brand-profile-grid .brand-hero-logo-lockup img {
@@ -5478,7 +5478,7 @@ body.event-gallery-open {
     .brand-profile--logo-only
     .brand-profile-grid
     .brand-hero-meta {
-    margin-top: clamp(-0.45rem, -1.8vw, -0.2rem);
+    margin-top: clamp(-2.2rem, -5.4vw, -1.2rem);
   }
 
   .brand-page .brand-profile--logo-only .brand-profile-grid .brand-hero-panel {
