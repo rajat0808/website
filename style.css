@@ -7261,3 +7261,27 @@ body.event-gallery-open {
     grid-row: 1 / span 8;
   }
 }
+
+/* Final overrides for mobile alignment and logo sizing */
+@media (max-width: 768px) {
+  /* Left align all About sections on Home and Brand pages */
+  .about-feature .about-copy,
+  .about-feature .about-copy p,
+  .about-feature .about-intro,
+  .brand-about-box,
+  .brand-about-box__content,
+  .brand-about-box__content h2,
+  .brand-about-box__content p,
+  .brand-about-box__intro p {
+    text-align: left !important;
+    justify-items: start !important;
+  }
+
+  /* GAS Brand Logo reduction */
+  .brand-page--gas .brand-profile-grid .brand-hero-logo-lockup img {
+    height: 70px !important;
+    width: auto !important;
+    max-height: 70px !important;
+    transform: none !important;
+  }
+}
