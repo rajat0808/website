@@ -992,14 +992,14 @@ body.menu-open .menu-lines span:last-child {
 }
 
 @media (max-width: 768px) {
-  .about-feature--home .about-copy,
-  .about-feature--home .about-copy p,
-  .about-feature--home .about-intro,
-  .about-feature--home .about-text-content p,
-  .about-feature--home .about-more p,
-  .about-feature--home .about-kicker--copy {
-    text-align: center;
-    justify-items: center;
+  .about-feature .about-copy,
+  .about-feature .about-copy p,
+  .about-feature .about-intro,
+  .about-feature .about-text-content p,
+  .about-feature .about-more p,
+  .about-feature .about-kicker--copy {
+    text-align: left;
+    justify-items: start;
   }
 
   .section-header {
@@ -1112,8 +1112,8 @@ body.menu-open .menu-lines span:last-child {
     font-size: 1rem;
   }
 
-  .about-feature--home .about-kicker {
-    text-align: center;
+  .about-feature .about-kicker {
+    text-align: left;
   }
 
   .hero {
@@ -5452,6 +5452,14 @@ body.event-gallery-open {
     max-width: min(100%, 320px);
     max-height: none;
     transform: translateY(-3%);
+  }
+
+  .brand-page--gas
+    .brand-profile--logo-only
+    .brand-profile-grid
+    .brand-hero-logo-lockup
+    img {
+    transform: scale(0.55) translateX(2%);
   }
 
   .brand-page--basanti
