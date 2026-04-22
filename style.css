@@ -242,6 +242,7 @@ ul {
   margin-left: auto;
 }
 
+
 .main-nav a {
   font-size: clamp(0.85rem, 0.9vw, 1.05rem);
   font-weight: 500;
@@ -2434,7 +2435,7 @@ body.menu-open .menu-lines span:last-child {
   position: absolute;
   inset: 0;
   background-color: #000000;
-  background-image: url("assets/brand-hero-gold-floral-exact.jpg?v=20260417-exact");
+  background-image: url("assets/hero-home-opt.webp?v=20260422");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -2459,9 +2460,9 @@ body.menu-open .menu-lines span:last-child {
   text-transform: uppercase;
   line-height: 0.95;
   background: none;
-  color: #000000;
-  -webkit-text-fill-color: #000000;
-  text-shadow: none;
+  color: var(--lux-gold);
+  -webkit-text-fill-color: var(--lux-gold);
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 .events-page .events.section-padding {
@@ -5572,12 +5573,8 @@ body.event-gallery-open {
   inset: 0;
   width: 100%;
   height: 100%;
-  max-height: none;
-  object-fit: cover !important;
+  object-fit: cover;
   object-position: center center;
-  filter: none;
-  opacity: 1 !important;
-  z-index: 0;
   transform: scale(1);
   transform-origin: center center;
 }
@@ -5600,9 +5597,9 @@ body.event-gallery-open {
   letter-spacing: 0.24em;
   text-transform: uppercase;
   background: none;
-  color: #000000;
-  -webkit-text-fill-color: #000000;
-  text-shadow: none;
+  color: var(--lux-gold);
+  -webkit-text-fill-color: var(--lux-gold);
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 .brand-page .brand-hero-media .slider {
@@ -5905,6 +5902,7 @@ body.event-gallery-open {
   object-fit: contain;
   object-position: center 82%;
 }
+
 
 .brand-page.brand-page--charles-tyrwhitt
   .brand-hero--collage
@@ -6583,7 +6581,11 @@ body.event-gallery-open {
 }
 
 @media (max-width: 640px) {
-  .brand-page:not([class*="brand-page--"]) .brand-hero-headline__title {
+  .brand-hero--split {
+    min-height: clamp(13rem, 36vh, 20rem);
+  }
+
+  .brand-hero-headline__title {
     font-size: clamp(2rem, 12vw, 3.5rem);
     letter-spacing: 0.18em;
   }
@@ -7023,7 +7025,7 @@ body.event-gallery-open {
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--armani {
-  --brand-logo-scale: 1.01;
+  --brand-logo-scale: 0.88;
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--basanti {
@@ -7039,7 +7041,7 @@ body.event-gallery-open {
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--la-martina {
-  --brand-logo-scale: 1.31;
+  --brand-logo-scale: 1.1;
   --luxury-card-bg: #000000;
 }
 
