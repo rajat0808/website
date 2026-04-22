@@ -6856,7 +6856,7 @@ body.event-gallery-open {
 
 .brand-page .luxury-card--saresa .luxury-card__logo img {
   mix-blend-mode: normal;
-  filter: brightness(0) saturate(100%) invert(22%) sepia(51%) saturate(2249%) hue-rotate(344deg) brightness(92%) contrast(93%);
+  filter: brightness(0) saturate(100%) invert(14%) sepia(72%) saturate(2600%) hue-rotate(347deg) brightness(74%) contrast(104%);
   width: min(99%, 520px);
   height: auto;
   max-width: 99%;
@@ -6866,7 +6866,7 @@ body.event-gallery-open {
 
 .brand-page .brand-hero-logo-lockup.luxury-card--saresa img {
   mix-blend-mode: normal;
-  filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+  filter: brightness(0) saturate(100%) invert(14%) sepia(72%) saturate(2600%) hue-rotate(347deg) brightness(74%) contrast(104%);
   width: min(100%, 280px);
   height: auto;
   max-height: clamp(80px, 14vw, 140px);
