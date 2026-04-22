@@ -6005,6 +6005,18 @@ body.event-gallery-open {
   height: clamp(30rem, 65vh, 45rem);
 }
 
+@media (max-width: 768px) {
+  .brand-page.brand-page--basanti .brand-hero--collage .brand-hero-collage {
+    height: clamp(20rem, 50vh, 32rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-page.brand-page--basanti .brand-hero--collage .brand-hero-collage {
+    height: clamp(15rem, 42vh, 20rem);
+  }
+}
+
 .brand-page.brand-page--basanti .brand-hero--collage .brand-hero-card {
   border-radius: 0;
   box-shadow: none;
