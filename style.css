@@ -5783,7 +5783,7 @@ body.event-gallery-open {
   position: static;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center 20%;
   border: 0;
   border-radius: 0;
@@ -5996,46 +5996,7 @@ body.event-gallery-open {
   object-position: center 20%;
 }
 
-.brand-page.brand-page--basanti .brand-hero--collage .brand-hero-collage {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  aspect-ratio: auto;
-  gap: 0;
-  height: clamp(30rem, 65vh, 45rem);
-}
 
-@media (max-width: 768px) {
-  .brand-page.brand-page--basanti .brand-hero--collage .brand-hero-collage {
-    height: clamp(20rem, 50vh, 32rem);
-  }
-}
-
-@media (max-width: 480px) {
-  .brand-page.brand-page--basanti .brand-hero--collage .brand-hero-collage {
-    height: clamp(15rem, 42vh, 20rem);
-  }
-}
-
-.brand-page.brand-page--basanti .brand-hero--collage .brand-hero-card {
-  border-radius: 0;
-  box-shadow: none;
-}
-
-.brand-page.brand-page--basanti .brand-hero--collage .brand-hero-card--tall {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-}
-
-.brand-page.brand-page--basanti .brand-hero--collage .brand-hero-card--mid {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-}
-
-.brand-page.brand-page--basanti .brand-hero--collage .brand-hero-card--wide {
-  grid-column: 3 / 4;
-  grid-row: 1 / 2;
-}
 
 .brand-page .brand-profile-grid--boxed {
   max-width: 1200px;
