@@ -2286,7 +2286,7 @@ body.menu-open .menu-lines span:last-child {
 .brands-logo-item--saresa .brands-featured-logo {
   transform: translate(-50%, -50%) scale(1.7);
   transform-origin: center;
-  filter: none;
+  filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
 }
 
 .brands-logo-item--charles-tyrwhitt .brands-featured-logo {
@@ -6114,8 +6114,8 @@ body.event-gallery-open {
   .brand-page .brand-about-box--simple .brand-about-box__content,
   .brand-page .brand-about-box--simple .brand-about-box__content h2,
   .brand-page .brand-about-box--simple .brand-about-box__content p {
-    text-align: center;
-    justify-items: center;
+    text-align: left;
+    justify-items: start;
   }
 }
 
@@ -6851,7 +6851,7 @@ body.event-gallery-open {
 
 .brand-page .luxury-card--saresa .luxury-card__logo img {
   mix-blend-mode: normal;
-  filter: none;
+  filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
   width: min(99%, 520px);
   height: auto;
   max-width: 99%;
