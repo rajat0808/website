@@ -6279,6 +6279,21 @@ body.event-gallery-open {
     margin-top: 0 !important;
     margin-bottom: 2.2rem !important;
   }
+
+  /* Kora Specific Mobile Refinements */
+  .brand-page--kora .brand-hero--collage {
+    margin-bottom: 4rem !important;
+  }
+
+  .brand-page--kora .brand-profile-grid {
+    padding-top: 1.5rem !important;
+    row-gap: 2.2rem !important;
+  }
+
+  .brand-page--kora .brand-hero-logo-lockup {
+    margin-top: 0 !important;
+    margin-bottom: 2.2rem !important;
+  }
 }
 
 @media (max-width: 560px) {
