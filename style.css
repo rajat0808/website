@@ -6240,17 +6240,17 @@ body.event-gallery-open {
 
   /* Lacoste Specific Mobile Refinements */
   .brand-page--lacoste .brand-hero--collage {
-    margin-bottom: 5.5rem !important; /* Force space below the hero collage */
+    margin-bottom: 4rem !important; /* Slightly decreased gap */
   }
 
   .brand-page--lacoste .brand-profile-grid {
-    padding-top: 2rem !important; /* Additional gap */
-    row-gap: 3.5rem !important; /* Gap between logo and store information */
+    padding-top: 1.5rem !important; /* Slightly decreased gap */
+    row-gap: 2.2rem !important; /* Slightly decreased gap */
   }
 
   .brand-page--lacoste .brand-hero-logo-lockup {
     margin-top: 0 !important;
-    margin-bottom: 3.2rem !important;
+    margin-bottom: 2.2rem !important; /* Slightly decreased gap */
   }
 }
 
