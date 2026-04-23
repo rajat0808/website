@@ -6264,6 +6264,21 @@ body.event-gallery-open {
     margin-top: 0 !important;
     margin-bottom: 2.2rem !important;
   }
+
+  /* GAS Specific Mobile Refinements */
+  .brand-page--gas .brand-hero--collage {
+    margin-bottom: 4rem !important;
+  }
+
+  .brand-page--gas .brand-profile-grid {
+    padding-top: 1.5rem !important;
+    row-gap: 2.2rem !important;
+  }
+
+  .brand-page--gas .brand-hero-logo-lockup {
+    margin-top: 0 !important;
+    margin-bottom: 2.2rem !important;
+  }
 }
 
 @media (max-width: 560px) {
