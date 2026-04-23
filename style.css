@@ -5624,10 +5624,18 @@ body.event-gallery-open {
   transform-origin: center center;
 }
 
+.brand-page:not([class*="brand-page--"]) .brand-hero-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.4) 100%);
+  z-index: 1;
+}
+
 .brand-page:not([class*="brand-page--"]) .brand-hero-headline {
   position: absolute;
   inset: 0;
-  z-index: 2;
+  z-index: 3; /* Above overlay */
   display: grid;
   place-items: center;
   padding: 1.5rem;
@@ -5642,7 +5650,7 @@ body.event-gallery-open {
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: #cda35a;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+  text-shadow: 0 10px 30px rgba(0,0,0,0.8), 0 0 50px rgba(0,0,0,0.4);
 }
 
 .brand-page .brand-hero-media .slider {
