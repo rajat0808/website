@@ -3454,7 +3454,7 @@ body.event-gallery-open {
   }
 
   .index-page .gallery-heading {
-    padding-top: clamp(3.8rem, 10vw, 5.8rem);
+    padding-top: clamp(2.8rem, 8vw, 4.2rem);
     padding-bottom: 0.75rem;
   }
  
@@ -3531,7 +3531,7 @@ body.event-gallery-open {
 
 @media (max-width: 430px) {
   .index-page .gallery-heading {
-    padding-top: clamp(2.2rem, 6.5vw, 3.2rem);
+    padding-top: clamp(1.2rem, 4vw, 2rem);
     padding-bottom: 0.6rem;
   }
 
