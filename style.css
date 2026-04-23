@@ -2408,8 +2408,10 @@ body.menu-open .menu-lines span:last-child {
 
   .brands-title {
     font-family: var(--font-accent) !important;
-    letter-spacing: 0.04em;
+    font-weight: 500;
+    letter-spacing: 0.06em;
     font-size: calc(clamp(1.6rem, 7vw, 2.45rem) + 2pt);
+    line-height: 1.1;
   }
 }
 
@@ -3318,12 +3320,12 @@ body.event-gallery-open {
   padding-inline: clamp(1.6rem, 3vw, 2.4rem);
   text-align: center;
   font-family: var(--font-accent) !important;
-  font-size: clamp(2rem, 4.2vw, 3.4rem);
-  font-weight: 400;
+  font-size: calc(clamp(2.2rem, 4.4vw, 3.5rem) + 2pt);
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   font-kerning: normal;
-  line-height: 1;
+  line-height: 1.1;
   color: #111111;
   position: relative;
   z-index: 1;
@@ -3535,8 +3537,10 @@ body.event-gallery-open {
 
   .gallery-heading__title {
     font-family: var(--font-accent) !important;
-    font-size: clamp(1.55rem, 8vw, 2rem);
-    letter-spacing: 0.07em;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    font-size: calc(clamp(1.6rem, 7vw, 2.45rem) + 2pt);
+    line-height: 1.1;
   }
 
   .hero--classic .hero-slider-track {
@@ -3559,9 +3563,9 @@ body.event-gallery-open {
     margin-right: auto;
     white-space: nowrap !important;
     text-wrap: nowrap !important;
-    font-size: clamp(1.35rem, 6.5vw, 1.75rem);
-    line-height: 1.06;
-    letter-spacing: 0.04em;
+    font-size: calc(clamp(1.6rem, 7vw, 2.45rem) + 2pt);
+    line-height: 1.1;
+    letter-spacing: 0.06em;
     font-weight: 500;
     color: #000000;
     margin-bottom: 0.85rem;
