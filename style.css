@@ -3454,8 +3454,8 @@ body.event-gallery-open {
   }
 
   .index-page .gallery-heading {
-    padding-top: clamp(3.4rem, 9.5vw, 5.2rem);
-    padding-bottom: 1.1rem;
+    padding-top: clamp(3.8rem, 10vw, 5.8rem);
+    padding-bottom: 0.75rem;
   }
  
   .index-page .brands-premium {
@@ -3531,8 +3531,8 @@ body.event-gallery-open {
 
 @media (max-width: 430px) {
   .index-page .gallery-heading {
-    padding-top: clamp(1.8rem, 5.5vw, 2.8rem);
-    padding-bottom: 1rem;
+    padding-top: clamp(2.2rem, 6.5vw, 3.2rem);
+    padding-bottom: 0.6rem;
   }
 
   .index-page .brands-premium {

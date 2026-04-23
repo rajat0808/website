@@ -1,7 +1,7 @@
 import os
 import re
 
-new_version = "20260423-37"
+new_version = "20260423-38"
 directory = r"d:\New folder (3)\emporio"
 
 for filename in os.listdir(directory):
