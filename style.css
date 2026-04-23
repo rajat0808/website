@@ -3522,7 +3522,6 @@ body.event-gallery-open {
 
   .index-page .about-feature--home {
     padding-bottom: 0 !important;
-    margin-bottom: -1rem !important;
   }
 
   .index-page .footer {
@@ -3537,8 +3536,7 @@ body.event-gallery-open {
   }
 
   .index-page .brands-premium {
-    padding-top: 0 !important;
-    margin-top: -1.5rem !important;
+    padding-top: 0.85rem !important;
     padding-bottom: clamp(1.2rem, 4vw, 2rem);
   }
 
