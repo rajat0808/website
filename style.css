@@ -18,6 +18,7 @@
   --header-height-mobile: 64px;
   --font-serif: "Manrope", sans-serif;
   --font-sans: "Manrope", sans-serif;
+  --font-accent: "Domine", serif;
 }
 
 html {
@@ -1759,6 +1760,7 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .gallery-heading__title {
+  font-family: var(--font-accent) !important;
   margin: 0;
   font-size: calc(clamp(2.2rem, 4.4vw, 3.5rem) + 2pt);
   font-weight: 500;
@@ -2125,7 +2127,7 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .brands-title {
-  font-family: var(--font-sans);
+  font-family: var(--font-accent) !important;
   font-size: calc(clamp(2.2rem, 4.4vw, 3.5rem) + 2pt);
   font-weight: 500;
   letter-spacing: 0.06em;
@@ -3314,7 +3316,7 @@ body.event-gallery-open {
   margin: 0 auto clamp(1.5rem, 3vw, 2.5rem);
   padding-inline: clamp(1.6rem, 3vw, 2.4rem);
   text-align: center;
-  font-family: var(--font-sans);
+  font-family: var(--font-accent) !important;
   font-size: clamp(2rem, 4.2vw, 3.4rem);
   font-weight: 400;
   text-transform: uppercase;
@@ -5644,7 +5646,7 @@ body.event-gallery-open {
 
 .brand-page:not([class*="brand-page--"]) .brand-hero-headline__title {
   margin: 0;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--font-accent) !important;
   font-size: clamp(2.5rem, 8vw, 6.3rem);
   font-weight: 500;
   letter-spacing: 0.24em;
