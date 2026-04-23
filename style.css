@@ -5362,8 +5362,8 @@ body.event-gallery-open {
 @media (max-width: 768px) {
   .brand-page .brand-profile-grid {
     grid-template-columns: 1fr;
-    row-gap: 24px;
-    padding-top: 4rem;
+    row-gap: 3.5rem;
+    padding-top: 5rem;
     min-height: auto;
     text-align: left;
   }
@@ -5389,8 +5389,9 @@ body.event-gallery-open {
 
   .brand-page .brand-profile-grid .brand-hero-panel {
     border-bottom: 1px solid #9b7b55;
-    padding-bottom: 1rem;
+    padding-bottom: 2.5rem;
     text-align: center;
+    gap: 1.5rem;
   }
 
   .brand-page--basanti
@@ -5404,7 +5405,7 @@ body.event-gallery-open {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin: 0 auto 0.8rem;
+    margin: 0 auto 2.5rem;
   }
 
   .brand-page--basanti
@@ -5437,6 +5438,8 @@ body.event-gallery-open {
   }
 
   .brand-page .brand-hero-meta {
+    grid-template-columns: 1fr;
+    row-gap: 1.25rem;
     justify-content: center;
     text-align: center;
   }
@@ -5450,8 +5453,8 @@ body.event-gallery-open {
     .brand-profile-grid
     .brand-hero-logo-lockup
     img {
-    height: clamp(110px, 26vw, 170px);
-    max-width: min(100%, 320px);
+    height: clamp(150px, 34vw, 225px);
+    max-width: min(100%, 350px);
     max-height: none;
     transform: translateY(-3%);
   }
@@ -5491,6 +5494,47 @@ body.event-gallery-open {
 
   .brand-page:not([class*="brand-page--"]) .brand-mini-breadcrumb {
     transform: none;
+  }
+
+  /* Professional UI/UX Refinements for Mobile */
+  .brand-page[class*="brand-page--"] .brand-profile-grid {
+    padding-top: 1rem !important; /* Ultra-tight spacing from hero */
+    row-gap: 1rem !important; /* Ultra-tight separation */
+  }
+
+  .brand-page[class*="brand-page--"] .brand-hero-logo-lockup {
+    margin: 0 auto 0.75rem !important; /* Minimal space between logo and information part */
+  }
+
+  /* Increased logo size by 0.1 (scale 1.0) */
+  .brand-page[class*="brand-page--"] .brand-hero-logo-lockup img {
+    transform: scale(1) !important;
+    max-height: clamp(140px, 18vw, 250px) !important;
+    width: auto !important;
+  }
+
+  .brand-page[class*="brand-page--"] .brand-hero-meta {
+    margin-top: 0.25rem !important;
+    gap: 1rem !important;
+  }
+
+  .brand-page[class*="brand-page--"] .brand-hero-panel {
+    padding-bottom: 1rem !important;
+  }
+
+  /* Basanti Specific Ultra-Compact Layout */
+  .brand-page--basanti .brand-profile-grid {
+    padding-top: 0.5rem !important;
+    row-gap: 0.75rem !important;
+  }
+
+  .brand-page--basanti .brand-hero-logo-lockup {
+    margin: 0 auto 0.5rem !important;
+  }
+
+  /* Charles Tyrwhitt Specific: Increase Logo-to-Info Gap */
+  .brand-page--charles-tyrwhitt .brand-hero-logo-lockup {
+    margin-bottom: 4.5rem !important;
   }
 }
 
@@ -6177,13 +6221,15 @@ body.event-gallery-open {
   }
 
   .brand-page .brand-profile {
-    padding-top: 2rem;
+    padding-top: 4.5rem;
   }
 
+
   .brand-page .brand-profile-grid {
-    padding-top: 2rem;
-    padding-bottom: 1.2rem;
+    padding-top: 4.5rem;
+    padding-bottom: 2.5rem;
   }
+
 
   .brand-page .brand-profile-actions {
     justify-content: flex-end;
@@ -7303,23 +7349,23 @@ body.event-gallery-open {
 /* La Martina handset spacing refinements */
 @media (max-width: 768px) {
   .brand-page--la-martina .brand-profile {
-    padding-top: 1rem;
+    padding-top: 3.5rem;
   }
 
   .brand-page--la-martina .brand-profile-grid {
-    padding-top: 0.9rem;
-    row-gap: 1.05rem;
+    padding-top: 3rem;
+    row-gap: 3.5rem;
   }
 
   .brand-page--la-martina .brand-profile-grid .brand-hero-panel {
-    padding-bottom: 0.75rem;
+    padding-bottom: 2rem;
   }
 
   .brand-page--la-martina
     .brand-profile--logo-only
     .brand-profile-grid
     .brand-hero-logo-lockup {
-    margin: -0.35rem auto -0.1rem;
+    margin: 0 auto 2rem;
   }
 
   .brand-page--la-martina
@@ -7336,7 +7382,7 @@ body.event-gallery-open {
     .brand-profile--logo-only
     .brand-profile-grid
     .brand-hero-meta {
-    margin-top: clamp(-0.9rem, -2.8vw, -0.4rem);
+    margin-top: 0.5rem;
   }
 }
 
@@ -7359,11 +7405,11 @@ body.event-gallery-open {
     max-width: min(100%, 360px);
   }
 
-  .brand-page--la-martina
+  .brand-page--la-martina, .brand-page--basanti
     .brand-profile--logo-only
     .brand-profile-grid
     .brand-hero-logo-lockup {
-    margin: -0.2rem auto 0;
+    margin: 0 auto 2.5rem;
   }
 
   .brand-page--la-martina
@@ -7373,3 +7419,13 @@ body.event-gallery-open {
     margin-top: 0.2rem;
   }
 }
+
+/* Saresa Red Logo Theme */
+.brands-logo-item--saresa .brands-featured-logo,
+.luxury-card--saresa img {
+  filter: invert(15%) sepia(95%) saturate(6932%) hue-rotate(358deg) brightness(95%) contrast(112%) !important;
+}
+
+
+
+
