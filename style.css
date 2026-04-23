@@ -6237,6 +6237,15 @@ body.event-gallery-open {
   .brand-page .brand-profile-actions {
     justify-content: flex-end;
   }
+
+  /* Lacoste Specific Mobile Refinements */
+  .brand-page--lacoste .brand-hero-logo-lockup {
+    margin-top: -2.2rem !important; /* Pull logo closer to the collage images */
+  }
+
+  .brand-page--lacoste .brand-profile-grid {
+    row-gap: 0.5rem !important; /* Tighter gap between logo and information */
+  }
 }
 
 @media (max-width: 560px) {
