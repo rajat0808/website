@@ -3551,8 +3551,6 @@ body.event-gallery-open {
   .index-page .about-tagline {
     font-size: clamp(0.6rem, 2.8vw, 0.82rem);
     letter-spacing: 0.14em;
-    white-space: nowrap !important;
-    text-wrap: nowrap !important;
     margin-top: 1.5rem;
   }
 
@@ -3561,8 +3559,6 @@ body.event-gallery-open {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    white-space: nowrap !important;
-    text-wrap: nowrap !important;
     font-size: calc(clamp(1.6rem, 7vw, 2.45rem) + 2pt);
     line-height: 1.1;
     letter-spacing: 0.06em;
