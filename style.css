@@ -5536,10 +5536,7 @@ body.event-gallery-open {
     margin: -3rem auto 0.5rem !important; /* Pull logo UP into the hero area aggressively */
   }
 
-  /* Charles Tyrwhitt Specific: Increase Logo-to-Info Gap */
-  .brand-page--charles-tyrwhitt .brand-hero-logo-lockup {
-    margin-bottom: 4.5rem !important;
-  }
+
 }
 
 @media (max-width: 640px) {
@@ -6251,6 +6248,21 @@ body.event-gallery-open {
   .brand-page--lacoste .brand-hero-logo-lockup {
     margin-top: 0 !important;
     margin-bottom: 2.2rem !important; /* Slightly decreased gap */
+  }
+
+  /* Charles Tyrwhitt Specific Mobile Refinements */
+  .brand-page--charles-tyrwhitt .brand-hero--collage {
+    margin-bottom: 4rem !important;
+  }
+
+  .brand-page--charles-tyrwhitt .brand-profile-grid {
+    padding-top: 1.5rem !important;
+    row-gap: 2.2rem !important;
+  }
+
+  .brand-page--charles-tyrwhitt .brand-hero-logo-lockup {
+    margin-top: 0 !important;
+    margin-bottom: 2.2rem !important;
   }
 }
 
