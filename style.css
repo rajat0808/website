@@ -7411,10 +7411,15 @@ body.event-gallery-open {
   }
 }
 
-/* Saresa Red Logo Theme */
-.brands-logo-item--saresa .brands-featured-logo,
-.luxury-card--saresa img {
-  filter: invert(15%) sepia(95%) saturate(6932%) hue-rotate(358deg) brightness(95%) contrast(112%) !important;
+/* Saresa Logo Theme: Red (#c30010) on Profiles, Black on Homepage */
+body:not(.index-page) .brands-logo-item--saresa .brands-featured-logo,
+body:not(.index-page) .luxury-card--saresa img {
+  filter: brightness(0) saturate(100%) invert(18%) sepia(91%) saturate(5427%) hue-rotate(352deg) brightness(90%) contrast(116%) !important;
+}
+
+.index-page .brands-logo-item--saresa .brands-featured-logo,
+.index-page .luxury-card--saresa img {
+  filter: grayscale(1) brightness(0) !important;
 }
 
 
