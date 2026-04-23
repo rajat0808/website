@@ -2407,6 +2407,7 @@ body.menu-open .menu-lines span:last-child {
   }
 
   .brands-title {
+    font-family: var(--font-accent) !important;
     letter-spacing: 0.04em;
     font-size: calc(clamp(1.6rem, 7vw, 2.45rem) + 2pt);
   }
@@ -3533,6 +3534,7 @@ body.event-gallery-open {
   }
 
   .gallery-heading__title {
+    font-family: var(--font-accent) !important;
     font-size: clamp(1.55rem, 8vw, 2rem);
     letter-spacing: 0.07em;
   }
