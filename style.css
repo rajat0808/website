@@ -5498,8 +5498,8 @@ body.event-gallery-open {
 
   /* Professional UI/UX Refinements for Mobile */
   .brand-page[class*="brand-page--"] .brand-profile-grid {
-    padding-top: 1rem !important; /* Ultra-tight spacing from hero */
-    row-gap: 1rem !important; /* Ultra-tight separation */
+    padding-top: 0 !important; /* Minimal gap from hero */
+    row-gap: 1rem !important; /* Tight separation between logo/info and about text */
   }
 
   .brand-page[class*="brand-page--"] .brand-hero-logo-lockup {
@@ -5514,7 +5514,7 @@ body.event-gallery-open {
   }
 
   .brand-page[class*="brand-page--"] .brand-hero-meta {
-    margin-top: 0.25rem !important;
+    margin-top: 0 !important;
     gap: 1rem !important;
   }
 
@@ -5522,14 +5522,14 @@ body.event-gallery-open {
     padding-bottom: 1rem !important;
   }
 
-  /* Basanti Specific Ultra-Compact Layout */
+  /* Basanti Specific Zero Gap Layout */
   .brand-page--basanti .brand-profile-grid {
-    padding-top: 0.5rem !important;
+    padding-top: 0 !important;
     row-gap: 0.75rem !important;
   }
 
   .brand-page--basanti .brand-hero-logo-lockup {
-    margin: 0 auto 0.5rem !important;
+    margin: -3rem auto 0.5rem !important; /* Pull logo UP into the hero area aggressively */
   }
 
   /* Charles Tyrwhitt Specific: Increase Logo-to-Info Gap */
@@ -6220,15 +6220,6 @@ body.event-gallery-open {
     grid-template-columns: 1fr;
   }
 
-  .brand-page .brand-profile {
-    padding-top: 4.5rem;
-  }
-
-
-  .brand-page .brand-profile-grid {
-    padding-top: 4.5rem;
-    padding-bottom: 2.5rem;
-  }
 
 
   .brand-page .brand-profile-actions {
