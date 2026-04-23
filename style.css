@@ -3540,6 +3540,10 @@ body.event-gallery-open {
     padding-bottom: clamp(1.2rem, 4vw, 2rem);
   }
 
+  .index-page .brands-header {
+    margin-bottom: 0.8rem !important;
+  }
+
   .gallery-heading__title {
     font-family: var(--font-accent) !important;
     font-weight: 500;
