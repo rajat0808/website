@@ -6239,12 +6239,14 @@ body.event-gallery-open {
   }
 
   /* Lacoste Specific Mobile Refinements */
-  .brand-page--lacoste .brand-hero-logo-lockup {
-    margin-top: -2.2rem !important; /* Pull logo closer to the collage images */
+  .brand-page--lacoste .brand-profile-grid {
+    padding-top: 2.5rem !important; /* Gap between hero collage and logo section */
+    row-gap: 1.5rem !important; /* Distinct gap between logo and store information */
   }
 
-  .brand-page--lacoste .brand-profile-grid {
-    row-gap: 0.5rem !important; /* Tighter gap between logo and information */
+  .brand-page--lacoste .brand-hero-logo-lockup {
+    margin-top: 0 !important;
+    margin-bottom: 1.8rem !important;
   }
 }
 
