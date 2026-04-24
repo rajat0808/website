@@ -1729,7 +1729,7 @@ body.menu-open .menu-lines span:last-child {
 
 .index-page .gallery-heading {
   padding-top: var(--index-heading-gap);
-  padding-bottom: var(--index-section-gap-tight);
+  padding-bottom: clamp(0.4rem, 1.2vw, 0.8rem);
 }
 
 .gallery-heading + .hero {
@@ -1737,7 +1737,7 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .index-page .gallery-heading + .hero {
-  margin-top: clamp(0.8rem, 1.8vw, 1.4rem);
+  margin-top: 0;
 }
 
 .index-page .hero--classic {
@@ -1856,6 +1856,14 @@ body.menu-open .menu-lines span:last-child {
 
   .grid-item.large {
     grid-column: span 2;
+  }
+
+  .index-page .brands-premium {
+    padding-bottom: clamp(2rem, 4vw, 3.5rem);
+  }
+
+  .index-page .gallery-heading {
+    padding-top: clamp(2rem, 4vw, 3.5rem);
   }
 }
 
@@ -2113,7 +2121,7 @@ body.menu-open .menu-lines span:last-child {
 
 .brands-header {
   text-align: center;
-  margin-bottom: clamp(1.8rem, 3vw, 2.8rem);
+  margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
   position: relative;
   z-index: 1;
 }
@@ -3455,7 +3463,7 @@ body.event-gallery-open {
 
   .index-page .gallery-heading {
     padding-top: clamp(2.8rem, 8vw, 4.2rem);
-    padding-bottom: 0.75rem;
+    padding-bottom: 0.35rem;
   }
  
   .index-page .brands-premium {
@@ -3532,7 +3540,7 @@ body.event-gallery-open {
 @media (max-width: 430px) {
   .index-page .gallery-heading {
     padding-top: clamp(1.2rem, 4vw, 2rem);
-    padding-bottom: 0.6rem;
+    padding-bottom: 0.3rem;
   }
 
   .index-page .brands-premium {
