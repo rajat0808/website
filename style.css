@@ -688,7 +688,7 @@ body.menu-open .menu-lines span:last-child {
   grid-row: 1;
   justify-self: end;
   align-self: center;
-  margin-right: clamp(-3rem, -1.8vw, -1rem);
+  margin-right: clamp(1.5rem, 4vw, 5.5rem);
 }
 
 .about-side-tag > span {
@@ -1283,7 +1283,7 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .hero--classic .hero-slider-track.is-ready {
-  animation: scroll 39s linear infinite;
+  animation: scroll 78s linear infinite;
 }
 
 .hero--classic .hero-slider-track.is-paused,
