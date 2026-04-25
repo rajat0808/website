@@ -2110,7 +2110,7 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .index-page .brands-premium {
-  padding-top: var(--index-heading-gap);
+  padding-top: clamp(1.6rem, 3vw, 2.8rem);
   padding-bottom: var(--index-section-gap);
 }
 
