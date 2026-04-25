@@ -62,7 +62,28 @@ h6 {
   --index-section-gap-tight: clamp(1rem, 2vw, 1.5rem);
   --index-heading-gap: clamp(4rem, 7vw, 6rem);
   --index-event-gap: clamp(4.5rem, 7.5vw, 6.5rem);
+  --index-gallery-gap: clamp(0.9rem, 2vw, 1.6rem);
   --index-event-heading-width: min(100%, 980px);
+}
+
+@media (max-width: 640px) {
+  .index-page {
+    --index-section-gap: clamp(1.8rem, 6.5vw, 2.6rem);
+    --index-section-gap-tight: clamp(0.55rem, 2.6vw, 0.9rem);
+    --index-heading-gap: clamp(2rem, 7vw, 3rem);
+    --index-event-gap: clamp(2.3rem, 8.5vw, 3.4rem);
+    --index-gallery-gap: clamp(0.45rem, 2.2vw, 0.85rem);
+  }
+}
+
+@media (max-width: 430px) {
+  .index-page {
+    --index-section-gap: clamp(1.2rem, 4.8vw, 1.9rem);
+    --index-section-gap-tight: clamp(0.35rem, 1.8vw, 0.65rem);
+    --index-heading-gap: clamp(1.2rem, 4vw, 2rem);
+    --index-event-gap: clamp(1.6rem, 6vw, 2.4rem);
+    --index-gallery-gap: clamp(0.25rem, 1.5vw, 0.5rem);
+  }
 }
 
 .index-page .header-container .logo {
@@ -943,6 +964,10 @@ body.menu-open .menu-lines span:last-child {
     margin-top: 1.2rem;
   }
 
+  .about-feature--home .about-grid {
+    gap: clamp(2.4rem, 7vw, 3.2rem);
+  }
+
   .about-display {
     font-size: clamp(2rem, 8vw, 3.2rem);
   }
@@ -1728,7 +1753,7 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .index-page .gallery-heading {
-  padding-top: var(--index-heading-gap);
+  padding-top: var(--index-gallery-gap);
   padding-bottom: clamp(0.4rem, 1.2vw, 0.8rem);
 }
 
@@ -2110,8 +2135,8 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .index-page .brands-premium {
-  padding-top: clamp(1.6rem, 3vw, 2.8rem);
-  padding-bottom: var(--index-section-gap);
+  padding-top: clamp(2.35rem, 4.2vw, 3.8rem);
+  padding-bottom: var(--index-section-gap-tight);
 }
 
 .brands-premium::before,
@@ -3462,12 +3487,13 @@ body.event-gallery-open {
   }
 
   .index-page .gallery-heading {
-    padding-top: clamp(2.8rem, 8vw, 4.2rem);
+    padding-top: clamp(2.35rem, 6.4vw, 3.1rem);
     padding-bottom: 0.35rem;
   }
  
   .index-page .brands-premium {
-    padding-bottom: clamp(3rem, 8.5vw, 4.4rem);
+    padding-top: clamp(2rem, 6vw, 2.9rem);
+    padding-bottom: clamp(2rem, 5vw, 2.65rem);
   }
 
   .index-page .contact-title {
@@ -3522,27 +3548,31 @@ body.event-gallery-open {
   }
 
   .index-page .contact.section-padding {
-    padding-top: clamp(3.2rem, 11vw, 5.5rem);
+    padding-top: clamp(2.2rem, 8.5vw, 3.8rem);
     padding-bottom: 2rem;
     padding-left: clamp(0.7rem, 3vw, 1rem);
     padding-right: clamp(0.7rem, 3vw, 1rem);
   }
 
   .index-page .about-feature--home {
-    padding-bottom: 0 !important;
+    padding-bottom: clamp(1.2rem, 3.8vw, 1.9rem) !important;
   }
 
 }
 
 @media (max-width: 430px) {
   .index-page .gallery-heading {
-    padding-top: clamp(1.2rem, 4vw, 2rem);
+    padding-top: clamp(1.7rem, 4.5vw, 2.05rem);
     padding-bottom: 0.3rem;
   }
 
   .index-page .brands-premium {
-    padding-top: 0.85rem !important;
-    padding-bottom: clamp(1.2rem, 4vw, 2rem);
+    padding-top: clamp(1.55rem, 4.8vw, 2.15rem) !important;
+    padding-bottom: clamp(1.3rem, 3.6vw, 1.65rem);
+  }
+
+  .index-page .about-feature--home {
+    padding-bottom: clamp(1.35rem, 4vw, 2rem) !important;
   }
 
   .index-page .brands-header {
@@ -3566,6 +3596,7 @@ body.event-gallery-open {
     font-size: clamp(0.6rem, 2.8vw, 0.82rem);
     letter-spacing: 0.14em;
     margin-top: 1.5rem;
+    transform: translateX(-0.4rem);
   }
 
   .index-page .contact-title {
@@ -3631,7 +3662,7 @@ body.event-gallery-open {
   .footer-logo {
     text-align: left !important;
     font-size: 1.1rem;
-    margin: 0 0 0.4rem;
+    margin: 0 0 0.6rem;
   }
 }
 
@@ -3801,7 +3832,7 @@ body.event-gallery-open {
   .footer-links h3,
   .footer-social h3,
   .footer-timing h3 {
-    margin-bottom: 0.25rem !important;
+    margin-bottom: 0.45rem !important;
   }
 
   .footer-social {
