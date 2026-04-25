@@ -692,7 +692,7 @@ body.menu-open .menu-lines span:last-child {
   right: auto;
   left: auto;
   top: auto;
-  transform: none;
+  transform: translateX(clamp(1.8rem, 3vw, 3.2rem));
   font-family: "Times New Roman", Times, serif;
   font-size: clamp(0.75rem, 1.1vw, 1.1rem);
   letter-spacing: 0.02em;
@@ -781,6 +781,8 @@ body.menu-open .menu-lines span:last-child {
   margin: 0;
   position: relative;
   z-index: 1;
+  justify-self: end;
+  transform: translateX(clamp(1.15rem, 2.3vw, 2.3rem));
 }
 
 .about-feature--home .about-display > span {
@@ -979,6 +981,8 @@ body.menu-open .menu-lines span:last-child {
 
   .about-feature--home .about-display {
     max-width: none;
+    justify-self: center;
+    transform: none;
   }
 
   .about-feature--home .about-copy {
