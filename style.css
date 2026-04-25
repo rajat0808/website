@@ -3782,7 +3782,7 @@ body.event-gallery-open {
 
   .footer-right {
     grid-template-columns: 1fr;
-    gap: 0.8rem;
+    gap: 1rem;
   }
 
   .footer-social {
@@ -3801,7 +3801,7 @@ body.event-gallery-open {
   }
 
   .footer-right {
-    gap: 1rem;
+    gap: 1.2rem;
   }
 
   .footer-links h3,
@@ -3848,7 +3848,7 @@ body.event-gallery-open {
   }
 
   .index-page .footer-right {
-    gap: 1rem;
+    gap: 1.2rem;
   }
 
   .index-page .footer-social .social-icons {
@@ -3867,6 +3867,10 @@ body.event-gallery-open {
 }
 
 @media (max-width: 430px) {
+  .footer-right {
+    gap: 1.3rem;
+  }
+
   .index-page .footer {
     padding-top: 2.2rem;
     padding-bottom: calc(1.9rem + env(safe-area-inset-bottom));
