@@ -686,7 +686,7 @@ body.menu-open .menu-lines span:last-child {
   grid-row: 1;
   justify-self: end;
   align-self: center;
-  margin-right: clamp(1.5rem, 4vw, 5.5rem);
+  margin-right: clamp(0.5rem, 1.5vw, 1.2rem);
 }
 
 .about-side-tag > span {
@@ -1851,7 +1851,7 @@ body.menu-open .menu-lines span:last-child {
   }
 
   .index-page .gallery-heading {
-    padding-top: clamp(2rem, 4vw, 3.5rem);
+    padding-top: clamp(4.5rem, 8vw, 6.5rem);
   }
 }
 
@@ -3182,7 +3182,7 @@ body.event-gallery-open {
 }
 
 .index-page .contact.section-padding {
-  padding-top: calc(var(--index-event-gap) + 2rem);
+  padding-top: clamp(3rem, 5.5vw, 4.5rem);
   padding-bottom: clamp(2rem, 4vw, 3rem);
 }
 
