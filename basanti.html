@@ -184,46 +184,59 @@
                 pioneer and champion the women's textile white-label market.
               </p>
 
-              <p>
-                In 2010, Utkarsh joined the family business with ambitions of
-                his own, and in 2017 Basanti was born. The name came from his
-                grandfather, with one simple brief: it had to be unforgettable.
-                Utkarsh added "kapde aur koffee" to reflect his vision of
-                revolutionising the buying experience.
-              </p>
+              <div class="brand-about-more" id="basantiAboutMore">
+                <p>
+                  In 2010, Utkarsh joined the family business with ambitions of
+                  his own, and in 2017 Basanti was born. The name came from his
+                  grandfather, with one simple brief: it had to be unforgettable.
+                  Utkarsh added "kapde aur koffee" to reflect his vision of
+                  revolutionising the buying experience.
+                </p>
 
-              <p>
-                The journey has continued to evolve ever since. Basanti went
-                online in 2018, introduced its Warehouse Experience Centre in
-                2019, opened its first store outside NCR in 2023, and in 2024
-                unveiled Khan Market - a landmark of love, resilience, and
-                passion dedicated to Utkarsh's grandfather. #WeLoveYou
-              </p>
+                <p>
+                  The journey has continued to evolve ever since. Basanti went
+                  online in 2018, introduced its Warehouse Experience Centre in
+                  2019, opened its first store outside NCR in 2023, and in 2024
+                  unveiled Khan Market - a landmark of love, resilience, and
+                  passion dedicated to Utkarsh's grandfather. #WeLoveYou
+                </p>
 
-              <p>
-                Basanti transcends traditional fashion boundaries. Its flagship
-                store enhances this approach with a charming coffee bar,
-                inviting guests to unwind with a cup of coffee and the soothing
-                rhythms of folk India in a serene shopping environment.
-              </p>
+                <p>
+                  Basanti transcends traditional fashion boundaries. Its flagship
+                  store enhances this approach with a charming coffee bar,
+                  inviting guests to unwind with a cup of coffee and the soothing
+                  rhythms of folk India in a serene shopping environment.
+                </p>
 
-              <p>
-                In 2024, the brand took a bold step further by launching an
-                exclusive line of accessories. The collection includes
-                handcrafted jewellery and designer potlis and bags, each piece
-                thoughtfully created to complement Basanti's clothing lines and
-                complete every look.
-              </p>
+                <p>
+                  In 2024, the brand took a bold step further by launching an
+                  exclusive line of accessories. The collection includes
+                  handcrafted jewellery and designer potlis and bags, each piece
+                  thoughtfully created to complement Basanti's clothing lines and
+                  complete every look.
+                </p>
 
-              <p>
-                Every visit to Basanti offers more than just shopping. From the
-                ambient music to the curated product range, every detail is
-                designed to enrich your lifestyle. Whether you are browsing the
-                latest collections, enjoying a quiet coffee, or exploring the
-                accessories line, Basanti ensures that every piece you take home
-                is a testament to quality, style, and joy. Here, fashion is not
-                just seen - it is experienced.
-              </p>
+                <p>
+                  Every visit to Basanti offers more than just shopping. From the
+                  ambient music to the curated product range, every detail is
+                  designed to enrich your lifestyle. Whether you are browsing the
+                  latest collections, enjoying a quiet coffee, or exploring the
+                  accessories line, Basanti ensures that every piece you take home
+                  is a testament to quality, style, and joy. Here, fashion is not
+                  just seen - it is experienced.
+                </p>
+              </div>
+
+              <button
+                class="brand-read-more"
+                id="basantiReadMore"
+                type="button"
+                aria-expanded="false"
+                aria-controls="basantiAboutMore"
+                hidden
+              >
+                Read more
+              </button>
             </div>
           </article>
         </div>
@@ -397,6 +410,27 @@
             link.addEventListener("click", closeMenu);
           },
         );
+      })();
+
+      (function () {
+        var moreContent = document.getElementById("basantiAboutMore");
+        var readMoreButton = document.getElementById("basantiReadMore");
+
+        if (!moreContent || !readMoreButton) {
+          return;
+        }
+
+        moreContent.hidden = true;
+        readMoreButton.hidden = false;
+
+        readMoreButton.addEventListener("click", function () {
+          var isExpanded =
+            readMoreButton.getAttribute("aria-expanded") === "true";
+
+          moreContent.hidden = isExpanded;
+          readMoreButton.setAttribute("aria-expanded", String(!isExpanded));
+          readMoreButton.textContent = isExpanded ? "Read more" : "Read less";
+        });
       })();
     </script>
   </body>

@@ -6202,6 +6202,54 @@ body.event-gallery-open {
   text-align: left;
 }
 
+.brand-page .brand-about-more {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.brand-page .brand-about-more[hidden] {
+  display: none;
+}
+
+.brand-page .brand-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  width: fit-content;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #000000;
+  cursor: pointer;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.brand-page .brand-read-more::after {
+  content: "+";
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.brand-page .brand-read-more[aria-expanded="true"]::after {
+  content: "-";
+}
+
+.brand-page .brand-read-more:hover {
+  opacity: 0.72;
+  transform: translateY(-1px);
+}
+
+.brand-page .brand-read-more:focus-visible {
+  outline: 2px solid #b99656;
+  outline-offset: 4px;
+}
+
 @media (max-width: 768px) {
   .brand-page .brand-about-box--simple .brand-about-box__content,
   .brand-page .brand-about-box--simple .brand-about-box__content h2,
