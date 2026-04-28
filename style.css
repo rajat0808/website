@@ -5934,8 +5934,22 @@ body.event-gallery-open {
   .brand-hero--collage
   .brand-hero-card
   .brand-hero-image {
-  object-fit: contain;
-  object-position: center;
+  object-fit: cover;
+  object-position: center 16%;
+}
+
+.brand-page.brand-page--kora
+  .brand-hero--collage
+  .brand-hero-card--mid
+  .brand-hero-image {
+  object-position: center 14%;
+}
+
+.brand-page.brand-page--kora
+  .brand-hero--collage
+  .brand-hero-card--wide
+  .brand-hero-image {
+  object-position: center 18%;
 }
 
 .brand-page.brand-page--basanti
