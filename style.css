@@ -686,7 +686,7 @@ body.menu-open .menu-lines span:last-child {
   grid-row: 1;
   justify-self: end;
   align-self: center;
-  margin-right: clamp(1.5rem, 4vw, 5.5rem);
+  margin-right: clamp(0.5rem, 1.5vw, 1.2rem);
 }
 
 .about-side-tag > span {
@@ -1851,7 +1851,7 @@ body.menu-open .menu-lines span:last-child {
   }
 
   .index-page .gallery-heading {
-    padding-top: clamp(2rem, 4vw, 3.5rem);
+    padding-top: clamp(4.5rem, 8vw, 6.5rem);
   }
 }
 
@@ -3182,7 +3182,7 @@ body.event-gallery-open {
 }
 
 .index-page .contact.section-padding {
-  padding-top: calc(var(--index-event-gap) + 2rem);
+  padding-top: clamp(3rem, 5.5vw, 4.5rem);
   padding-bottom: clamp(2rem, 4vw, 3rem);
 }
 
@@ -5934,8 +5934,22 @@ body.event-gallery-open {
   .brand-hero--collage
   .brand-hero-card
   .brand-hero-image {
-  object-fit: contain;
-  object-position: center;
+  object-fit: cover;
+  object-position: center 16%;
+}
+
+.brand-page.brand-page--kora
+  .brand-hero--collage
+  .brand-hero-card--mid
+  .brand-hero-image {
+  object-position: center 14%;
+}
+
+.brand-page.brand-page--kora
+  .brand-hero--collage
+  .brand-hero-card--wide
+  .brand-hero-image {
+  object-position: center 18%;
 }
 
 .brand-page.brand-page--basanti
@@ -6186,6 +6200,54 @@ body.event-gallery-open {
   color: #000000;
   width: 100%;
   text-align: left;
+}
+
+.brand-page .brand-about-more {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.brand-page .brand-about-more[hidden] {
+  display: none;
+}
+
+.brand-page .brand-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  width: fit-content;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #000000;
+  cursor: pointer;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.brand-page .brand-read-more::after {
+  content: "+";
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.brand-page .brand-read-more[aria-expanded="true"]::after {
+  content: "-";
+}
+
+.brand-page .brand-read-more:hover {
+  opacity: 0.72;
+  transform: translateY(-1px);
+}
+
+.brand-page .brand-read-more:focus-visible {
+  outline: 2px solid #b99656;
+  outline-offset: 4px;
 }
 
 @media (max-width: 768px) {
