@@ -21,5 +21,6 @@ _render_check*.png
 tmp/
 temp/
 .cache/
+dist/
 assets/_tmp-*
 

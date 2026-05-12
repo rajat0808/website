@@ -26,10 +26,28 @@ Then open:
 
 `http://localhost:8000/index.html`
 
+## Deploy Build
+
+Build the publishable artifact into `dist/`:
+
+```powershell
+cd "D:\New folder (3)\emporio"
+python -m pip install -r requirements-build.txt
+python build_site.py
+```
+
+Preview the deploy output locally:
+
+```powershell
+python -m http.server 8000 --directory dist
+```
+
+The GitHub Pages workflow now deploys `dist/` instead of the whole repository.
+
 ## Maintenance Notes
 
 - Keep page-specific CSS in `style.css` using page-scoped selectors (for example `.index-page ...`) rather than inline `<style>` blocks.
 - When `style.css` changes, bump the cache-bust query in HTML links:
   - `style.css?v=...`
+- Run `python build_site.py --check` after content edits to catch missing local files before deploy.
 - Keep generated screenshots and local logs out of git (covered by `.gitignore`).
-

@@ -1,19 +1,14 @@
-import os
 import re
+from pathlib import Path
 
 new_version = "20260424-5"
-directory = r"d:\New folder (3)\emporio"
+directory = Path(__file__).resolve().parent
 
-for filename in os.listdir(directory):
-    if filename.endswith(".html"):
-        filepath = os.path.join(directory, filename)
-        with open(filepath, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
-        # Replace style.css?v=... with the new version
-        updated_content = re.sub(r'style\.css\?v=[^"]*', f'style.css?v={new_version}', content)
-        
-        if updated_content != content:
-            with open(filepath, 'w', encoding='utf-8') as f:
-                f.write(updated_content)
-            print(f"Updated {filename}")
+for filepath in directory.glob("*.html"):
+    content = filepath.read_text(encoding="utf-8")
+
+    updated_content = re.sub(r'style\.css\?v=[^"]*', f"style.css?v={new_version}", content)
+
+    if updated_content != content:
+        filepath.write_text(updated_content, encoding="utf-8")
+        print(f"Updated {filepath.name}")
