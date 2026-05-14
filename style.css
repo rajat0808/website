@@ -25,8 +25,7 @@ html {
   font-size: 80%;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  scroll-padding-top: var(--header-height);
-}
+  scroll-padding-top: var(--header-height);}
 
 * {
   margin: 0;
