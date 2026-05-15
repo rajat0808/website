@@ -5642,7 +5642,7 @@ body.event-gallery-open {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center center;
   transform: scale(1);
   transform-origin: center center;
