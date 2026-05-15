@@ -2435,7 +2435,7 @@ body.menu-open .menu-lines span:last-child {
   position: absolute;
   inset: 0;
   background-color: #000000;
-  background-image: url("assets/brand-hero-final.jpg?v=20260422-3");
+  background-image: url("assets/IMG_8226.PNG?v=20260515-1");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -5644,7 +5644,7 @@ body.event-gallery-open {
   height: 100%;
   object-fit: cover;
   object-position: center center;
-  transform: scale(1);
+  transform: scale(1.1);
   transform-origin: center center;
 }
 
