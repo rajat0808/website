@@ -7036,7 +7036,7 @@ body.event-gallery-open {
 }
 
 .brand-page .luxury-card--saresa {
-  --brand-logo-scale: 0.8;
+  --brand-logo-scale: 0.9;
   --luxury-card-bg: #ffffff;
 }
 
@@ -7290,7 +7290,7 @@ body.event-gallery-open {
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--saresa {
-  --brand-logo-scale: 0.8;
+  --brand-logo-scale: 0.9;
 }
 
 .brand-page:not([class*="brand-page--"]) .luxury-card--levis {
@@ -7380,6 +7380,14 @@ body.event-gallery-open {
 
   .brand-page:not([class*="brand-page--"]) .luxury-card--basanti {
     --brand-logo-scale: 1.74;
+  }
+
+  .brand-page .luxury-card--saresa {
+    --brand-logo-scale: 0.8;
+  }
+
+  .brand-page:not([class*="brand-page--"]) .luxury-card--saresa {
+    --brand-logo-scale: 0.8;
   }
 
   .brand-page:not([class*="brand-page--"])
