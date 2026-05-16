@@ -2021,6 +2021,27 @@ body.menu-open .menu-lines span:last-child {
   visibility: visible;
 }
 
+@media (hover: none), (pointer: coarse), (max-width: 768px) {
+  .index-page .brands-logo-marquee .marquee-controls,
+  .index-page .hero--classic .marquee-controls {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .index-page .brand-marquee-controls,
+  .index-page .gallery-slider-controls {
+    padding-left: max(0.45rem, env(safe-area-inset-left));
+    padding-right: max(0.45rem, env(safe-area-inset-right));
+  }
+
+  .index-page .brands-logo-marquee .marquee-btn,
+  .index-page .hero--classic .marquee-btn {
+    width: clamp(2.2rem, 10.5vw, 2.75rem);
+    height: clamp(2.2rem, 10.5vw, 2.75rem);
+    background: rgba(255, 255, 255, 0.96);
+  }
+}
+
 .brands-logo-marquee.is-interacting .brands-logo-row,
 .hero--classic:hover .hero-slider-track,
 .hero--classic:focus-within .hero-slider-track,
