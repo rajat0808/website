@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260424-5" />
+  <link rel="stylesheet" href="style.css?v=20260516-2" />
   <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-se.png?v=20260323-1" />
   <link rel="preload" href="assets/fontawesome/css/all.min.css" as="style" onload="
         this.onload = null;
@@ -221,7 +221,7 @@
     <div class="brands-header">
       <h2 class="brands-title">Brands</h2>
     </div>
-    <div class="brands-logo-marquee" aria-label="Featured brands">
+    <div class="brands-logo-marquee" aria-label="Featured brands" data-slider-shell="brands">
       <div class="brands-logo-row">
         <div class="brands-logo-group" role="list">
           <a class="brands-logo-item brands-logo-item--armani brands-logo-item--featured" role="listitem"
@@ -396,6 +396,16 @@
           </a>
         </div>
       </div>
+      <div class="slider-controls marquee-controls brand-marquee-controls" aria-label="Brand slider controls">
+        <button class="slider-btn marquee-btn" type="button" data-slider-control="brands" data-slider-direction="prev"
+          aria-label="Show previous brands">
+          <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <button class="slider-btn marquee-btn" type="button" data-slider-control="brands" data-slider-direction="next"
+          aria-label="Show next brands">
+          <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+        </button>
+      </div>
     </div>
   </section>
 
@@ -404,7 +414,7 @@
   </section>
 
   <!-- Hero Section (Signature) -->
-  <section class="hero hero--classic defer-render">
+  <section class="hero hero--classic defer-render" data-slider-shell="gallery">
     <div class="hero-slider" aria-hidden="true">
       <div class="hero-slider-track">
         <img src="assets/brand-slide-01-opt.webp" alt="" loading="eager" fetchpriority="high" decoding="async" />
@@ -423,6 +433,16 @@
         <img src="assets/DSC01384.JPG" alt="" loading="lazy" decoding="async" />
         <img src="assets/DSC01448.JPG" alt="" loading="lazy" decoding="async" />
       </div>
+    </div>
+    <div class="slider-controls marquee-controls gallery-slider-controls" aria-label="Gallery slider controls">
+      <button class="slider-btn marquee-btn" type="button" data-slider-control="gallery" data-slider-direction="prev"
+        aria-label="Show previous gallery image">
+        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+      </button>
+      <button class="slider-btn marquee-btn" type="button" data-slider-control="gallery" data-slider-direction="next"
+        aria-label="Show next gallery image">
+        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+      </button>
     </div>
   </section>
 
@@ -641,6 +661,143 @@
       }
 
       Array.prototype.forEach.call(animatedTracks, armTrack);
+    })();
+
+    (function () {
+      var sliders = {
+        brands: document.querySelector(".brands-logo-row"),
+        gallery: document.querySelector(".hero--classic .hero-slider-track"),
+      };
+      var sliderShells = document.querySelectorAll("[data-slider-shell]");
+      var interactionTimers = {};
+
+      function parseTimeToMs(value) {
+        var raw = (value || "0s").split(",")[0].trim();
+        var amount = parseFloat(raw);
+        if (!Number.isFinite(amount)) {
+          return 0;
+        }
+        return raw.indexOf("ms") > -1 ? amount : amount * 1000;
+      }
+
+      function getPrimaryAnimation(track) {
+        if (!track.getAnimations) {
+          return null;
+        }
+        var animations = track.getAnimations();
+        return animations.length ? animations[0] : null;
+      }
+
+      function getAnimationDuration(track, animation) {
+        var style = window.getComputedStyle(track);
+        var duration = animation && animation.effect
+          ? animation.effect.getTiming().duration
+          : parseTimeToMs(style.animationDuration);
+
+        if (!Number.isFinite(duration) || duration <= 0) {
+          duration = parseTimeToMs(style.animationDuration);
+        }
+        return duration;
+      }
+
+      function getStepDuration(track, animation) {
+        var duration = getAnimationDuration(track, animation);
+        var items = track.querySelectorAll(
+          ".brands-logo-group[role='list'] .brands-logo-item",
+        ).length;
+
+        if (!items && track.children.length) {
+          items = Math.max(1, Math.round(track.children.length / 2));
+        }
+        if (!Number.isFinite(duration) || duration <= 0 || !items) {
+          return 0;
+        }
+        return duration / items;
+      }
+
+      function moveSlider(name, direction) {
+        var track = sliders[name];
+        if (!track) {
+          return;
+        }
+
+        var animation = getPrimaryAnimation(track);
+        var step = getStepDuration(track, animation);
+        if (!step) {
+          return;
+        }
+
+        var offset = direction === "next" ? step : -step;
+        if (animation) {
+          var duration = getAnimationDuration(track, animation);
+          var nextTime = (animation.currentTime || 0) + offset;
+          while (nextTime < 0) {
+            nextTime += duration;
+          }
+          animation.currentTime = nextTime % duration;
+          return;
+        }
+
+        var style = window.getComputedStyle(track);
+        var duration = getAnimationDuration(track, null);
+        if (!duration) {
+          return;
+        }
+        var delay = parseTimeToMs(style.animationDelay);
+        var progress = ((-delay % duration) + duration) % duration;
+        var nextProgress = (progress + offset + duration) % duration;
+        track.style.animationDelay = -(nextProgress / 1000) + "s";
+      }
+
+      function revealControls(name) {
+        var shell = document.querySelector("[data-slider-shell='" + name + "']");
+        if (!shell) {
+          return;
+        }
+
+        shell.classList.add("is-interacting");
+        window.clearTimeout(interactionTimers[name]);
+        interactionTimers[name] = window.setTimeout(function () {
+          shell.classList.remove("is-interacting");
+        }, 2200);
+      }
+
+      Array.prototype.forEach.call(sliderShells, function (shell) {
+        var name = shell.getAttribute("data-slider-shell");
+        if (!name) {
+          return;
+        }
+
+        shell.addEventListener("pointerdown", function () {
+          revealControls(name);
+        });
+
+        shell.addEventListener("pointerenter", function () {
+          shell.classList.add("is-interacting");
+        });
+
+        shell.addEventListener("pointerleave", function () {
+          if (window.matchMedia("(hover: hover)").matches) {
+            shell.classList.remove("is-interacting");
+          }
+        });
+      });
+
+      document.addEventListener("click", function (event) {
+        var target = event.target;
+        if (!target || !target.closest) {
+          return;
+        }
+        var button = target.closest("[data-slider-control]");
+        if (!button) {
+          return;
+        }
+        revealControls(button.getAttribute("data-slider-control"));
+        moveSlider(
+          button.getAttribute("data-slider-control"),
+          button.getAttribute("data-slider-direction"),
+        );
+      });
     })();
 
     //noinspection SpellCheckingInspection
