@@ -578,34 +578,36 @@
     })();
 
     (function () {
-      var heroSliderTrack = document.querySelector(".hero-slider-track");
-      if (!heroSliderTrack) {
+      var containers = document.querySelectorAll(".brands-logo-marquee, .hero-slider");
+      if (!containers.length) {
         return;
       }
 
       function syncPageVisibility() {
-        heroSliderTrack.classList.toggle(
-          "is-paused",
-          document.visibilityState !== "visible",
-        );
+        var isVisible = document.visibilityState === "visible";
+        Array.prototype.forEach.call(containers, function (container) {
+          container.classList.toggle("is-paused", !isVisible);
+        });
       }
 
       syncPageVisibility();
       document.addEventListener("visibilitychange", syncPageVisibility);
 
       if ("IntersectionObserver" in window) {
-        var heroTrackObserver = new IntersectionObserver(
+        var observer = new IntersectionObserver(
           function (entries) {
             entries.forEach(function (entry) {
-              heroSliderTrack.classList.toggle(
+              entry.target.classList.toggle(
                 "is-offscreen",
                 !entry.isIntersecting,
               );
             });
           },
-          { threshold: 0.01, rootMargin: "120px 0px" },
+          { threshold: 0.01, rootMargin: "120px 0px" }
         );
-        heroTrackObserver.observe(heroSliderTrack);
+        Array.prototype.forEach.call(containers, function (container) {
+          observer.observe(container);
+        });
       }
     })();
 
@@ -663,91 +665,185 @@
       Array.prototype.forEach.call(animatedTracks, armTrack);
     })();
 
+    function InteractiveMarquee(container, track, autoSpeed, isReverse) {
+      this.container = typeof container === "string" ? document.querySelector(container) : container;
+      this.track = typeof track === "string" ? document.querySelector(track) : track;
+      if (!this.container || !this.track) {
+        return;
+      }
+
+      this.autoSpeed = typeof autoSpeed === "number" ? autoSpeed : 1;
+      this.isReverse = !!isReverse;
+
+      this.isDown = false;
+      this.startX = 0;
+      this.scrollLeftStart = 0;
+      this.isInteracting = false;
+      this.interactionTimeout = null;
+      this.animationFrameId = null;
+      this.lastTime = performance.now();
+      this.dragged = false;
+      this.draggedDistance = 0;
+
+      this.initStyles();
+      this.initEvents();
+
+      var self = this;
+      function step(time) {
+        self.animate(time);
+        self.animationFrameId = requestAnimationFrame(step);
+      }
+      this.animationFrameId = requestAnimationFrame(step);
+    }
+
+    InteractiveMarquee.prototype.initStyles = function () {
+      this.container.classList.add("has-interactive-marquee");
+    };
+
+    InteractiveMarquee.prototype.getMaxScroll = function () {
+      return this.track.scrollWidth / 2;
+    };
+
+    InteractiveMarquee.prototype.snapScroll = function () {
+      var maxScroll = this.getMaxScroll();
+      if (maxScroll <= 0) {
+        return;
+      }
+      var current = this.container.scrollLeft;
+      if (current >= maxScroll) {
+        this.container.scrollLeft = current - maxScroll;
+      } else if (current <= 0) {
+        this.container.scrollLeft = current + maxScroll;
+      }
+    };
+
+    InteractiveMarquee.prototype.animate = function (time) {
+      if (
+        !this.isInteracting &&
+        !this.isDown &&
+        !this.container.classList.contains("is-paused") &&
+        !this.container.classList.contains("is-offscreen")
+      ) {
+        var delta = time - this.lastTime;
+        var speedPxPerMs = (this.autoSpeed * 60) / 1000;
+        var amount = speedPxPerMs * delta;
+        var direction = this.isReverse ? -1 : 1;
+        this.container.scrollLeft += amount * direction;
+        this.snapScroll();
+      }
+      this.lastTime = time;
+    };
+
+    InteractiveMarquee.prototype.startInteraction = function () {
+      this.isInteracting = true;
+      window.clearTimeout(this.interactionTimeout);
+    };
+
+    InteractiveMarquee.prototype.stopInteraction = function () {
+      var self = this;
+      window.clearTimeout(this.interactionTimeout);
+      this.interactionTimeout = window.setTimeout(function () {
+        self.isInteracting = false;
+        self.lastTime = performance.now();
+      }, 1500);
+    };
+
+    InteractiveMarquee.prototype.initEvents = function () {
+      var self = this;
+
+      this.container.addEventListener("pointerdown", function (e) {
+        if (e.pointerType === "mouse" && e.button !== 0) {
+          return;
+        }
+        self.isDown = true;
+        self.dragged = false;
+        self.draggedDistance = 0;
+        self.container.classList.add("is-dragging");
+        
+        try {
+          self.container.setPointerCapture(e.pointerId);
+        } catch (err) {}
+
+        self.startX = e.clientX;
+        self.scrollLeftStart = self.container.scrollLeft;
+        self.startInteraction();
+      });
+
+      this.container.addEventListener("pointermove", function (e) {
+        if (!self.isDown) {
+          return;
+        }
+        var deltaX = e.clientX - self.startX;
+        self.draggedDistance = Math.abs(deltaX);
+        if (self.draggedDistance > 5) {
+          self.dragged = true;
+        }
+        var walk = deltaX * 1.2;
+        self.container.scrollLeft = self.scrollLeftStart - walk;
+        self.snapScroll();
+      });
+
+      function handlePointerUp(e) {
+        if (!self.isDown) {
+          return;
+        }
+        self.isDown = false;
+        self.container.classList.remove("is-dragging");
+        try {
+          self.container.releasePointerCapture(e.pointerId);
+        } catch (err) {}
+        self.stopInteraction();
+      }
+
+      this.container.addEventListener("pointerup", handlePointerUp);
+      this.container.addEventListener("pointercancel", handlePointerUp);
+      this.container.addEventListener("pointerleave", handlePointerUp);
+
+      // Prevent link clicking if dragging happened
+      this.container.addEventListener("click", function (e) {
+        if (self.dragged) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      }, true);
+
+      // Keep snapping in sync with manual scrolling/momentum
+      this.container.addEventListener("scroll", function () {
+        self.snapScroll();
+      });
+
+      this.container.addEventListener("touchstart", function () {
+        self.startInteraction();
+      }, { passive: true });
+
+      this.container.addEventListener("touchend", function () {
+        self.stopInteraction();
+      }, { passive: true });
+    };
+
+    InteractiveMarquee.prototype.move = function (direction) {
+      this.startInteraction();
+      var maxScroll = this.getMaxScroll();
+      var step = maxScroll / (this.track.children.length / 2 || 12);
+      var amount = direction === "next" ? step : -step;
+      var targetScroll = this.container.scrollLeft + amount;
+      
+      this.container.scrollTo({
+        left: targetScroll,
+        behavior: "smooth"
+      });
+
+      this.stopInteraction();
+    };
+
     (function () {
-      var sliders = {
-        brands: document.querySelector(".brands-logo-row"),
-        gallery: document.querySelector(".hero--classic .hero-slider-track"),
+      var instances = {
+        brands: new InteractiveMarquee(".brands-logo-marquee", ".brands-logo-row", 0.95),
+        gallery: new InteractiveMarquee(".hero-slider", ".hero-slider-track", 1.45),
       };
+
       var sliderShells = document.querySelectorAll("[data-slider-shell]");
       var interactionTimers = {};
-
-      function parseTimeToMs(value) {
-        var raw = (value || "0s").split(",")[0].trim();
-        var amount = parseFloat(raw);
-        if (!Number.isFinite(amount)) {
-          return 0;
-        }
-        return raw.indexOf("ms") > -1 ? amount : amount * 1000;
-      }
-
-      function getPrimaryAnimation(track) {
-        if (!track.getAnimations) {
-          return null;
-        }
-        var animations = track.getAnimations();
-        return animations.length ? animations[0] : null;
-      }
-
-      function getAnimationDuration(track, animation) {
-        var style = window.getComputedStyle(track);
-        var duration = animation && animation.effect
-          ? animation.effect.getTiming().duration
-          : parseTimeToMs(style.animationDuration);
-
-        if (!Number.isFinite(duration) || duration <= 0) {
-          duration = parseTimeToMs(style.animationDuration);
-        }
-        return duration;
-      }
-
-      function getStepDuration(track, animation) {
-        var duration = getAnimationDuration(track, animation);
-        var items = track.querySelectorAll(
-          ".brands-logo-group[role='list'] .brands-logo-item",
-        ).length;
-
-        if (!items && track.children.length) {
-          items = Math.max(1, Math.round(track.children.length / 2));
-        }
-        if (!Number.isFinite(duration) || duration <= 0 || !items) {
-          return 0;
-        }
-        return duration / items;
-      }
-
-      function moveSlider(name, direction) {
-        var track = sliders[name];
-        if (!track) {
-          return;
-        }
-
-        var animation = getPrimaryAnimation(track);
-        var step = getStepDuration(track, animation);
-        if (!step) {
-          return;
-        }
-
-        var offset = direction === "next" ? step : -step;
-        if (animation) {
-          var duration = getAnimationDuration(track, animation);
-          var nextTime = (animation.currentTime || 0) + offset;
-          while (nextTime < 0) {
-            nextTime += duration;
-          }
-          animation.currentTime = nextTime % duration;
-          return;
-        }
-
-        var style = window.getComputedStyle(track);
-        var duration = getAnimationDuration(track, null);
-        if (!duration) {
-          return;
-        }
-        var delay = parseTimeToMs(style.animationDelay);
-        var progress = ((-delay % duration) + duration) % duration;
-        var nextProgress = (progress + offset + duration) % duration;
-        track.style.animationDelay = -(nextProgress / 1000) + "s";
-      }
 
       function revealControls(name) {
         var shell = document.querySelector("[data-slider-shell='" + name + "']");
@@ -792,11 +888,13 @@
         if (!button) {
           return;
         }
-        revealControls(button.getAttribute("data-slider-control"));
-        moveSlider(
-          button.getAttribute("data-slider-control"),
-          button.getAttribute("data-slider-direction"),
-        );
+        var name = button.getAttribute("data-slider-control");
+        var direction = button.getAttribute("data-slider-direction");
+        
+        revealControls(name);
+        if (instances[name]) {
+          instances[name].move(direction);
+        }
       });
     })();
 
