@@ -2003,20 +2003,47 @@ body.menu-open .menu-lines span:last-child {
   pointer-events: auto;
 }
 
+.brands-slider-wrapper {
+  position: relative;
+  width: 100%;
+}
+
 .brand-marquee-controls {
-  padding-inline: clamp(0.45rem, 1.5vw, 1rem);
+  position: absolute;
+  inset: 50% 0 auto;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  padding: 0;
+}
+
+.brand-marquee-controls .slider-btn {
+  pointer-events: auto;
+}
+
+@media (min-width: 769px) {
+  .brand-marquee-controls .slider-btn[data-slider-direction="prev"] {
+    margin-left: -2.35rem;
+  }
+  .brand-marquee-controls .slider-btn[data-slider-direction="next"] {
+    margin-right: -2.35rem;
+  }
 }
 
 .gallery-slider-controls {
   padding-inline: clamp(0.75rem, 2.4vw, 2rem);
 }
 
-.brands-logo-marquee:hover .marquee-controls,
-.brands-logo-marquee:focus-within .marquee-controls,
-.brands-logo-marquee.is-interacting .marquee-controls,
-.hero--classic:hover .marquee-controls,
-.hero--classic:focus-within .marquee-controls,
-.hero--classic.is-interacting .marquee-controls {
+.brands-logo-marquee:hover ~ .brand-marquee-controls,
+.brands-logo-marquee:focus-within ~ .brand-marquee-controls,
+.brands-logo-marquee.is-interacting ~ .brand-marquee-controls,
+.brand-marquee-controls:hover,
+.brand-marquee-controls:focus-within,
+.hero--classic:hover .gallery-slider-controls,
+.hero--classic:focus-within .gallery-slider-controls,
+.hero--classic.is-interacting .gallery-slider-controls {
   opacity: 1;
   visibility: visible;
 }
