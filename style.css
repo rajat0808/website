@@ -2121,7 +2121,9 @@ body.menu-open .menu-lines span:last-child {
 .brands-logo-marquee {
   position: relative;
   overflow: hidden;
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 
 .brands-logo-row {
@@ -2132,7 +2134,7 @@ body.menu-open .menu-lines span:last-child {
   display: flex;
   align-items: stretch;
   width: max-content;
-  gap: var(--brands-gap);
+  gap: 0;
   animation: none;
   will-change: transform;
 }
@@ -2145,6 +2147,7 @@ body.menu-open .menu-lines span:last-child {
   display: flex;
   align-items: stretch;
   gap: var(--brands-gap);
+  padding-right: var(--brands-gap);
   flex-shrink: 0;
 }
 
