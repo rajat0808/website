@@ -7737,14 +7737,14 @@ body:not(.index-page) .luxury-card--saresa img {
 
 .brands-logo-marquee.has-interactive-marquee,
 .hero--classic .hero-slider.has-interactive-marquee {
-  cursor: grab;
+
   user-select: none;
   pointer-events: auto !important;
 }
 
 .brands-logo-marquee.has-interactive-marquee:active,
 .hero--classic .hero-slider.has-interactive-marquee:active {
-  cursor: grabbing;
+
 }
 
 .brands-logo-marquee.has-interactive-marquee .brands-logo-row,
@@ -7756,5 +7756,5 @@ body:not(.index-page) .luxury-card--saresa img {
 
 .has-interactive-marquee.is-dragging * {
   pointer-events: none !important;
-  cursor: grabbing !important;
+
 }
