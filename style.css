@@ -2021,9 +2021,11 @@ body.menu-open .menu-lines span:last-child {
   visibility: visible;
 }
 
-@media (hover: none), (pointer: coarse), (max-width: 768px) {
-  .index-page .brands-logo-marquee .marquee-controls,
-  .index-page .hero--classic .marquee-controls {
+@media (max-width: 768px), (pointer: coarse), (hover: none) {
+  .marquee-controls,
+  .slider-controls,
+  .marquee-btn,
+  .slider-btn {
     display: none !important;
   }
 }
