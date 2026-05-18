@@ -741,7 +741,7 @@
         self.isDown = true;
         self.dragged = false;
         self.draggedDistance = 0;
-        self.container.classList.add("is-dragging");
+        // self.container.classList.add("is-dragging");
         
         try {
           self.container.setPointerCapture(e.pointerId);
@@ -760,6 +760,7 @@
         self.draggedDistance = Math.abs(deltaX);
         if (self.draggedDistance > 5) {
           self.dragged = true;
+          self.container.classList.add("is-dragging");
         }
         var walk = deltaX * 1.2;
         self.container.scrollLeft = self.scrollLeftStart - walk;
