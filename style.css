@@ -1288,9 +1288,6 @@ body.menu-open .menu-lines span:last-child {
   border-radius: 4px;
   border: 0.35px solid rgba(255, 255, 255, 0.85);
   filter: saturate(0.9) brightness(0.78);
-  cursor: default !important;
-  -webkit-user-drag: none;
-  user-drag: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2318,9 +2315,6 @@ body.menu-open .menu-lines span:last-child {
   display: block;
   transform: scale(calc(var(--logo-scale) - 0.1)) translateX(0.1em);
   transform-origin: center;
-  -webkit-user-drag: none;
-  user-drag: none;
-  cursor: default !important;
 }
 
 .brands-logo-item--featured {
@@ -7743,16 +7737,14 @@ body:not(.index-page) .luxury-card--saresa img {
 
 .brands-logo-marquee.has-interactive-marquee,
 .hero--classic .hero-slider.has-interactive-marquee {
-
-  cursor: default !important;
+  cursor: grab;
   user-select: none;
   pointer-events: auto !important;
 }
 
 .brands-logo-marquee.has-interactive-marquee:active,
 .hero--classic .hero-slider.has-interactive-marquee:active {
-  cursor: default !important;
-
+  cursor: grabbing;
 }
 
 .brands-logo-marquee.has-interactive-marquee .brands-logo-row,
@@ -7764,6 +7756,5 @@ body:not(.index-page) .luxury-card--saresa img {
 
 .has-interactive-marquee.is-dragging * {
   pointer-events: none !important;
-  cursor: default !important;
-
+  cursor: grabbing !important;
 }
