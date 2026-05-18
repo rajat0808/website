@@ -2280,7 +2280,7 @@ body.menu-open .menu-lines span:last-child {
 .brands-logo-item--sindh-emporio .brands-featured-logo {
   transform: translate(-50%, -50%) scale(1.16);
   transform-origin: center;
-  filter: brightness(0);
+  filter: brightness(0) !important;
   mix-blend-mode: normal;
 }
 
@@ -7605,7 +7605,7 @@ body:not(.index-page) .luxury-card--saresa img {
 }
 
 .index-page .brands-logo-item--saresa .brands-featured-logo {
-  filter: brightness(0) invert(1) drop-shadow(0 2px 10px rgba(0, 0, 0, 0.35)) !important;
+  filter: brightness(0) !important;
 }
 
 /* Interactive Marquee & Drag Slider overrides */
