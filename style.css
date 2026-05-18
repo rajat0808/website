@@ -2280,8 +2280,8 @@ body.menu-open .menu-lines span:last-child {
 .brands-logo-item--sindh-emporio .brands-featured-logo {
   transform: translate(-50%, -50%) scale(1.16);
   transform-origin: center;
-  filter: brightness(0) !important;
-  mix-blend-mode: normal;
+  mix-blend-mode: multiply;
+  filter: grayscale(1) contrast(200%);
 }
 
 .brands-logo-item--lacoste {
