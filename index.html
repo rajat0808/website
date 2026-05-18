@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260518-2" />
+  <link rel="stylesheet" href="style.css?v=20260518-3" />
   <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-se.png?v=20260323-1" />
   <link rel="preload" href="assets/fontawesome/css/all.min.css" as="style" onload="
         this.onload = null;
@@ -804,81 +804,9 @@
       }, { passive: true });
     };
 
-    InteractiveMarquee.prototype.move = function (direction) {
-      this.startInteraction();
-      var maxScroll = this.getMaxScroll();
-      var step = maxScroll / (this.track.children.length / 2 || 12);
-      var amount = direction === "next" ? step : -step;
-      var targetScroll = this.container.scrollLeft + amount;
-      
-      this.container.scrollTo({
-        left: targetScroll,
-        behavior: "smooth"
-      });
-
-      this.stopInteraction();
-    };
-
     (function () {
-      var instances = {
-        brands: new InteractiveMarquee(".brands-logo-marquee", ".brands-logo-row", 0.95),
-        gallery: new InteractiveMarquee(".hero-slider", ".hero-slider-track", 1.45),
-      };
-
-      var sliderShells = document.querySelectorAll("[data-slider-shell]");
-      var interactionTimers = {};
-
-      function revealControls(name) {
-        var shell = document.querySelector("[data-slider-shell='" + name + "']");
-        if (!shell) {
-          return;
-        }
-
-        shell.classList.add("is-interacting");
-        window.clearTimeout(interactionTimers[name]);
-        interactionTimers[name] = window.setTimeout(function () {
-          shell.classList.remove("is-interacting");
-        }, 2200);
-      }
-
-      Array.prototype.forEach.call(sliderShells, function (shell) {
-        var name = shell.getAttribute("data-slider-shell");
-        if (!name) {
-          return;
-        }
-
-        shell.addEventListener("pointerdown", function () {
-          revealControls(name);
-        });
-
-        shell.addEventListener("pointerenter", function () {
-          shell.classList.add("is-interacting");
-        });
-
-        shell.addEventListener("pointerleave", function () {
-          if (window.matchMedia("(hover: hover)").matches) {
-            shell.classList.remove("is-interacting");
-          }
-        });
-      });
-
-      document.addEventListener("click", function (event) {
-        var target = event.target;
-        if (!target || !target.closest) {
-          return;
-        }
-        var button = target.closest("[data-slider-control]");
-        if (!button) {
-          return;
-        }
-        var name = button.getAttribute("data-slider-control");
-        var direction = button.getAttribute("data-slider-direction");
-        
-        revealControls(name);
-        if (instances[name]) {
-          instances[name].move(direction);
-        }
-      });
+      new InteractiveMarquee(".brands-logo-marquee", ".brands-logo-row", 0.95);
+      new InteractiveMarquee(".hero-slider", ".hero-slider-track", 1.45);
     })();
 
     //noinspection SpellCheckingInspection

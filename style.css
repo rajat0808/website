@@ -1934,127 +1934,9 @@ body.menu-open .menu-lines span:last-child {
   line-height: 1.6;
 }
 
-.slider-controls {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.slider-btn {
-  width: 2.4rem;
-  height: 2.4rem;
-  border-radius: 999px;
-  border: 1px solid rgba(15, 34, 63, 0.16);
-  background: #ffffff;
-  color: #111827;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition:
-    border-color 0.2s ease,
-    background 0.2s ease;
-}
-
-.slider-btn:hover {
-  border-color: var(--ink);
-  background: var(--bg-soft);
-}
-
-.marquee-controls {
-  position: absolute;
-  inset: 50% 0 auto;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: clamp(0.55rem, 1.2vw, 0.8rem);
-  padding: 0 clamp(0.75rem, 2.4vw, 2rem);
-  pointer-events: none;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-50%);
-  transition:
-    opacity 0.2s ease,
-    visibility 0.2s ease;
-}
-
-.marquee-btn {
-  width: clamp(2.15rem, 4vw, 2.75rem);
-  height: clamp(2.15rem, 4vw, 2.75rem);
-  border-color: rgba(0, 0, 0, 0.22);
-  background: rgba(255, 255, 255, 0.92);
-  color: #111111;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-
-.marquee-btn:hover,
-.marquee-btn:focus-visible {
-  border-color: #111111;
-  background: #ffffff;
-}
-
-.marquee-btn:focus-visible {
-  outline: 2px solid #b99656;
-  outline-offset: 3px;
-}
-
-.marquee-controls .marquee-btn {
-  pointer-events: auto;
-}
-
 .brands-slider-wrapper {
   position: relative;
   width: 100%;
-}
-
-.brand-marquee-controls {
-  position: absolute;
-  inset: 50% 0 auto;
-  transform: translateY(-50%);
-  z-index: 10;
-  display: flex;
-  justify-content: space-between;
-  pointer-events: none;
-  padding: 0;
-}
-
-.brand-marquee-controls .slider-btn {
-  pointer-events: auto;
-}
-
-@media (min-width: 769px) {
-  .brand-marquee-controls .slider-btn[data-slider-direction="prev"] {
-    margin-left: -2.35rem;
-  }
-  .brand-marquee-controls .slider-btn[data-slider-direction="next"] {
-    margin-right: -2.35rem;
-  }
-}
-
-.gallery-slider-controls {
-  padding-inline: clamp(0.75rem, 2.4vw, 2rem);
-}
-
-.brands-logo-marquee:hover ~ .brand-marquee-controls,
-.brands-logo-marquee:focus-within ~ .brand-marquee-controls,
-.brands-logo-marquee.is-interacting ~ .brand-marquee-controls,
-.brand-marquee-controls:hover,
-.brand-marquee-controls:focus-within,
-.hero--classic:hover .gallery-slider-controls,
-.hero--classic:focus-within .gallery-slider-controls,
-.hero--classic.is-interacting .gallery-slider-controls {
-  opacity: 1;
-  visibility: visible;
-}
-
-@media (max-width: 768px), (pointer: coarse), (hover: none) {
-  .marquee-controls,
-  .slider-controls,
-  .marquee-btn,
-  .slider-btn {
-    display: none !important;
-  }
 }
 
 .brands-logo-marquee.is-interacting .brands-logo-row,
@@ -2338,7 +2220,7 @@ body.menu-open .menu-lines span:last-child {
 }
 
 .brands-logo-item--featured::after {
-  display: none;
+  content: none;
 }
 
 .brands-logo-item--featured .brands-featured-logo {
@@ -2352,7 +2234,7 @@ body.menu-open .menu-lines span:last-child {
   max-height: none;
   object-fit: contain;
   transform: translate(-50%, -50%);
-  filter: brightness(0) saturate(100%);
+  filter: brightness(0);
   z-index: 2;
   display: block;
 }
@@ -2360,7 +2242,7 @@ body.menu-open .menu-lines span:last-child {
 .brands-logo-item--superdry .brands-featured-logo {
   transform: translate(-50%, -50%) scale(1.2);
   transform-origin: center;
-  filter: brightness(0) saturate(100%);
+  filter: brightness(0);
 }
 
 .brands-logo-item--la-martina .brands-featured-logo {
@@ -2387,7 +2269,7 @@ body.menu-open .menu-lines span:last-child {
 .brands-logo-item--saresa .brands-featured-logo {
   transform: translate(-50%, -50%) scale(1.7);
   transform-origin: center;
-  filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+  filter: brightness(0);
 }
 
 .brands-logo-item--charles-tyrwhitt .brands-featured-logo {
@@ -2398,8 +2280,8 @@ body.menu-open .menu-lines span:last-child {
 .brands-logo-item--sindh-emporio .brands-featured-logo {
   transform: translate(-50%, -50%) scale(1.16);
   transform-origin: center;
-  filter: none;
-  mix-blend-mode: multiply;
+  filter: brightness(0);
+  mix-blend-mode: normal;
 }
 
 .brands-logo-item--lacoste {
@@ -2425,7 +2307,7 @@ body.menu-open .menu-lines span:last-child {
   object-position: center;
   transform: translate(-50%, -50%) scale(1.75);
   transform-origin: center;
-  filter: none;
+  filter: brightness(0);
   mix-blend-mode: normal;
 }
 
@@ -7718,9 +7600,12 @@ body:not(.index-page) .luxury-card--saresa img {
   filter: brightness(0) saturate(100%) invert(18%) sepia(91%) saturate(5427%) hue-rotate(352deg) brightness(90%) contrast(116%) !important;
 }
 
-.index-page .brands-logo-item--saresa .brands-featured-logo,
 .index-page .luxury-card--saresa img {
   filter: grayscale(1) brightness(0) !important;
+}
+
+.index-page .brands-logo-item--saresa .brands-featured-logo {
+  filter: brightness(0) invert(1) drop-shadow(0 2px 10px rgba(0, 0, 0, 0.35)) !important;
 }
 
 /* Interactive Marquee & Drag Slider overrides */
