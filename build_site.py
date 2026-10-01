@@ -69,6 +69,24 @@ def validate(files):
     print(f'PASS: checked local references in {sum(p.suffix == ".html" for p in files)} pages and packaged CSS.')
 
 
+def rewrite_pages_root_links(content):
+    page_names = {page.stem for page in ROOT.glob('*.html')}
+    pattern = re.compile(r'''(?P<prefix>\b(?:href|src|poster|data-src)\s*=\s*)(?P<quote>["'])/(?P<path>[^"']*)(?P=quote)''', re.IGNORECASE)
+
+    def rewrite(match):
+        path = match.group('path')
+        if not path:
+            path = 'index.html'
+        else:
+            route, suffix = re.match(r'^([^?#]*)(.*)$', path).groups()
+            if route and '/' not in route and '.' not in route and route in page_names:
+                route += '.html'
+            path = route + suffix
+        return f"{match.group('prefix')}{match.group('quote')}/website/{path}{match.group('quote')}"
+
+    return pattern.sub(rewrite, content)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check', action='store_true', help='Validate without producing output')
@@ -90,6 +108,8 @@ def main():
             shutil.copy2(source, destination)
         for page in staging.glob('*.html'):
             content = page.read_text(encoding='utf-8-sig')
+            if args.target == 'pages':
+                content = rewrite_pages_root_links(content)
             if 'assets/cookie-consent.css' not in content:
                 content = content.replace('</head>', '  <link rel="stylesheet" href="assets/cookie-consent.css?v=1" />\n</head>', 1)
             if 'assets/cookie-consent.js' not in content:
