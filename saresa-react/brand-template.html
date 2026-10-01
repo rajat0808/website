@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1100765828989940');
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-05X6PLBLGM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-05X6PLBLGM');
+</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brands | Sindh Emporio | UP's Finest Luxury Landmark</title>
+    <meta
+      name="description"
+      content="Explore the curated luxury brands at Sindh Emporio in Lucknow."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#fbfaf7" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=5d0ab5cb7a0e" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="64x64"
+      href="assets/favicon-se.png?v=20260323-1"
+    />
+    <link
+      rel="preload"
+      href="assets/fontawesome/css/all.min.css"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <noscript
+      ><link rel="stylesheet" href="assets/fontawesome/css/all.min.css"
+    /></noscript>
+  <script>
+    (function () {
+      function isHomePath(pathname) {
+        return pathname === "/" || /\/index\.html$/i.test(pathname);
+      }
+
+      function cleanHash() {
+        if (window.location.hash && window.history.replaceState) {
+          window.history.replaceState(null, "", window.location.pathname + window.location.search);
+        }
+      }
+
+      function scrollToTarget(id) {
+        var target = document.getElementById(id);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+
+      cleanHash();
+
+      document.addEventListener("click", function (event) {
+        var link = event.target.closest ? event.target.closest("a[data-scroll-target]") : null;
+        if (!link) {
+          return;
+        }
+        var targetId = link.getAttribute("data-scroll-target");
+        if (!targetId) {
+          return;
+        }
+        if (isHomePath(window.location.pathname)) {
+          event.preventDefault();
+          scrollToTarget(targetId);
+          if (window.history.replaceState) {
+            window.history.replaceState(null, "", "/");
+          }
+        } else {
+          try {
+            window.sessionStorage.setItem("sindhScrollTarget", targetId);
+          } catch (error) {}
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var targetId = null;
+        try {
+          targetId = window.sessionStorage.getItem("sindhScrollTarget");
+          window.sessionStorage.removeItem("sindhScrollTarget");
+        } catch (error) {}
+        if (targetId && isHomePath(window.location.pathname)) {
+          window.setTimeout(function () {
+            scrollToTarget(targetId);
+          }, 100);
+        }
+      });
+    })();
+  </script>
+  <style>
+#brand-root [data-reveal] { opacity:1; transform:none; }
+@media (prefers-reduced-motion: no-preference) {
+#brand-root .luxury-card { transition:transform .25s ease; }
+#brand-root .luxury-card.reveal-pending:not(.is-visible) { opacity:0; transform:translateY(28px) scale(.9); }
+#brand-root .luxury-card.is-visible { animation:brand-pop .65s cubic-bezier(.2,.8,.2,1) var(--brand-delay, 0ms) backwards; }
+#brand-root .brand-hero { animation:brand-enter .85s ease both; }
+#brand-root .luxury-card.is-visible:hover { transform:translateY(-5px); }
+@keyframes brand-pop { from { opacity:0; transform:translateY(28px) scale(.9); } 75% { opacity:1; transform:translateY(-3px) scale(1.015); } to { opacity:1; transform:none; } }
+@keyframes brand-enter { from {opacity:0; transform:translateY(16px);} to {opacity:1;transform:none;} }
+}
+</style>
+<noscript><style>#brand-root [data-reveal]{opacity:1!important;transform:none!important}</style></noscript>
+<style>
+@media(max-width:768px){
+.header-container{min-height:64px;align-items:center;position:relative;}
+.header-container > .logo{position:relative;left:auto;top:auto;transform:none;margin:0 auto 0 0!important;}
+.header-container .logo .logo-text span{font-size:22px;}
+.header-container .logo .logo-text .sub{font-size:10px;}
+.header-container > .menu-trigger{margin-left:auto;min-height:44px;}
+}
+</style></head>
+  <body class="brand-page">
+<div id="brand-root">{{APP}}</div>
+<script>
+    (function () {
+      document.addEventListener("DOMContentLoaded", function () {
+        var widget = document.getElementById("whatsappWidget");
+        if (!widget) {
+          return;
+        }
+        var dismiss = widget.querySelector("[data-whatsapp-dismiss]");
+        var toggle = widget.querySelector("[data-whatsapp-toggle]");
+        var autoCloseTimer = null;
+
+        function clearAutoClose() {
+          if (autoCloseTimer) {
+            window.clearTimeout(autoCloseTimer);
+            autoCloseTimer = null;
+          }
+        }
+
+        function setOpen(isOpen) {
+          clearAutoClose();
+          widget.classList.toggle("is-open", isOpen);
+          if (toggle) {
+            toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          }
+          if (isOpen) {
+            autoCloseTimer = window.setTimeout(function () {
+              setOpen(false);
+            }, 2000);
+          }
+        }
+
+        if (toggle) {
+          toggle.addEventListener("click", function (event) {
+            if (!widget.classList.contains("is-open")) {
+              event.preventDefault();
+              setOpen(true);
+            }
+          });
+        }
+
+        if (dismiss) {
+          dismiss.addEventListener("click", function () {
+            setOpen(false);
+          });
+        }
+
+        document.addEventListener("click", function (event) {
+          if (widget.classList.contains("is-open") && !widget.contains(event.target)) {
+            setOpen(false);
+          }
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") {
+            setOpen(false);
+          }
+        });
+      });
+    })();
+  </script>
+<script>
+      (function () {
+        document.addEventListener(
+          "click",
+          function (event) {
+            var link = event.target.closest
+              ? event.target.closest("a[data-direct-brand-link]")
+              : null;
+            if (!link) {
+              return;
+            }
+            var href = link.getAttribute("href");
+            if (!href) {
+              return;
+            }
+            event.preventDefault();
+            event.stopPropagation();
+            window.location.href = href;
+          },
+          true,
+        );
+      })();
+
+      (function () {
+        var menuTrigger = document.getElementById("menuTrigger");
+        var menuPanel = document.getElementById("menuPanel");
+        var menuContent = menuPanel
+          ? menuPanel.querySelector(".menu-content")
+          : null;
+        var menuText = menuTrigger
+          ? menuTrigger.querySelector(".menu-text")
+          : null;
+
+        if (!menuTrigger || !menuPanel) {
+          return;
+        }
+
+        function openMenu() {
+          menuPanel.hidden = false;
+          menuTrigger.setAttribute("aria-expanded", "true");
+          menuTrigger.setAttribute("aria-label", "Close menu");
+          if (menuText) {
+            menuText.textContent = "CLOSE";
+          }
+          document.body.classList.add("menu-open");
+        }
+
+        function closeMenu() {
+          menuPanel.hidden = true;
+          menuTrigger.setAttribute("aria-expanded", "false");
+          menuTrigger.setAttribute("aria-label", "Open menu");
+          if (menuText) {
+            menuText.textContent = "MENU";
+          }
+          document.body.classList.remove("menu-open");
+        }
+
+        menuTrigger.addEventListener("click", function () {
+          var isExpanded = menuTrigger.getAttribute("aria-expanded") === "true";
+          if (isExpanded) {
+            closeMenu();
+            return;
+          }
+          openMenu();
+        });
+
+        document.addEventListener("click", function (event) {
+          var target = event.target;
+          if (menuPanel.hidden) {
+            return;
+          }
+          if (menuTrigger.contains(target)) {
+            return;
+          }
+          if (menuContent && menuContent.contains(target)) {
+            return;
+          }
+          closeMenu();
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") {
+            closeMenu();
+          }
+        });
+
+        Array.prototype.forEach.call(
+          menuPanel.querySelectorAll("a"),
+          function (link) {
+            link.addEventListener("click", closeMenu);
+          },
+        );
+      })();
+
+      (function () {
+        var socialLinks = document.querySelectorAll(
+          '.social-icons a[target="_blank"]',
+        );
+        if (!socialLinks.length) {
+          return;
+        }
+
+        Array.prototype.forEach.call(socialLinks, function (link) {
+          link.addEventListener("click", function (event) {
+            var newWindow = window.open(link.href, "_blank", "noopener");
+            if (newWindow) {
+              newWindow.opener = null;
+              event.preventDefault();
+            }
+          });
+        });
+      })();
+    </script>
+<script>
+    (function () {
+      document.addEventListener("DOMContentLoaded", function () {
+        var dropdownItems = document.querySelectorAll(".main-nav .nav-item--has-dropdown");
+        if (!dropdownItems.length) {
+          return;
+        }
+
+        function setOpen(item, isOpen) {
+          var trigger = item.querySelector("a[aria-haspopup='true']");
+          item.classList.toggle("is-open", isOpen);
+          if (trigger) {
+            trigger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          }
+        }
+
+        function closeAll(exceptItem) {
+          Array.prototype.forEach.call(dropdownItems, function (item) {
+            if (item !== exceptItem) {
+              setOpen(item, false);
+            }
+          });
+        }
+
+        Array.prototype.forEach.call(dropdownItems, function (item) {
+          var trigger = item.querySelector("a[aria-haspopup='true']");
+          if (!trigger) {
+            return;
+          }
+
+          trigger.addEventListener("click", function (event) {
+            event.preventDefault();
+            var willOpen = !item.classList.contains("is-open");
+            closeAll(item);
+            setOpen(item, willOpen);
+          });
+
+          trigger.addEventListener("focus", function () {
+            closeAll(item);
+            setOpen(item, true);
+          });
+        });
+
+        document.addEventListener("click", function (event) {
+          if (!event.target.closest || !event.target.closest(".main-nav .nav-item--has-dropdown")) {
+            closeAll();
+          }
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") {
+            closeAll();
+          }
+        });
+      });
+    })();
+  </script>
+<script>
+(function(){
+  var items=document.querySelectorAll('#brand-root .luxury-card[data-reveal]');
+  var reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+  function showAll(){items.forEach(function(el){el.classList.remove('reveal-pending');el.classList.add('is-visible');});}
+  if(reduced.matches || !('IntersectionObserver' in window)){showAll();return;}
+  var observer=new IntersectionObserver(function(entries){
+    var stagger=0;
+    entries.forEach(function(entry){
+      if(!entry.isIntersecting)return;
+      entry.target.style.setProperty('--brand-delay',stagger*80+'ms');
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+      stagger++;
+    });
+  },{threshold:0.12});
+  items.forEach(function(el){el.classList.add('reveal-pending');observer.observe(el);});
+  document.addEventListener('focusin',function(event){
+    var card=event.target.closest('#brand-root .luxury-card');
+    if(card){card.style.setProperty('--brand-delay','0ms');card.classList.add('is-visible');observer.unobserve(card);}
+  });
+  reduced.addEventListener('change',function(){if(reduced.matches){observer.disconnect();showAll();}});
+})();
+</script>
+</body>
+</html>
