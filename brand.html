@@ -1,6 +1,29 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1100765828989940');
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-05X6PLBLGM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-05X6PLBLGM');
+</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brands | Sindh Emporio | UP's Finest Luxury Landmark</title>
@@ -13,7 +36,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20260515-2" />
+    <link rel="stylesheet" href="style.css?v=5d0ab5cb7a0e" />
     <link
       rel="icon"
       type="image/png"
@@ -32,19 +55,113 @@
     <noscript
       ><link rel="stylesheet" href="assets/fontawesome/css/all.min.css"
     /></noscript>
-    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
-  </head>
+  <script>
+    (function () {
+      function isHomePath(pathname) {
+        return pathname === "/" || /\/index\.html$/i.test(pathname);
+      }
+
+      function cleanHash() {
+        if (window.location.hash && window.history.replaceState) {
+          window.history.replaceState(null, "", window.location.pathname + window.location.search);
+        }
+      }
+
+      function scrollToTarget(id) {
+        var target = document.getElementById(id);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+
+      cleanHash();
+
+      document.addEventListener("click", function (event) {
+        var link = event.target.closest ? event.target.closest("a[data-scroll-target]") : null;
+        if (!link) {
+          return;
+        }
+        var targetId = link.getAttribute("data-scroll-target");
+        if (!targetId) {
+          return;
+        }
+        if (isHomePath(window.location.pathname)) {
+          event.preventDefault();
+          scrollToTarget(targetId);
+          if (window.history.replaceState) {
+            window.history.replaceState(null, "", "/");
+          }
+        } else {
+          try {
+            window.sessionStorage.setItem("sindhScrollTarget", targetId);
+          } catch (error) {}
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var targetId = null;
+        try {
+          targetId = window.sessionStorage.getItem("sindhScrollTarget");
+          window.sessionStorage.removeItem("sindhScrollTarget");
+        } catch (error) {}
+        if (targetId && isHomePath(window.location.pathname)) {
+          window.setTimeout(function () {
+            scrollToTarget(targetId);
+          }, 100);
+        }
+      });
+    })();
+  </script>
+  <style>
+#brand-root [data-reveal] { opacity:1; transform:none; }
+@media (prefers-reduced-motion: no-preference) {
+#brand-root .luxury-card { transition:transform .25s ease; }
+#brand-root .luxury-card.reveal-pending:not(.is-visible) { opacity:0; transform:translateY(28px) scale(.9); }
+#brand-root .luxury-card.is-visible { animation:brand-pop .65s cubic-bezier(.2,.8,.2,1) var(--brand-delay, 0ms) backwards; }
+#brand-root .brand-hero { animation:brand-enter .85s ease both; }
+#brand-root .luxury-card.is-visible:hover { transform:translateY(-5px); }
+@keyframes brand-pop { from { opacity:0; transform:translateY(28px) scale(.9); } 75% { opacity:1; transform:translateY(-3px) scale(1.015); } to { opacity:1; transform:none; } }
+@keyframes brand-enter { from {opacity:0; transform:translateY(16px);} to {opacity:1;transform:none;} }
+}
+</style>
+<noscript><style>#brand-root [data-reveal]{opacity:1!important;transform:none!important}</style></noscript>
+<style>
+@media(max-width:768px){
+.header-container{min-height:64px;align-items:center;position:relative;}
+.header-container > .logo{position:relative;left:auto;top:auto;transform:none;margin:0 auto 0 0!important;}
+.header-container .logo .logo-text span{font-size:22px;}
+.header-container .logo .logo-text .sub{font-size:10px;}
+.header-container > .menu-trigger{margin-left:auto;min-height:44px;}
+}
+</style></head>
   <body class="brand-page">
+<div id="brand-root"><div class="brand-react-content">
+    <!-- Meta Pixel noscript fallback -->
+    <noscript><img height="1" width="1" style="display:none" alt=""
+      src="https://www.facebook.com/tr?id=1100765828989940&amp;ev=PageView&amp;noscript=1"
+     loading="eager" decoding="async"></noscript>
     <header class="header header--overlay">
       <div class="header-container">
-        <a class="logo" href="index.html" aria-label="Sindh Emporio home">
+        <a class="logo" href="/" aria-label="Sindh Emporio home">
           <strong class="logo-text"><span>SINDH</span><span class="sub">EMPORIO</span></strong>
         </a>
         <nav class="main-nav" aria-label="Primary navigation">
           <ul>
-            <li><a href="index.html#top">HOME</a></li>
-            <li><a href="brand.html#brands">BRANDS</a></li>
-            <li><a href="events.html">EVENTS</a></li>
+            <li><a href="/">HOME</a></li>
+            <li class="nav-item nav-item--has-dropdown">
+  <a href="/brand" aria-haspopup="true" aria-expanded="false">BRANDS</a>
+  <ul class="nav-dropdown" aria-label="Featured brands">
+    <li><a href="/boss">BOSS</a></li>
+    <li><a href="/basanti">BASANTI_kapdeaurkoffee</a></li>
+    <li><a href="/kora">KORA</a></li>
+    <li><a href="/saresa">SARESA</a></li>
+    <li><a href="/sindh-emporio">SINDH EMPORIO</a></li>
+    <li><a href="/la-martina">LA MARTINA</a></li>
+    <li><a href="/lacoste">LACOSTE</a></li>
+  </ul>
+</li>
+            <li><a href="/events">EVENTS</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
           </ul>
         </nav>
         <button
@@ -71,20 +188,15 @@
                 <span class="menu-rule" aria-hidden="true"></span>
               </div>
               <ul class="menu-panel-links">
-                <li><a href="index.html#top">HOME</a></li>
-                <li><a href="brand.html#brands">BRANDS</a></li>
-                <li><a href="events.html">EVENTS</a></li>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/brand">BRANDS</a></li>
+                <li><a href="/events">EVENTS</a></li>
                 <li>
-                  <a
-                    href="https://wa.me/9120067888"
-                    target="_blank"
-                    rel="noopener"
-                    >CONTACT US</a
-                  >
+                  <a href="contact.html">CONTACT US</a>
                 </li>
                 <li>
                   <a
-                    href="https://www.google.com/maps/search/?api=1&amp;query=Sindh+Emporio+Lucknow"
+                    href="https://www.google.com/maps/place/Sindh+Emporio/@26.8488642,80.9398655,17z/data=!3m1!4b1!4m6!3m5!1s0x399bfd00043c74f1:0x21cfff0319a125db!8m2!3d26.8488642!4d80.9424404!16s%2Fg%2F11lz1mr8x4"
                     target="_blank"
                     rel="noopener"
                     >LOCATION</a
@@ -98,16 +210,16 @@
     </header>
 
     <main class="brand-main brand-main--catalog">
-      <section class="brand-hero brand-hero--split" aria-label="Brands hero">
+      <section data-reveal class="brand-hero brand-hero--split" aria-label="Brands hero">
         <div class="brand-hero-media">
           <img
             class="brand-hero-image brand-hero-image--catalog"
-            src="assets/IMG_8226.PNG?v=20260515-1"
+            src="assets/IMG_8226.webp?v=20260515-1"
             alt="Luxurious abstract gold design"
-            loading="eager"
+           
             fetchpriority="high"
-            decoding="async"
-          />
+           
+           loading="eager" decoding="async">
 
         </div>
       </section>
@@ -115,47 +227,48 @@
         <div class="luxury-showcase__inner luxury-showcase__inner--boxed">
           <div class="luxury-grid">
             <a
-              class="luxury-card luxury-card--armani"
+              data-reveal class="luxury-card luxury-card--armani"
               href="javascript:void(0)" style="cursor: default;"
               aria-label="Open Armani Exchange"
             >
               <div class="luxury-card__logo">
                 <img
-                  src="assets/logo-armani-exchange-updated.png"
+                  src="assets/logo-armani-exchange-updated.webp"
                   alt="Armani Exchange logo"
-                  loading="lazy"
-                />
+                 
+                 loading="lazy" decoding="async">
               </div>
             </a>
             <!--suppress SpellCheckingInspection -->
             <a
-              class="luxury-card luxury-card--basanti"
-              href="basanti.html"
+              data-reveal class="luxury-card luxury-card--basanti"
+              href="/basanti"
               aria-label="Open Basanti"
             >
               <div class="luxury-card__logo">
                 <img
-                  src="assets/logo-basanti.png"
+                  src="assets/logo-basanti.webp"
                   alt="Basanti logo"
-                  loading="lazy"
-                />
+                 
+                 loading="lazy" decoding="async">
               </div>
             </a>
             <a
-              class="luxury-card luxury-card--boss"
-              href="javascript:void(0)" style="cursor: default;"
+              data-reveal class="luxury-card luxury-card--boss"
+              href="/boss"
+              data-direct-brand-link
               aria-label="Open BOSS"
             >
               <div class="luxury-card__logo">
                 <img
-                  src="assets/logo-boss-white.png"
+                  src="assets/logo-boss-white.webp"
                   alt="BOSS logo"
-                  loading="lazy"
-                />
+                 
+                 loading="lazy" decoding="async">
               </div>
             </a>
             <a
-              class="luxury-card luxury-card--charles-tyrwhitt"
+              data-reveal class="luxury-card luxury-card--charles-tyrwhitt"
               href="javascript:void(0)" style="cursor: default;"
               aria-label="Open Charles Tyrwhitt"
             >
@@ -163,114 +276,116 @@
                 <img
                   src="assets/logo-charles-tyrwhitt.svg"
                   alt="Charles Tyrwhitt logo"
-                  loading="lazy"
-                />
+                 
+                 loading="lazy" decoding="async">
               </div>
             </a>
             <a
-              class="luxury-card luxury-card--gas"
+              data-reveal class="luxury-card luxury-card--gas"
               href="javascript:void(0)" style="cursor: default;"
               aria-label="Open GAS"
             >
               <div class="luxury-card__logo">
-                <img src="assets/logo-gas-updated.png" alt="GAS logo" loading="lazy" />
+                <img src="assets/logo-gas-updated.webp" alt="GAS logo"  loading="lazy" decoding="async">
               </div>
             </a>
             <a
-              class="luxury-card luxury-card--kora"
-              href="kora.html"
+              data-reveal class="luxury-card luxury-card--kora"
+              href="/kora"
               aria-label="Open Kora"
             >
               <div class="luxury-card__logo">
                 <img
-                  src="assets/logo-kora-gold.png"
+                  src="assets/logo-kora-gold.webp"
                   alt="Kora logo"
-                  loading="lazy"
-                />
+                 
+                 loading="lazy" decoding="async">
               </div>
             </a>
             <a
-              class="luxury-card luxury-card--la-martina"
-              href="javascript:void(0)" style="cursor: default;"
+              data-reveal class="luxury-card luxury-card--la-martina"
+              href="/la-martina"
+              data-direct-brand-link
               aria-label="Open La Martina"
             >
               <div class="luxury-card__logo">
                 <img
                   src="assets/logo-la-martina-updated.svg?v=20260416-5"
                   alt="La Martina logo"
-                  loading="lazy"
-                />
+                 
+                 loading="lazy" decoding="async">
               </div>
             </a>
             <a
-              class="luxury-card luxury-card--lacoste"
-              href="javascript:void(0)" style="cursor: default;"
+              data-reveal class="luxury-card luxury-card--lacoste"
+              href="/lacoste"
+              data-direct-brand-link
               aria-label="Open Lacoste"
             >
               <div class="luxury-card__logo">
                 <img
-                  src="assets/logo-lacoste-from-jpg.png"
+                  src="assets/logo-lacoste-from-jpg.webp"
                   alt="Lacoste logo"
-                  loading="lazy"
-                />
+                 
+                 loading="lazy" decoding="async">
               </div>
             </a>
             <a
-              class="luxury-card luxury-card--levis"
+              data-reveal class="luxury-card luxury-card--levis"
               href="javascript:void(0)" style="cursor: default;"
               aria-label="Open Levi's"
             >
               <div class="luxury-card__logo">
                 <img
-                  src="assets/logo-levis.png"
+                  src="assets/logo-levis.webp"
                   alt="Levi's logo"
-                  loading="lazy"
-                />
+                 
+                 loading="lazy" decoding="async">
               </div>
             </a>
             <a
-              class="luxury-card luxury-card--saresa"
-              href="saresa.html"
+              data-reveal class="luxury-card luxury-card--saresa"
+              href="/saresa"
               aria-label="Open Saresa"
             >
               <div class="luxury-card__logo">
                 <img
-                  src="assets/logo-saresa.png"
+                  src="assets/logo-saresa-red.webp"
                   alt="Saresa logo"
-                  loading="lazy"
-                />
+                 
+                 loading="lazy" decoding="async">
               </div>
             </a>
             <a
-              class="luxury-card luxury-card--sindh-emporio"
-              href="sindh-emporio.html"
+              data-reveal class="luxury-card luxury-card--sindh-emporio"
+              href="/sindh-emporio"
               aria-label="Open Sindh Emporio"
             >
               <div class="luxury-card__logo">
                 <img
-                  src="assets/logo-sindh-emporio-box-gold.png?v=20260408-1"
+                  src="assets/logo-sindh-emporio-box-gold.webp?v=20260408-1"
                   alt="Sindh Emporio logo"
-                  loading="lazy"
-                />
+                 
+                 loading="lazy" decoding="async">
               </div>
             </a>
             <a
-              class="luxury-card luxury-card--superdry"
+              data-reveal class="luxury-card luxury-card--superdry"
               href="javascript:void(0)" style="cursor: default;"
               aria-label="Open Superdry"
             >
               <div class="luxury-card__logo">
                 <img
-                  src="assets/logo-superdry.png"
+                  src="assets/logo-superdry.webp"
                   alt="Superdry logo"
-                  loading="lazy"
-                />
+                 
+                 loading="lazy" decoding="async">
               </div>
             </a>
           </div>
         </div>
         <div class="luxury-showcase__actions">
-          <a class="brand-back-link brand-back-link--home" href="index.html#top"
+          <a class="brand-back-link brand-back-link--home" href="/"
             >Back to home</a
           >
         </div>
@@ -284,10 +399,18 @@
           <p class="tagline"></p>
           <!--suppress SpellCheckingInspection -->
           <p class="address">
-            31/54, Mahatma Gandhi Marg,<br />
-            Hazratganj, Lucknow, Uttar Pradesh 226001
+            <a
+              href="https://www.google.com/maps/place/Sindh+Emporio/@26.8488642,80.9398655,17z/data=!3m1!4b1!4m6!3m5!1s0x399bfd00043c74f1:0x21cfff0319a125db!8m2!3d26.8488642!4d80.9424404!16s%2Fg%2F11lz1mr8x4"
+              target="_blank"
+              rel="noopener"
+            >
+              31/54, Mahatma Gandhi Marg,<br />
+              Sushanpura, Nagar Nigam Market,<br />
+              Hazratganj, Lucknow,<br />
+              Uttar Pradesh 226001
+            </a>
           </p>
-          <p class="phone">Phone: +91 20067888</p>
+          <p class="phone">Phone: +91 9120067888</p>
           <p class="email">
             Email:
             <a href="mailto:Emporio@sindhgroup.in">emporio@sindhgroup.in</a>
@@ -297,22 +420,20 @@
         <div class="footer-links">
           <h3>QUICK LINKS</h3>
           <ul>
-            <li><a href="index.html#top">Home</a></li>
-            <li><a href="index.html#about">About Us</a></li>
-            <li><a href="brand.html#brands">Brands</a></li>
-            <li><a href="events.html">Events</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/" data-scroll-target="about">About Us</a></li>
+            <li><a href="/brand">Brands</a></li>
+            <li><a href="/events">Events</a></li>
             <li>
               <a
-                href="https://www.google.com/maps/search/?api=1&amp;query=Sindh+Emporio+Lucknow"
+                href="https://www.google.com/maps/place/Sindh+Emporio/@26.8488642,80.9398655,17z/data=!3m1!4b1!4m6!3m5!1s0x399bfd00043c74f1:0x21cfff0319a125db!8m2!3d26.8488642!4d80.9424404!16s%2Fg%2F11lz1mr8x4"
                 target="_blank"
                 rel="noopener"
                 >Location</a
               >
             </li>
             <li>
-              <a href="https://wa.me/9120067888" target="_blank" rel="noopener"
-                >Contact Us</a
-              >
+              <a href="contact.html">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -369,8 +490,111 @@
         </p>
       </div>
     </footer>
+  <aside class="whatsapp-widget" id="whatsappWidget" aria-label="WhatsApp stylist support">
+    <button class="whatsapp-widget__close" type="button" aria-label="Hide WhatsApp message"
+      data-whatsapp-dismiss>
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <a class="whatsapp-widget__message"
+      href="https://wa.me/9120067888?text=Namaste%21%20I%27d%20like%20to%20connect%20with%20a%20stylist."
+      target="_blank" rel="noopener" aria-label="Connect with a stylist on WhatsApp">
+      <span>Namaste! Connect with stylist</span>
+      <span>for same day delivery.</span>
+    </a>
+    <a class="whatsapp-widget__action"
+      data-whatsapp-toggle aria-expanded="false"
+      href="https://wa.me/9120067888?text=Namaste%21%20I%27d%20like%20to%20connect%20with%20a%20stylist."
+      target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+  </aside>
+  
 
-    <script>
+        
+</div></div>
+<script>
+    (function () {
+      document.addEventListener("DOMContentLoaded", function () {
+        var widget = document.getElementById("whatsappWidget");
+        if (!widget) {
+          return;
+        }
+        var dismiss = widget.querySelector("[data-whatsapp-dismiss]");
+        var toggle = widget.querySelector("[data-whatsapp-toggle]");
+        var autoCloseTimer = null;
+
+        function clearAutoClose() {
+          if (autoCloseTimer) {
+            window.clearTimeout(autoCloseTimer);
+            autoCloseTimer = null;
+          }
+        }
+
+        function setOpen(isOpen) {
+          clearAutoClose();
+          widget.classList.toggle("is-open", isOpen);
+          if (toggle) {
+            toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          }
+          if (isOpen) {
+            autoCloseTimer = window.setTimeout(function () {
+              setOpen(false);
+            }, 2000);
+          }
+        }
+
+        if (toggle) {
+          toggle.addEventListener("click", function (event) {
+            if (!widget.classList.contains("is-open")) {
+              event.preventDefault();
+              setOpen(true);
+            }
+          });
+        }
+
+        if (dismiss) {
+          dismiss.addEventListener("click", function () {
+            setOpen(false);
+          });
+        }
+
+        document.addEventListener("click", function (event) {
+          if (widget.classList.contains("is-open") && !widget.contains(event.target)) {
+            setOpen(false);
+          }
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") {
+            setOpen(false);
+          }
+        });
+      });
+    })();
+  </script>
+<script>
+      (function () {
+        document.addEventListener(
+          "click",
+          function (event) {
+            var link = event.target.closest
+              ? event.target.closest("a[data-direct-brand-link]")
+              : null;
+            if (!link) {
+              return;
+            }
+            var href = link.getAttribute("href");
+            if (!href) {
+              return;
+            }
+            event.preventDefault();
+            event.stopPropagation();
+            window.location.href = href;
+          },
+          true,
+        );
+      })();
+
       (function () {
         var menuTrigger = document.getElementById("menuTrigger");
         var menuPanel = document.getElementById("menuPanel");
@@ -461,5 +685,86 @@
         });
       })();
     </script>
-  </body>
+<script>
+    (function () {
+      document.addEventListener("DOMContentLoaded", function () {
+        var dropdownItems = document.querySelectorAll(".main-nav .nav-item--has-dropdown");
+        if (!dropdownItems.length) {
+          return;
+        }
+
+        function setOpen(item, isOpen) {
+          var trigger = item.querySelector("a[aria-haspopup='true']");
+          item.classList.toggle("is-open", isOpen);
+          if (trigger) {
+            trigger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          }
+        }
+
+        function closeAll(exceptItem) {
+          Array.prototype.forEach.call(dropdownItems, function (item) {
+            if (item !== exceptItem) {
+              setOpen(item, false);
+            }
+          });
+        }
+
+        Array.prototype.forEach.call(dropdownItems, function (item) {
+          var trigger = item.querySelector("a[aria-haspopup='true']");
+          if (!trigger) {
+            return;
+          }
+
+          trigger.addEventListener("click", function (event) {
+            event.preventDefault();
+            var willOpen = !item.classList.contains("is-open");
+            closeAll(item);
+            setOpen(item, willOpen);
+          });
+
+          trigger.addEventListener("focus", function () {
+            closeAll(item);
+            setOpen(item, true);
+          });
+        });
+
+        document.addEventListener("click", function (event) {
+          if (!event.target.closest || !event.target.closest(".main-nav .nav-item--has-dropdown")) {
+            closeAll();
+          }
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") {
+            closeAll();
+          }
+        });
+      });
+    })();
+  </script>
+<script>
+(function(){
+  var items=document.querySelectorAll('#brand-root .luxury-card[data-reveal]');
+  var reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+  function showAll(){items.forEach(function(el){el.classList.remove('reveal-pending');el.classList.add('is-visible');});}
+  if(reduced.matches || !('IntersectionObserver' in window)){showAll();return;}
+  var observer=new IntersectionObserver(function(entries){
+    var stagger=0;
+    entries.forEach(function(entry){
+      if(!entry.isIntersecting)return;
+      entry.target.style.setProperty('--brand-delay',stagger*80+'ms');
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+      stagger++;
+    });
+  },{threshold:0.12});
+  items.forEach(function(el){el.classList.add('reveal-pending');observer.observe(el);});
+  document.addEventListener('focusin',function(event){
+    var card=event.target.closest('#brand-root .luxury-card');
+    if(card){card.style.setProperty('--brand-delay','0ms');card.classList.add('is-visible');observer.unobserve(card);}
+  });
+  reduced.addEventListener('change',function(){if(reduced.matches){observer.disconnect();showAll();}});
+})();
+</script>
+</body>
 </html>

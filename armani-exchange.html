@@ -1,6 +1,29 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1100765828989940');
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-05X6PLBLGM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-05X6PLBLGM');
+</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sindh Emporio | UP's Finest Luxury Landmark</title>
@@ -10,7 +33,7 @@
     />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#fbfaf7" />
-    <link rel="stylesheet" href="style.css?v=20260424-5" />
+    <link rel="stylesheet" href="style.css?v=5d0ab5cb7a0e" />
     <link
       rel="icon"
       type="image/png"
@@ -32,6 +55,10 @@
     <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
   </head>
   <body class="brand-page brand-page--armani">
+    <!-- Meta Pixel noscript fallback -->
+    <noscript><img height="1" width="1" style="display:none" alt=""
+      src="https://www.facebook.com/tr?id=1100765828989940&amp;ev=PageView&amp;noscript=1"
+    /></noscript>
     <header class="header header--overlay">
       <div class="header-container">
         <a class="logo" href="index.html" aria-label="Sindh Emporio home">
@@ -40,8 +67,20 @@
         <nav class="main-nav" aria-label="Primary navigation">
           <ul>
             <li><a href="index.html#top">HOME</a></li>
-            <li><a href="brand.html#brands">BRANDS</a></li>
+            <li class="nav-item nav-item--has-dropdown">
+  <a href="/brand" aria-haspopup="true" aria-expanded="false">BRANDS</a>
+  <ul class="nav-dropdown" aria-label="Featured brands">
+    <li><a href="/boss">BOSS</a></li>
+    <li><a href="/basanti">BASANTI_kapdeaurkoffee</a></li>
+    <li><a href="/kora">KORA</a></li>
+    <li><a href="/saresa">SARESA</a></li>
+    <li><a href="/sindh-emporio">SINDH EMPORIO</a></li>
+    <li><a href="/la-martina">LA MARTINA</a></li>
+    <li><a href="/lacoste">LACOSTE</a></li>
+  </ul>
+</li>
             <li><a href="events.html">EVENTS</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
           </ul>
         </nav>
         <button
@@ -69,19 +108,14 @@
               </div>
               <ul class="menu-panel-links">
                 <li><a href="index.html#top">HOME</a></li>
-                <li><a href="brand.html#brands">BRANDS</a></li>
+                <li><a href="/brand">BRANDS</a></li>
                 <li><a href="events.html">EVENTS</a></li>
                 <li>
-                  <a
-                    href="https://wa.me/9120067888"
-                    target="_blank"
-                    rel="noopener"
-                    >CONTACT US</a
-                  >
+                  <a href="contact.html">CONTACT US</a>
                 </li>
                 <li>
                   <a
-                    href="https://www.google.com/maps/search/?api=1&amp;query=Sindh+Emporio+Lucknow"
+                    href="https://www.google.com/maps/place/Sindh+Emporio/@26.8488642,80.9398655,17z/data=!3m1!4b1!4m6!3m5!1s0x399bfd00043c74f1:0x21cfff0319a125db!8m2!3d26.8488642!4d80.9424404!16s%2Fg%2F11lz1mr8x4"
                     target="_blank"
                     rel="noopener"
                     >LOCATION</a
@@ -121,7 +155,7 @@
               <figure class="brand-hero-card brand-hero-card--wide">
                 <img
                   class="brand-hero-image"
-                  src="assets/armani-exchange-04.png"
+                  src="assets/armani-exchange-04.webp"
                   alt=""
                   loading="lazy"
                 />
@@ -142,7 +176,7 @@
           >
             <div class="brand-hero-logo-lockup">
               <img
-                src="assets/logo-armani-exchange-updated.png"
+                src="assets/logo-armani-exchange-updated.webp"
                 alt="Armani Exchange logo"
                 loading="lazy"
               />
@@ -218,7 +252,7 @@
         </div>
 
         <div class="brand-profile-actions">
-          <a class="brand-back-link" href="brand.html#brands">Back to brands</a>
+          <a class="brand-back-link" href="/brand">Back to brands</a>
         </div>
       </section>
     </main>
@@ -230,10 +264,18 @@
           <p class="tagline"></p>
           <!--suppress SpellCheckingInspection -->
           <p class="address">
-            31/54, Mahatma Gandhi Marg,<br />
-            Hazratganj, Lucknow, Uttar Pradesh 226001
+            <a
+              href="https://www.google.com/maps/place/Sindh+Emporio/@26.8488642,80.9398655,17z/data=!3m1!4b1!4m6!3m5!1s0x399bfd00043c74f1:0x21cfff0319a125db!8m2!3d26.8488642!4d80.9424404!16s%2Fg%2F11lz1mr8x4"
+              target="_blank"
+              rel="noopener"
+            >
+              31/54, Mahatma Gandhi Marg,<br />
+              Sushanpura, Nagar Nigam Market,<br />
+              Hazratganj, Lucknow,<br />
+              Uttar Pradesh 226001
+            </a>
           </p>
-          <p class="phone">Phone: +91 20067888</p>
+          <p class="phone">Phone: +91 9120067888</p>
           <p class="email">
             Email:
             <a href="mailto:Emporio@sindhgroup.in">emporio@sindhgroup.in</a>
@@ -245,20 +287,18 @@
           <ul>
             <li><a href="index.html#top">Home</a></li>
             <li><a href="index.html#about">About Us</a></li>
-            <li><a href="brand.html#brands">Brands</a></li>
+            <li><a href="/brand">Brands</a></li>
             <li><a href="events.html">Events</a></li>
             <li>
               <a
-                href="https://www.google.com/maps/search/?api=1&amp;query=Sindh+Emporio+Lucknow"
+                href="https://www.google.com/maps/place/Sindh+Emporio/@26.8488642,80.9398655,17z/data=!3m1!4b1!4m6!3m5!1s0x399bfd00043c74f1:0x21cfff0319a125db!8m2!3d26.8488642!4d80.9424404!16s%2Fg%2F11lz1mr8x4"
                 target="_blank"
                 rel="noopener"
                 >Location</a
               >
             </li>
             <li>
-              <a href="https://wa.me/9120067888" target="_blank" rel="noopener"
-                >Contact Us</a
-              >
+              <a href="contact.html">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -315,6 +355,84 @@
         </p>
       </div>
     </footer>
+  <aside class="whatsapp-widget" id="whatsappWidget" aria-label="WhatsApp stylist support">
+    <button class="whatsapp-widget__close" type="button" aria-label="Hide WhatsApp message"
+      data-whatsapp-dismiss>
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <a class="whatsapp-widget__message"
+      href="https://wa.me/9120067888?text=Namaste%21%20I%27d%20like%20to%20connect%20with%20a%20stylist."
+      target="_blank" rel="noopener" aria-label="Connect with a stylist on WhatsApp">
+      <span>Namaste! Connect with stylist</span>
+      <span>for same day delivery.</span>
+    </a>
+    <a class="whatsapp-widget__action"
+      data-whatsapp-toggle aria-expanded="false"
+      href="https://wa.me/9120067888?text=Namaste%21%20I%27d%20like%20to%20connect%20with%20a%20stylist."
+      target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+  </aside>
+  <script>
+    (function () {
+      document.addEventListener("DOMContentLoaded", function () {
+        var widget = document.getElementById("whatsappWidget");
+        if (!widget) {
+          return;
+        }
+        var dismiss = widget.querySelector("[data-whatsapp-dismiss]");
+        var toggle = widget.querySelector("[data-whatsapp-toggle]");
+        var autoCloseTimer = null;
+
+        function clearAutoClose() {
+          if (autoCloseTimer) {
+            window.clearTimeout(autoCloseTimer);
+            autoCloseTimer = null;
+          }
+        }
+
+        function setOpen(isOpen) {
+          clearAutoClose();
+          widget.classList.toggle("is-open", isOpen);
+          if (toggle) {
+            toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          }
+          if (isOpen) {
+            autoCloseTimer = window.setTimeout(function () {
+              setOpen(false);
+            }, 2000);
+          }
+        }
+
+        if (toggle) {
+          toggle.addEventListener("click", function (event) {
+            if (!widget.classList.contains("is-open")) {
+              event.preventDefault();
+              setOpen(true);
+            }
+          });
+        }
+
+        if (dismiss) {
+          dismiss.addEventListener("click", function () {
+            setOpen(false);
+          });
+        }
+
+        document.addEventListener("click", function (event) {
+          if (widget.classList.contains("is-open") && !widget.contains(event.target)) {
+            setOpen(false);
+          }
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") {
+            setOpen(false);
+          }
+        });
+      });
+    })();
+  </script>
 
     <script>
       (function () {
@@ -387,6 +505,62 @@
           },
         );
       })();
-    </script>
-  </body>
+    </script>    <script>
+    (function () {
+      document.addEventListener("DOMContentLoaded", function () {
+        var dropdownItems = document.querySelectorAll(".main-nav .nav-item--has-dropdown");
+        if (!dropdownItems.length) {
+          return;
+        }
+
+        function setOpen(item, isOpen) {
+          var trigger = item.querySelector("a[aria-haspopup='true']");
+          item.classList.toggle("is-open", isOpen);
+          if (trigger) {
+            trigger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          }
+        }
+
+        function closeAll(exceptItem) {
+          Array.prototype.forEach.call(dropdownItems, function (item) {
+            if (item !== exceptItem) {
+              setOpen(item, false);
+            }
+          });
+        }
+
+        Array.prototype.forEach.call(dropdownItems, function (item) {
+          var trigger = item.querySelector("a[aria-haspopup='true']");
+          if (!trigger) {
+            return;
+          }
+
+          trigger.addEventListener("click", function (event) {
+            event.preventDefault();
+            var willOpen = !item.classList.contains("is-open");
+            closeAll(item);
+            setOpen(item, willOpen);
+          });
+
+          trigger.addEventListener("focus", function () {
+            closeAll(item);
+            setOpen(item, true);
+          });
+        });
+
+        document.addEventListener("click", function (event) {
+          if (!event.target.closest || !event.target.closest(".main-nav .nav-item--has-dropdown")) {
+            closeAll();
+          }
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") {
+            closeAll();
+          }
+        });
+      });
+    })();
+  </script>
+</body>
 </html>
