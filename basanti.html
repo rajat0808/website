@@ -106,12 +106,13 @@
         .saresa-story .brand-profile-actions { order:4; margin-top:28px; }
       }
       @media(max-width:768px) {
-        .saresa-story__logo { justify-self:center; object-position:center; margin:0 auto 20px; }
-        .saresa-story__contacts { width:100%; text-align:left; }
-        .saresa-story__contact { justify-content:flex-start; gap:8px; font-size:clamp(11px,3vw,14px); }
-        .saresa-story__about,
-        .saresa-story .brand-profile-actions { text-align:center; }
-        .saresa-story__social { width:fit-content; max-width:100%; margin:16px 0 0 48px; }
+        .saresa-story { grid-template-columns:1fr; gap:0; padding:24px 6% 36px; border:0; }
+        .saresa-story__logo { justify-self:center; object-position:center; margin:0 auto 22px; }
+        .saresa-story__contacts { display:flex; width:100%; flex-direction:column; align-items:center; gap:16px; margin:0 0 28px; padding:0; border:0; text-align:center; }
+        .saresa-story__contact { justify-content:center; gap:8px; padding:0; border:0; font-size:clamp(11px,3vw,14px); text-align:center; }
+        .saresa-story__about { width:100%; margin:0; padding:0; border:0; text-align:left; }
+        .saresa-story .brand-profile-actions { text-align:left; }
+        .saresa-story__social { width:fit-content; max-width:100%; margin:14px auto 0; }
       }
       @media(min-width:1001px) {
         .basanti-story { row-gap:20px; padding-top:16px; }
