@@ -12,7 +12,6 @@ export default function BasantiPage() {
       <section className="saresa-story basanti-story" id="brand-details" aria-labelledby="basanti-title">
           <div className="basanti-brand-heading">
             <img className="saresa-story__logo" src="assets/logo-basanti-lockup.webp" alt="Basanti — kapde aur koffie" width="400" height="130" loading="lazy" />
-            <a className="basanti-catalog-link" href="basanti-catalog.html">Explore all Products</a>
           </div>
           <div className="saresa-story__contacts">
             <a href="mailto:lucknowstore@basantikekapde.com" className="saresa-story__contact"><span className="saresa-story__icon" aria-hidden="true">✉</span><span>lucknowstore@basantikekapde.com</span></a>
