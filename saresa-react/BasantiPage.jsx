@@ -1,15 +1,16 @@
 import { Header, Footer, ContactWidgets, HeroSlider } from "./SaresaPage.jsx";
 
-const slides = ["Ivory embellished corset and trousers", "Ivory embellished sari", "Multicolour draped Basanti ensemble", "Basanti pink ensemble", "Basanti green ensemble", "Basanti yellow ensemble"];
-const images = ["assets/basanti-slide-01.webp", "assets/basanti-slide-02.webp", "assets/basanti-slide-03.webp", "assets/basanti-hero-pink.jpeg", "assets/basanti-hero-green.jpeg", "assets/basanti-hero-yellow.jpeg"];
+const slides = ["Ivory embellished corset and trousers", "Ivory embellished sari", "Multicolour draped Basanti ensemble", "Basanti pink ensemble", "Basanti green ensemble"];
+const images = ["assets/basanti-slide-01.webp", "assets/basanti-slide-02.webp", "assets/basanti-slide-03.webp", "assets/basanti-hero-pink.jpeg", "assets/basanti-hero-green.jpeg"];
 
 export default function BasantiPage() {
 
   return (<>
     <Header />
     <main className="brand-main">
-      <HeroSlider slides={slides} imageSources={images} label="Basanti collection" sliderClassName="basanti-slider" viewHref="basanti-catalog.html" viewLabel="View More+" showViewOnAll />
+      <HeroSlider slides={slides} imageSources={images} label="Basanti collection" sliderClassName="basanti-slider" viewHref="basanti-catalog.html" viewLabel="+ View More" />
       <section className="saresa-story basanti-story" id="brand-details" aria-labelledby="basanti-title">
+        <div className="saresa-story__profile">
           <div className="basanti-brand-heading">
             <img className="saresa-story__logo" src="assets/logo-basanti-lockup.webp" alt="Basanti — kapde aur koffie" width="400" height="130" loading="lazy" />
           </div>
@@ -26,6 +27,7 @@ export default function BasantiPage() {
               </nav>
             </details>
           </div>
+        </div>
           <article className="saresa-story__about">
 
               <h2 id="basanti-title">About Basanti</h2>

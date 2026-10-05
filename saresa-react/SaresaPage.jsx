@@ -107,10 +107,10 @@ export function Header() {
 const heroSlides = [
   "White embroidered kurta set", "Mauve embroidered kurta set",
   "Pastel yellow kurta with dupatta", "Mint green embroidered kurta",
-  "Blue kurta with dupatta", "Floral kurta with white trousers",
+  "Blue kurta with dupatta",
 ];
 
-export function HeroSlider({ slides = heroSlides, imageSources, label = "Saresa collection", sliderClassName = "", viewIndex = 5, viewHref = "saresa-catalog.html", viewLabel = "View More+", showViewOnAll = false }) {
+export function HeroSlider({ slides = heroSlides, imageSources, label = "Saresa collection", sliderClassName = "", viewIndex = 4, viewHref = "saresa-catalog.html", viewLabel = "+ View More", showViewOnAll = false }) {
   const viewportRef = useRef(null);
   const trackRef = useRef(null);
   const touchStart = useRef(null);
@@ -174,6 +174,7 @@ function BrandContent() {
     <main className="brand-main">
       <HeroSlider />
       <section className="saresa-story" id="brand-details" aria-labelledby="saresa-title">
+        <div className="saresa-story__profile">
           <img className="saresa-story__logo" src="assets/logo-saresa-red.webp" alt="Saresa" width="300" height="250" loading="lazy" />
           <div className="saresa-story__contacts">
             <a href="mailto:customersupport.saresa@gmail.com" className="saresa-story__contact"><span className="saresa-story__icon" aria-hidden="true">✉</span><span>customersupport.saresa@gmail.com</span></a>
@@ -188,6 +189,7 @@ function BrandContent() {
               </nav>
             </details>
           </div>
+        </div>
           <article className="saresa-story__about">
 
               <h2 id="saresa-title">About Saresa</h2>

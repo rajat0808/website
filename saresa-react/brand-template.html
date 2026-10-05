@@ -115,11 +115,20 @@
   <style>
 #brand-root [data-reveal] { opacity:1; transform:none; }
 @media (prefers-reduced-motion: no-preference) {
-#brand-root .luxury-card { transition:transform .25s ease; }
+#brand-root .luxury-card { transition:transform .35s cubic-bezier(.2,.7,.2,1); will-change:transform,opacity; }
+#brand-root .luxury-card__logo { transition:transform .35s cubic-bezier(.2,.7,.2,1); }
 #brand-root .luxury-card.reveal-pending:not(.is-visible) { opacity:0; transform:translateY(28px) scale(.9); }
 #brand-root .luxury-card.is-visible { animation:brand-pop .65s cubic-bezier(.2,.8,.2,1) var(--brand-delay, 0ms) backwards; }
 #brand-root .brand-hero { animation:brand-enter .85s ease both; }
-#brand-root .luxury-card.is-visible:hover { transform:translateY(-5px); }
+#brand-root .luxury-card.is-visible:hover .luxury-card__logo { transform:scale(1.045); }
+@media(max-width:768px) {
+  #brand-root .luxury-card.reveal-pending:not(.is-visible) { transform:translateY(16px) scale(.97); }
+  #brand-root .luxury-card.is-visible { animation-name:brand-pop-mobile; animation-duration:.5s; }
+  @keyframes brand-pop-mobile { from { opacity:0; transform:translateY(16px) scale(.97); } 75% { opacity:1; transform:translateY(-2px) scale(1.01); } to { opacity:1; transform:none; } }
+}
+@media(hover:hover) and (pointer:fine) {
+  #brand-root .luxury-card.is-visible:hover { transform:translateY(-4px); }
+}
 @keyframes brand-pop { from { opacity:0; transform:translateY(28px) scale(.9); } 75% { opacity:1; transform:translateY(-3px) scale(1.015); } to { opacity:1; transform:none; } }
 @keyframes brand-enter { from {opacity:0; transform:translateY(16px);} to {opacity:1;transform:none;} }
 }
