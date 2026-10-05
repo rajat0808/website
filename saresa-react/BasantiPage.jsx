@@ -18,14 +18,6 @@ export default function BasantiPage() {
             <a href="mailto:lucknowstore@basantikekapde.com" className="saresa-story__contact"><span className="saresa-story__icon" aria-hidden="true">✉</span><span>lucknowstore@basantikekapde.com</span></a>
             <div className="saresa-story__contact"><span className="saresa-story__icon" aria-hidden="true">◷</span><span>Mon–Sun 11:00 AM – 9:00 PM</span></div>
             <a href="https://wa.me/919220199588" target="_blank" rel="noopener noreferrer" className="saresa-story__contact" aria-label="Chat with Basanti on WhatsApp at +91 92201 99588"><span className="saresa-story__icon" aria-hidden="true"><i className="fab fa-whatsapp"></i></span><span>+91 92201 99588</span></a>
-            <details className="saresa-story__share">
-              <summary className="saresa-story__contact"><span className="saresa-story__icon" aria-hidden="true"><i className="fas fa-share-alt"></i></span><span>Share</span></summary>
-              <nav className="saresa-story__social" aria-label="Social media links">
-                <a href="https://www.instagram.com/sindhemporio/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram" aria-hidden="true"></i> Instagram</a>
-                <a href="https://in.pinterest.com/sindhemporio/" target="_blank" rel="noopener noreferrer"><i className="fab fa-pinterest-p" aria-hidden="true"></i> Pinterest</a>
-                <a href="https://www.facebook.com/profile.php?id=61572688416998" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f" aria-hidden="true"></i> Facebook</a>
-              </nav>
-            </details>
           </div>
         </div>
           <article className="saresa-story__about">
